@@ -1,0 +1,47 @@
+name: Build Pinterest feed
+
+on:
+  schedule:
+    # Elke dag om 04:17 UTC. Pinterest haalt de feed zelf elke 24 uur op,
+    # dus dit hoeft alleen ruim vóór die ophaalmoment klaar te staan.
+    - cron: "17 4 * * *"
+  workflow_dispatch: # handmatig starten vanaf het Actions-tabblad
+  push:
+    branches: [main]
+    paths:
+      - build-feed.mjs
+      - .github/workflows/build-feed.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-feed
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Feed bouwen
+        env:
+          FW_STOREFRONT_TOKEN: ${{ secrets.FW_STOREFRONT_TOKEN }}
+        run: node build-feed.mjs
+
+      - name: Committen als er iets veranderd is
+        run: |
+          if [ -z "$(git status --porcelain docs/pinterest-feed.csv)" ]; then
+            echo "Feed ongewijzigd — niets te committen."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/pinterest-feed.csv
+          git commit -m "Feed bijgewerkt ($(date -u +%Y-%m-%d))"
+          git push
