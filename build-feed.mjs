@@ -12,7 +12,7 @@
  * Draaien:  FW_STOREFRONT_TOKEN=ptkn_... node build-feed.mjs
  */
 
-import { writeFileSync, mkdirSync } from "node:fs";
+import { writeFileSync, mkdirSync, readFileSync, existsSync } from "node:fs";
 import { dirname } from "node:path";
 
 // ---------------------------------------------------------------- instellingen
@@ -41,7 +41,35 @@ const CONFIG = {
 
   // Hoeveel extra afbeeldingen per variant meesturen (Pinterest: max 10 totaal).
   additionalImages: 5,
+
+  // Eigen Pinterest-mockups (gemaakt met aesth_batch.py, zie docs/pins/manifest.json).
+  // Bestaat er voor een product + kleur een mockup, dan wordt de hoofdsetting (gym) de
+  // image_link en komen de andere settings vooraan in additional_image_link; de
+  // Fourthwall-foto's volgen daarna. Zonder mockup blijft alles zoals het was.
+  pinsManifest: "docs/pins/manifest.json",
+  pinsBaseUrl: "https://meakamst-stack.github.io/aesth-pinterest-feed/pins/",
 };
+
+/** Leest de mockup-manifest in; ontbreekt die, dan worden alleen Fourthwall-foto's gebruikt. */
+function loadPins() {
+  if (!existsSync(CONFIG.pinsManifest)) return null;
+  try {
+    return JSON.parse(readFileSync(CONFIG.pinsManifest, "utf8"));
+  } catch (err) {
+    console.warn(`Let op: ${CONFIG.pinsManifest} niet leesbaar (${err.message}) — alleen Fourthwall-foto's.`);
+    return null;
+  }
+}
+
+const PINS = loadPins();
+
+/** Mockup-URL's voor één product + kleur: [hoofdfoto, ...overige settings] of []. */
+function pinImages(slug, color) {
+  const perColor = PINS?.producten?.[slug]?.kleuren?.[color];
+  if (!perColor) return [];
+  const order = [PINS.hoofdsetting, ...PINS.settings.filter((s) => s !== PINS.hoofdsetting)];
+  return order.filter((s) => perColor[s]).map((s) => CONFIG.pinsBaseUrl + perColor[s]);
+}
 
 // Kolommen in de volgorde die Pinterest verwacht. De eerste acht zijn verplicht.
 const COLUMNS = [
@@ -146,7 +174,9 @@ function variantRows(product) {
     const size = variant.attributes?.size?.name || "";
 
     // Kleur-specifieke foto's als die er zijn, anders de productfoto's.
-    const images = (variant.images?.length ? variant.images : productImages).map((i) => i.url);
+    const fwImages = (variant.images?.length ? variant.images : productImages).map((i) => i.url);
+    // Eigen mockups (indien aanwezig) gaan vóór de Fourthwall-foto's.
+    const images = [...pinImages(slug, color), ...fwImages];
     if (!images.length) return []; // zonder afbeelding keurt Pinterest de regel af
 
     const soldOut =
@@ -221,6 +251,9 @@ async function main() {
 
   mkdirSync(dirname(CONFIG.outFile), { recursive: true });
   writeFileSync(CONFIG.outFile, csv + "\n", "utf8");
+
+  const withPins = rows.filter((r) => r.image_link.startsWith(CONFIG.pinsBaseUrl)).length;
+  console.log(`${withPins} van ${rows.length} varianten met eigen mockup als hoofdfoto`);
 
   const perDesign = {};
   for (const r of rows) perDesign[r.item_group_id] = (perDesign[r.item_group_id] || 0) + 1;

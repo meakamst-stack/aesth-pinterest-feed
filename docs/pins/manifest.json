@@ -1,0 +1,196 @@
+{
+  "versie": "v1",
+  "hoofdsetting": "gym",
+  "settings": [
+    "gym",
+    "straat",
+    "studio"
+  ],
+  "producten": {
+    "i-stayed-oversized-gym-tee": {
+      "design": "stayed-01",
+      "naam": "I Stayed",
+      "kleuren": {
+        "Black": {
+          "gym": "stayed-01/stayed-01-tee-black-gym-v1.jpg",
+          "straat": "stayed-01/stayed-01-tee-black-straat-v1.jpg",
+          "studio": "stayed-01/stayed-01-tee-black-studio-v1.jpg"
+        },
+        "Bay": {
+          "gym": "stayed-01/stayed-01-tee-bay-gym-v1.jpg",
+          "straat": "stayed-01/stayed-01-tee-bay-straat-v1.jpg",
+          "studio": "stayed-01/stayed-01-tee-bay-studio-v1.jpg"
+        },
+        "Ivory": {
+          "gym": "stayed-01/stayed-01-tee-ivory-gym-v1.jpg",
+          "straat": "stayed-01/stayed-01-tee-ivory-straat-v1.jpg",
+          "studio": "stayed-01/stayed-01-tee-ivory-studio-v1.jpg"
+        }
+      }
+    },
+    "carbs-are-fuel-oversized-gym-tee": {
+      "design": "pasta-01",
+      "naam": "Carbs Are Fuel",
+      "kleuren": {
+        "Black": {
+          "gym": "pasta-01/pasta-01-tee-black-gym-v1.jpg",
+          "straat": "pasta-01/pasta-01-tee-black-straat-v1.jpg",
+          "studio": "pasta-01/pasta-01-tee-black-studio-v1.jpg"
+        },
+        "Ivory": {
+          "gym": "pasta-01/pasta-01-tee-ivory-gym-v1.jpg",
+          "straat": "pasta-01/pasta-01-tee-ivory-straat-v1.jpg",
+          "studio": "pasta-01/pasta-01-tee-ivory-studio-v1.jpg"
+        }
+      }
+    },
+    "deadlift-silhouette-oversized-gym-tee": {
+      "design": "deadlift-01",
+      "naam": "Deadlift Silhouette",
+      "kleuren": {
+        "Black": {
+          "gym": "deadlift-01/deadlift-01-tee-black-gym-v1.jpg",
+          "straat": "deadlift-01/deadlift-01-tee-black-straat-v1.jpg",
+          "studio": "deadlift-01/deadlift-01-tee-black-studio-v1.jpg"
+        },
+        "Bay": {
+          "gym": "deadlift-01/deadlift-01-tee-bay-gym-v1.jpg",
+          "straat": "deadlift-01/deadlift-01-tee-bay-straat-v1.jpg",
+          "studio": "deadlift-01/deadlift-01-tee-bay-studio-v1.jpg"
+        },
+        "Ivory": {
+          "gym": "deadlift-01/deadlift-01-tee-ivory-gym-v1.jpg",
+          "straat": "deadlift-01/deadlift-01-tee-ivory-straat-v1.jpg",
+          "studio": "deadlift-01/deadlift-01-tee-ivory-studio-v1.jpg"
+        }
+      }
+    },
+    "physique-club-oversized-gym-tee": {
+      "design": "physique-club-01",
+      "naam": "Physique Club",
+      "kleuren": {
+        "Black": {
+          "gym": "physique-club-01/physique-club-01-tee-black-gym-v1.jpg",
+          "straat": "physique-club-01/physique-club-01-tee-black-straat-v1.jpg",
+          "studio": "physique-club-01/physique-club-01-tee-black-studio-v1.jpg"
+        },
+        "Bay": {
+          "gym": "physique-club-01/physique-club-01-tee-bay-gym-v1.jpg",
+          "straat": "physique-club-01/physique-club-01-tee-bay-straat-v1.jpg",
+          "studio": "physique-club-01/physique-club-01-tee-bay-studio-v1.jpg"
+        },
+        "Ivory": {
+          "gym": "physique-club-01/physique-club-01-tee-ivory-gym-v1.jpg",
+          "straat": "physique-club-01/physique-club-01-tee-ivory-straat-v1.jpg",
+          "studio": "physique-club-01/physique-club-01-tee-ivory-studio-v1.jpg"
+        }
+      }
+    },
+    "progression-oversized-gym-tee": {
+      "design": "progression-01",
+      "naam": "Progression",
+      "kleuren": {
+        "Black": {
+          "gym": "progression-01/progression-01-tee-black-gym-v1.jpg",
+          "straat": "progression-01/progression-01-tee-black-straat-v1.jpg",
+          "studio": "progression-01/progression-01-tee-black-studio-v1.jpg"
+        },
+        "Bay": {
+          "gym": "progression-01/progression-01-tee-bay-gym-v1.jpg",
+          "straat": "progression-01/progression-01-tee-bay-straat-v1.jpg",
+          "studio": "progression-01/progression-01-tee-bay-studio-v1.jpg"
+        },
+        "Ivory": {
+          "gym": "progression-01/progression-01-tee-ivory-gym-v1.jpg",
+          "straat": "progression-01/progression-01-tee-ivory-straat-v1.jpg",
+          "studio": "progression-01/progression-01-tee-ivory-studio-v1.jpg"
+        }
+      }
+    },
+    "my-kind-of-self-care-oversized-gym-tee": {
+      "design": "gymheart-02",
+      "naam": "My Kind of Self-Care",
+      "kleuren": {
+        "Black": {
+          "gym": "gymheart-02/gymheart-02-tee-black-gym-v1.jpg",
+          "straat": "gymheart-02/gymheart-02-tee-black-straat-v1.jpg",
+          "studio": "gymheart-02/gymheart-02-tee-black-studio-v1.jpg"
+        },
+        "Bay": {
+          "gym": "gymheart-02/gymheart-02-tee-bay-gym-v1.jpg",
+          "straat": "gymheart-02/gymheart-02-tee-bay-straat-v1.jpg",
+          "studio": "gymheart-02/gymheart-02-tee-bay-studio-v1.jpg"
+        },
+        "Ivory": {
+          "gym": "gymheart-02/gymheart-02-tee-ivory-gym-v1.jpg",
+          "straat": "gymheart-02/gymheart-02-tee-ivory-straat-v1.jpg",
+          "studio": "gymheart-02/gymheart-02-tee-ivory-studio-v1.jpg"
+        }
+      }
+    },
+    "intention-oversized-gym-tee": {
+      "design": "intention-01",
+      "naam": "Intention",
+      "kleuren": {
+        "Black": {
+          "gym": "intention-01/intention-01-tee-black-gym-v1.jpg",
+          "straat": "intention-01/intention-01-tee-black-straat-v1.jpg",
+          "studio": "intention-01/intention-01-tee-black-studio-v1.jpg"
+        },
+        "Ivory": {
+          "gym": "intention-01/intention-01-tee-ivory-gym-v1.jpg",
+          "straat": "intention-01/intention-01-tee-ivory-straat-v1.jpg",
+          "studio": "intention-01/intention-01-tee-ivory-studio-v1.jpg"
+        },
+        "Bay": {
+          "gym": "intention-01/intention-01-tee-bay-gym-v1.jpg",
+          "straat": "intention-01/intention-01-tee-bay-straat-v1.jpg",
+          "studio": "intention-01/intention-01-tee-bay-studio-v1.jpg"
+        }
+      }
+    },
+    "deadlift-society-oversized-gym-tee": {
+      "design": "deadlift-society-01",
+      "naam": "Deadlift Society",
+      "kleuren": {
+        "Black": {
+          "gym": "deadlift-society-01/deadlift-society-01-tee-black-gym-v1.jpg",
+          "straat": "deadlift-society-01/deadlift-society-01-tee-black-straat-v1.jpg",
+          "studio": "deadlift-society-01/deadlift-society-01-tee-black-studio-v1.jpg"
+        }
+      }
+    },
+    "hot-girls-hit-legs-oversized-gym-tee": {
+      "design": "hot-girls-01",
+      "naam": "Hot Girls Hit Legs",
+      "kleuren": {
+        "Bay": {
+          "gym": "hot-girls-01/hot-girls-01-tee-bay-gym-v1.jpg",
+          "straat": "hot-girls-01/hot-girls-01-tee-bay-straat-v1.jpg",
+          "studio": "hot-girls-01/hot-girls-01-tee-bay-studio-v1.jpg"
+        },
+        "Ivory": {
+          "gym": "hot-girls-01/hot-girls-01-tee-ivory-gym-v1.jpg",
+          "straat": "hot-girls-01/hot-girls-01-tee-ivory-straat-v1.jpg",
+          "studio": "hot-girls-01/hot-girls-01-tee-ivory-studio-v1.jpg"
+        }
+      }
+    },
+    "strong-is-the-new-pretty-oversized-gym-tee": {
+      "design": "strong-pretty-01",
+      "naam": "Strong Is the New Pretty",
+      "kleuren": {
+        "Bay": {
+          "gym": "strong-pretty-01/strong-pretty-01-tee-bay-gym-v1.jpg",
+          "straat": "strong-pretty-01/strong-pretty-01-tee-bay-straat-v1.jpg",
+          "studio": "strong-pretty-01/strong-pretty-01-tee-bay-studio-v1.jpg"
+        },
+        "Ivory": {
+          "gym": "strong-pretty-01/strong-pretty-01-tee-ivory-gym-v1.jpg",
+          "straat": "strong-pretty-01/strong-pretty-01-tee-ivory-straat-v1.jpg",
+          "studio": "strong-pretty-01/strong-pretty-01-tee-ivory-studio-v1.jpg"
+        }
+      }
+    }
+  }
+}
