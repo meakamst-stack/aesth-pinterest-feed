@@ -24,9 +24,11 @@ er één product-pin van maakt in plaats van vijftien losse.
 - `docs/pins/<design>/…-<kleur>-<setting>-v2.jpg` + `docs/pins/manifest.json` komen uit
   `AESTH/designs/_algemeen/mockup-basis/aesth_batch.py` (uitleg in de README daar).
 - Per product + kleur wordt de **hoofdsetting** uit het manifest `image_link`
-  (Black → lichtgym, Ivory/Bay → donkergym); de overige settings komen vooraan in
-  `additional_image_link`, daarna de Fourthwall-foto's (max. 9 extra in totaal).
-- Geen mockup voor een product? Dan alleen Fourthwall-foto's — het script meldt dat.
+  (Black → lichtgym, Ivory/Bay → donkergym); de overige 3 settings worden
+  `additional_image_link`. **Fourthwall-flatlays gaan niet mee** zodra er eigen
+  mockups zijn: Pinterest maakt van elke extra afbeelding een aparte pin, en we
+  willen alleen pins met het model (`onlyOwnImages`, uit te zetten met `ONLY_OWN_IMAGES=0`).
+- Geen mockup voor een product + kleur? Dan de Fourthwall-foto's — het script meldt dat.
 - Nieuwe mockups krijgen **altijd een nieuwe versie in de bestandsnaam** (`-v3`),
   anders blijft Pinterest de oude foto tonen.
 - Pushen van `docs/pins/**` start de build vanzelf.
@@ -96,7 +98,7 @@ zodat Fourthwalls *Sales by UTM* catalogus-verkeer onderscheidt van `organic` en
 | Action eindigt met "GEWEIGERD" (exit 2) | de beveiliging hierboven; controleer Fourthwall, bij bewuste daling *force* |
 | Pinterest meldt "0 producten" | Pages staat uit of wijst naar de verkeerde map |
 | Pinterest keurt regels af | Catalogi → Diagnostiek → per regel de melding |
-| Waarschuwing 1306/1011 (429 op extra foto's) | GitHub Pages remt af; blijft het: `additionalImages` in `build-feed.mjs` verlagen (9 → 6) |
+| Waarschuwing 1306/1011 (429 op extra foto's) | GitHub Pages remt af; sinds 3 okt nog maar 3 extra per regel — blijft het: `additionalImages` verlagen |
 | Waarschuwing 1013 (aantal sterk veranderd) | normaal na archiveren; Pinterest kan oude artikelen tijdelijk vasthouden |
 | Oude foto's in Pinterest | versie in de bestandsnaam niet opgehoogd |
 | Feed staat stil | kijk of de Action nog draait (groen vinkje elke nacht, `docs/last-build.txt` van vandaag) |

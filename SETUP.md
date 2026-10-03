@@ -44,6 +44,6 @@ Catalogi → Gegevensbronnen → AESTH feed → *Gegevensopname beheren* → *Ge
 
 - `docs/pins/` + `manifest.json` komen uit `AESTH/designs/_algemeen/mockup-basis/aesth_batch.py`
   (`--uit ../../../../aesth-pinterest-feed/docs/pins`). Uitleg: README.md in die map.
-- `build-feed.mjs` leest het manifest: hoofdsetting per kleur als `image_link`, overige settings
-  + Fourthwall-foto's als `additional_image_link` (`additionalImages`, nu 9).
+- `build-feed.mjs` leest het manifest: hoofdsetting per kleur als `image_link`, de overige settings
+  als `additional_image_link`; Fourthwall-foto's alleen als er geen mockup is (`onlyOwnImages`).
 - Nieuwe mockups? Nieuwe versie in de bestandsnaam, anders toont Pinterest de oude foto.
