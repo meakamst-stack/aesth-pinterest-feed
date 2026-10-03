@@ -40,12 +40,16 @@ const CONFIG = {
   },
 
   // Hoeveel extra afbeeldingen per variant meesturen (Pinterest: max 10 totaal).
+  // Let op: Pinterest maakt van ELKE extra afbeelding een aparte pin.
   additionalImages: 9,
 
   // Eigen Pinterest-mockups (gemaakt met aesth_batch.py, zie docs/pins/manifest.json).
   // Bestaat er voor een product + kleur een mockup, dan wordt de hoofdsetting (per kleur,
-  // zie manifest) de image_link en komen de andere settings vooraan in additional_image_link; de
-  // Fourthwall-foto's volgen daarna. Zonder mockup blijft alles zoals het was.
+  // zie manifest) de image_link en de andere settings de additional_image_link.
+  // Met onlyOwnImages=true (besluit 3 okt 2026) gaan de Fourthwall-flatlays dan NIET mee:
+  // Pinterest zou er anders een pin per flatlay van maken. Zonder mockup voor een
+  // product + kleur worden de Fourthwall-foto's wél gebruikt (anders geen regel).
+  onlyOwnImages: process.env.ONLY_OWN_IMAGES !== "0",
   pinsManifest: "docs/pins/manifest.json",
   pinsDir: "docs/pins", // de bestanden waar het manifest naar verwijst
   pinsBaseUrl: "https://meakamst-stack.github.io/aesth-pinterest-feed/pins/",
@@ -258,7 +262,8 @@ function variantRows(product) {
     // Eigen mockups (indien aanwezig) gaan vóór de Fourthwall-foto's.
     const own = pinImages(slug, color);
     if (PINS && !own.length) zonderMockup.add(`${slug} / ${color || "(geen kleur)"}`);
-    const images = [...own, ...fwImages];
+    // Met eigen mockups: alleen die (elke extra afbeelding wordt een pin op Pinterest).
+    const images = own.length && CONFIG.onlyOwnImages ? own : [...own, ...fwImages];
     if (!images.length) return []; // zonder afbeelding keurt Pinterest de regel af
 
     const soldOut =
