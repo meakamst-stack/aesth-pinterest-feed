@@ -12,8 +12,8 @@
  * Draaien:  FW_STOREFRONT_TOKEN=ptkn_... node build-feed.mjs
  */
 
-import { writeFileSync, mkdirSync, readFileSync, existsSync } from "node:fs";
-import { dirname } from "node:path";
+import { writeFileSync, mkdirSync, readFileSync, existsSync, renameSync } from "node:fs";
+import { dirname, join } from "node:path";
 
 // ---------------------------------------------------------------- instellingen
 
@@ -47,7 +47,21 @@ const CONFIG = {
   // zie manifest) de image_link en komen de andere settings vooraan in additional_image_link; de
   // Fourthwall-foto's volgen daarna. Zonder mockup blijft alles zoals het was.
   pinsManifest: "docs/pins/manifest.json",
+  pinsDir: "docs/pins", // de bestanden waar het manifest naar verwijst
   pinsBaseUrl: "https://meakamst-stack.github.io/aesth-pinterest-feed/pins/",
+
+  // Beveiliging tegen een haperende of verouderde API-respons (incident 3 okt 2026:
+  // de API gaf een oude momentopname terug en de feed werd overschreven met 105
+  // gearchiveerde producten). De nieuwe feed wordt geweigerd als het aantal varianten
+  // of designs meer dan `maxDrop` daalt t.o.v. de bestaande CSV, of als er geen enkele
+  // eigen mockup meer in zit. Een bewuste daling (producten gearchiveerd) gaat met
+  // FORCE=1 — in GitHub via "Run workflow" met het vinkje 'force'.
+  force: process.env.FORCE === "1" || process.env.FORCE === "true",
+  maxDrop: Number(process.env.FEED_MAX_DROP ?? 0.3),
+
+  // Netwerk: een hangende verbinding mag het script niet eindeloos laten wachten.
+  fetchTimeoutMs: 30_000,
+  fetchAttempts: 3,
 };
 
 /** Leest de mockup-manifest in; ontbreekt die, dan worden alleen Fourthwall-foto's gebruikt. */
@@ -63,6 +77,11 @@ function loadPins() {
 
 const PINS = loadPins();
 
+// Product/kleur-combinaties zonder eigen mockup en manifest-paden zonder bestand,
+// verzameld voor de log aan het eind.
+const zonderMockup = new Set();
+const ontbrekendePins = new Set();
+
 /** Mockup-URL's voor één product + kleur: [hoofdfoto, ...overige settings] of []. */
 function pinImages(slug, color) {
   const perColor = PINS?.producten?.[slug]?.kleuren?.[color];
@@ -71,10 +90,21 @@ function pinImages(slug, color) {
   const hs = PINS.hoofdsetting;
   const main = typeof hs === "string" ? hs : hs?.[color] || PINS.settings[0];
   const order = [main, ...PINS.settings.filter((s) => s !== main)];
-  return order.filter((s) => perColor[s]).map((s) => CONFIG.pinsBaseUrl + perColor[s]);
+  return order
+    .filter((s) => perColor[s])
+    .filter((s) => {
+      // Een manifest-pad zonder bestand zou een 404-afbeelding in de feed zetten
+      // (Pinterest keurt die regel dan af). Overslaan en melden.
+      const ok = existsSync(join(CONFIG.pinsDir, perColor[s]));
+      if (!ok) ontbrekendePins.add(perColor[s]);
+      return ok;
+    })
+    .map((s) => CONFIG.pinsBaseUrl + perColor[s]);
 }
 
-// Kolommen in de volgorde die Pinterest verwacht. De eerste acht zijn verplicht.
+// Kolommen in de volgorde die Pinterest verwacht. Verplicht volgens de spec: id, title,
+// description, link, image_link, price, availability (+ item_group_id bij varianten);
+// de rest is optioneel maar aanbevolen voor shopping ads.
 const COLUMNS = [
   "id",
   "title",
@@ -102,14 +132,24 @@ const COLUMNS = [
 function toPlainText(html) {
   return String(html || "")
     .replace(/<br\s*\/?>/gi, " ")
-    .replace(/<\/p>/gi, " ")
+    // Elk blokelement dat sluit krijgt een spatie, anders plakken lijstitems aan
+    // elkaar ("Back print onlyComfort Colors…").
+    .replace(/<\/(p|li|h[1-6]|div|ul|ol|tr|td|th)>/gi, " ")
     .replace(/<[^>]+>/g, "")
     .replace(/&nbsp;/gi, " ")
-    .replace(/&amp;/gi, "&")
     .replace(/&quot;/gi, '"')
     .replace(/&#39;/gi, "'")
     .replace(/&lt;/gi, "<")
     .replace(/&gt;/gi, ">")
+    .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n)))
+    .replace(/&#x([0-9a-f]+);/gi, (_, n) => String.fromCodePoint(parseInt(n, 16)))
+    .replace(/&(rsquo|lsquo);/gi, "'")
+    .replace(/&(rdquo|ldquo);/gi, '"')
+    .replace(/&ndash;/gi, "–")
+    .replace(/&mdash;/gi, "—")
+    .replace(/&eacute;/gi, "é")
+    .replace(/&hellip;/gi, "…")
+    .replace(/&amp;/gi, "&") // als laatste, anders wordt &amp;lt; dubbel gedecodeerd
     .replace(/\s+/g, " ")
     .trim();
 }
@@ -139,26 +179,60 @@ function productUrl(slug) {
 
 // ------------------------------------------------------------------- ophalen
 
+/**
+ * fetch met timeout en herkansing. Bij 5xx/429 of een netwerkfout wordt het tot
+ * CONFIG.fetchAttempts keer geprobeerd (2 s, 4 s wachten); een 4xx is definitief.
+ */
+async function fetchJson(url) {
+  let lastErr;
+  for (let attempt = 1; attempt <= CONFIG.fetchAttempts; attempt++) {
+    try {
+      const res = await fetch(url, {
+        signal: AbortSignal.timeout(CONFIG.fetchTimeoutMs),
+        headers: { "cache-control": "no-cache", pragma: "no-cache" },
+      });
+      if (res.status >= 500 || res.status === 429) {
+        throw new Error(`Storefront API gaf ${res.status} ${res.statusText}`);
+      }
+      if (!res.ok) {
+        throw Object.assign(new Error(`Storefront API gaf ${res.status} ${res.statusText}`), { fatal: true });
+      }
+      return await res.json();
+    } catch (err) {
+      lastErr = err;
+      if (err.fatal || attempt === CONFIG.fetchAttempts) break;
+      const wait = 2000 * attempt;
+      console.warn(`Poging ${attempt} mislukt (${err.message}) — opnieuw over ${wait / 1000} s.`);
+      await new Promise((r) => setTimeout(r, wait));
+    }
+  }
+  throw lastErr;
+}
+
 async function fetchAllProducts() {
   const products = [];
   let page = 0;
+  let expectedTotal = null;
 
   for (;;) {
     const url =
       `${CONFIG.apiBase}/collections/all/products` +
       `?storefront_token=${encodeURIComponent(CONFIG.token)}` +
-      `&currency=${CONFIG.currency}&page=${page}&size=50`;
+      `&currency=${CONFIG.currency}&page=${page}&size=50` +
+      `&_=${Date.now()}`; // cache-buster: elke run een unieke URL
 
-    const res = await fetch(url);
-    if (!res.ok) {
-      throw new Error(`Storefront API gaf ${res.status} ${res.statusText} op pagina ${page}`);
-    }
-    const data = await res.json();
+    const data = await fetchJson(url);
     products.push(...(data.results || []));
+    if (typeof data.paging?.elementsTotal === "number") expectedTotal = data.paging.elementsTotal;
 
     if (!data.paging?.hasNextPage) break;
     page += 1;
     if (page > 40) throw new Error("Te veel pagina's — waarschijnlijk een oneindige lus.");
+  }
+
+  // De API zegt zelf hoeveel producten er zijn; klopt dat niet met wat we kregen → stoppen.
+  if (expectedTotal !== null && expectedTotal !== products.length) {
+    throw new Error(`API meldt ${expectedTotal} producten maar gaf er ${products.length} — onvolledige respons.`);
   }
 
   return products;
@@ -169,7 +243,10 @@ async function fetchAllProducts() {
 function variantRows(product) {
   const slug = product.slug;
   const link = productUrl(slug);
-  const description = truncate(toPlainText(product.description), 5000);
+  // Lege beschrijving zou een lege verplichte kolom geven (Pinterest keurt de regel af).
+  const plain = toPlainText(product.description);
+  if (!plain) console.warn(`Let op: ${slug} heeft geen beschrijving — productnaam gebruikt.`);
+  const description = truncate(plain || product.name, 5000);
   const productImages = product.images || [];
 
   return (product.variants || []).flatMap((variant) => {
@@ -179,7 +256,9 @@ function variantRows(product) {
     // Kleur-specifieke foto's als die er zijn, anders de productfoto's.
     const fwImages = (variant.images?.length ? variant.images : productImages).map((i) => i.url);
     // Eigen mockups (indien aanwezig) gaan vóór de Fourthwall-foto's.
-    const images = [...pinImages(slug, color), ...fwImages];
+    const own = pinImages(slug, color);
+    if (PINS && !own.length) zonderMockup.add(`${slug} / ${color || "(geen kleur)"}`);
+    const images = [...own, ...fwImages];
     if (!images.length) return []; // zonder afbeelding keurt Pinterest de regel af
 
     const soldOut =
@@ -212,6 +291,84 @@ function variantRows(product) {
       },
     ];
   });
+}
+
+// ---------------------------------------------------------------- beveiliging
+
+/** Minimale RFC-4180-parser: quotes, dubbele quotes, komma's en regeleinden binnen quotes. */
+function parseCsv(text) {
+  const rows = [];
+  let row = [];
+  let field = "";
+  let quoted = false;
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    if (quoted) {
+      if (c === '"') {
+        if (text[i + 1] === '"') { field += '"'; i++; } else quoted = false;
+      } else field += c;
+    } else if (c === '"') quoted = true;
+    else if (c === ",") { row.push(field); field = ""; }
+    else if (c === "\n" || c === "\r") {
+      if (c === "\r" && text[i + 1] === "\n") i++;
+      row.push(field); rows.push(row); row = []; field = "";
+    } else field += c;
+  }
+  if (field.length || row.length) { row.push(field); rows.push(row); }
+  return rows.filter((r) => r.length > 1 || r[0] !== "");
+}
+
+/** Telt varianten, designs en eigen mockups in een set feedrijen (arrays in COLUMNS-volgorde). */
+function feedStats(rows, header) {
+  const ig = header.indexOf("item_group_id");
+  const il = header.indexOf("image_link");
+  return {
+    variants: rows.length,
+    designs: new Set(rows.map((r) => r[ig])).size,
+    withPins: rows.filter((r) => String(r[il]).startsWith(CONFIG.pinsBaseUrl)).length,
+  };
+}
+
+function readExistingStats(path) {
+  if (!existsSync(path)) return null;
+  try {
+    const [header, ...rows] = parseCsv(readFileSync(path, "utf8"));
+    if (!header?.includes("item_group_id")) return null;
+    return feedStats(rows, header);
+  } catch (err) {
+    console.warn(`Let op: bestaande feed niet leesbaar (${err.message}) — vergelijking overgeslagen.`);
+    return null;
+  }
+}
+
+/** Redenen om de nieuwe feed NIET weg te schrijven; lege lijst = akkoord. */
+function guard(newRows) {
+  const reasons = [];
+  const nieuw = feedStats(newRows.map((r) => COLUMNS.map((c) => r[c])), COLUMNS);
+  const oud = readExistingStats(CONFIG.outFile);
+
+  if (oud) {
+    const grens = 1 - CONFIG.maxDrop;
+    const pct = Math.round(CONFIG.maxDrop * 100);
+    if (nieuw.variants < oud.variants * grens) {
+      reasons.push(`varianten dalen van ${oud.variants} naar ${nieuw.variants} (meer dan ${pct} %)`);
+    }
+    if (nieuw.designs < oud.designs * grens) {
+      reasons.push(`designs dalen van ${oud.designs} naar ${nieuw.designs} (meer dan ${pct} %)`);
+    }
+    if (oud.withPins > 0 && nieuw.withPins === 0) {
+      reasons.push(`de bestaande feed had ${oud.withPins} eigen mockups als hoofdfoto, de nieuwe 0`);
+    }
+  }
+  if (PINS && Object.keys(PINS.producten || {}).length && nieuw.withPins === 0) {
+    reasons.push("manifest.json bevat mockups, maar geen enkele variant kreeg er een als image_link");
+  }
+
+  console.log(
+    `Controle: ${nieuw.variants} varianten / ${nieuw.designs} designs / ${nieuw.withPins} met eigen mockup` +
+      (oud ? ` (bestaande feed: ${oud.variants} / ${oud.designs} / ${oud.withPins})` : " (geen bestaande feed)")
+  );
+  return reasons;
 }
 
 // ------------------------------------------------------------------ uitvoeren
@@ -247,13 +404,36 @@ async function main() {
     process.exit(1);
   }
 
+  // Beveiliging: een sterk gekrompen of mockup-loze feed wijst op een haperende API.
+  const reasons = guard(rows);
+  if (reasons.length) {
+    if (CONFIG.force) {
+      console.warn(`FORCE=1: beveiliging bewust omzeild. Redenen die anders zouden blokkeren:\n  - ${reasons.join("\n  - ")}`);
+    } else {
+      console.error(
+        `GEWEIGERD — bestaande feed blijft staan. Redenen:\n  - ${reasons.join("\n  - ")}\n` +
+          `Is dit een bewuste wijziging (producten gearchiveerd)? Start de workflow handmatig met het vinkje 'force' (FORCE=1).`
+      );
+      process.exit(2);
+    }
+  }
+  if (ontbrekendePins.size) {
+    console.warn(`Let op: manifest verwijst naar bestanden die niet in ${CONFIG.pinsDir} staan (overgeslagen): ${[...ontbrekendePins].join(", ")}`);
+  }
+  if (zonderMockup.size) {
+    console.warn(`Let op: zonder eigen mockup (Fourthwall-foto als hoofdfoto): ${[...zonderMockup].join("; ")}`);
+  }
+
   const csv = [
     COLUMNS.join(","),
     ...rows.map((r) => COLUMNS.map((c) => csvField(r[c])).join(",")),
   ].join("\n");
 
+  // Atomisch schrijven: eerst een tijdelijk bestand, dan hernoemen — nooit een half bestand.
   mkdirSync(dirname(CONFIG.outFile), { recursive: true });
-  writeFileSync(CONFIG.outFile, csv + "\n", "utf8");
+  const tmp = CONFIG.outFile + ".tmp";
+  writeFileSync(tmp, csv + "\n", "utf8");
+  renameSync(tmp, CONFIG.outFile);
 
   const withPins = rows.filter((r) => r.image_link.startsWith(CONFIG.pinsBaseUrl)).length;
   console.log(`${withPins} van ${rows.length} varianten met eigen mockup als hoofdfoto`);

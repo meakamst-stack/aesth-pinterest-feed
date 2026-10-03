@@ -2,14 +2,20 @@ name: Build Pinterest feed
 
 on:
   schedule:
-    # Elke dag om 04:17 UTC. Pinterest haalt de feed zelf elke 24 uur op,
-    # dus dit hoeft alleen ruim vóór die ophaalmoment klaar te staan.
+    # Elke dag om 04:17 UTC (start in de praktijk ~04:33). Pinterest haalt de feed
+    # dagelijks om 08:00 Amsterdam op, dus dit staat ruim op tijd klaar.
     - cron: "17 4 * * *"
   workflow_dispatch: # handmatig starten vanaf het Actions-tabblad
+    inputs:
+      force:
+        description: "Bewuste daling toestaan (producten gearchiveerd) — omzeilt de beveiliging eenmalig"
+        type: boolean
+        default: false
   push:
     branches: [main]
     paths:
       - build-feed.mjs
+      - "docs/pins/**"
       - .github/workflows/build-feed.yml
 
 permissions:
@@ -22,26 +28,37 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
-          node-version: "20"
+          node-version: "22"
 
       - name: Feed bouwen
         env:
           FW_STOREFRONT_TOKEN: ${{ secrets.FW_STOREFRONT_TOKEN }}
+          # Alleen 'true' bij een handmatige start met het vinkje 'force'; nachtrun en push geven '0'.
+          FORCE: ${{ inputs.force == true && '1' || '0' }}
         run: node build-feed.mjs
 
       - name: Committen als er iets veranderd is
         run: |
-          if [ -z "$(git status --porcelain docs/pinterest-feed.csv)" ]; then
-            echo "Feed ongewijzigd — niets te committen."
+          # Heartbeat: GitHub schakelt geplande workflows in een publieke repo uit na
+          # 60 dagen zonder commits. Een dagelijkse datumstempel houdt de repo actief.
+          date -u +%Y-%m-%dT%H:%M:%SZ > docs/last-build.txt
+          if [ -z "$(git status --porcelain docs/pinterest-feed.csv docs/last-build.txt)" ]; then
+            echo "Niets te committen."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/pinterest-feed.csv
-          git commit -m "Feed bijgewerkt ($(date -u +%Y-%m-%d))"
+          git add docs/pinterest-feed.csv docs/last-build.txt
+          if git diff --cached --quiet -- docs/pinterest-feed.csv; then
+            git commit -m "Heartbeat ($(date -u +%Y-%m-%d)) — feed ongewijzigd"
+          else
+            git commit -m "Feed bijgewerkt ($(date -u +%Y-%m-%d))"
+          fi
+          git pull --rebase origin main
           git push
