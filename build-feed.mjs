@@ -40,11 +40,11 @@ const CONFIG = {
   },
 
   // Hoeveel extra afbeeldingen per variant meesturen (Pinterest: max 10 totaal).
-  additionalImages: 5,
+  additionalImages: 9,
 
   // Eigen Pinterest-mockups (gemaakt met aesth_batch.py, zie docs/pins/manifest.json).
-  // Bestaat er voor een product + kleur een mockup, dan wordt de hoofdsetting (gym) de
-  // image_link en komen de andere settings vooraan in additional_image_link; de
+  // Bestaat er voor een product + kleur een mockup, dan wordt de hoofdsetting (per kleur,
+  // zie manifest) de image_link en komen de andere settings vooraan in additional_image_link; de
   // Fourthwall-foto's volgen daarna. Zonder mockup blijft alles zoals het was.
   pinsManifest: "docs/pins/manifest.json",
   pinsBaseUrl: "https://meakamst-stack.github.io/aesth-pinterest-feed/pins/",
@@ -67,7 +67,10 @@ const PINS = loadPins();
 function pinImages(slug, color) {
   const perColor = PINS?.producten?.[slug]?.kleuren?.[color];
   if (!perColor) return [];
-  const order = [PINS.hoofdsetting, ...PINS.settings.filter((s) => s !== PINS.hoofdsetting)];
+  // hoofdsetting is één setting ("gym") of per kleur ({"Black": "lichtgym", "Ivory": "donkergym"}).
+  const hs = PINS.hoofdsetting;
+  const main = typeof hs === "string" ? hs : hs?.[color] || PINS.settings[0];
+  const order = [main, ...PINS.settings.filter((s) => s !== main)];
   return order.filter((s) => perColor[s]).map((s) => CONFIG.pinsBaseUrl + perColor[s]);
 }
 

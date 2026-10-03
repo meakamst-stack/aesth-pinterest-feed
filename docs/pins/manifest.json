@@ -1,8 +1,13 @@
 {
-  "versie": "v1",
-  "hoofdsetting": "gym",
+  "versie": "v2",
+  "hoofdsetting": {
+    "Black": "lichtgym",
+    "Ivory": "donkergym",
+    "Bay": "donkergym"
+  },
   "settings": [
-    "gym",
+    "donkergym",
+    "lichtgym",
     "straat",
     "studio"
   ],
@@ -12,19 +17,22 @@
       "naam": "I Stayed",
       "kleuren": {
         "Black": {
-          "gym": "stayed-01/stayed-01-tee-black-gym-v1.jpg",
-          "straat": "stayed-01/stayed-01-tee-black-straat-v1.jpg",
-          "studio": "stayed-01/stayed-01-tee-black-studio-v1.jpg"
+          "donkergym": "stayed-01/stayed-01-tee-black-donkergym-v2.jpg",
+          "lichtgym": "stayed-01/stayed-01-tee-black-lichtgym-v2.jpg",
+          "straat": "stayed-01/stayed-01-tee-black-straat-v2.jpg",
+          "studio": "stayed-01/stayed-01-tee-black-studio-v2.jpg"
         },
         "Bay": {
-          "gym": "stayed-01/stayed-01-tee-bay-gym-v1.jpg",
-          "straat": "stayed-01/stayed-01-tee-bay-straat-v1.jpg",
-          "studio": "stayed-01/stayed-01-tee-bay-studio-v1.jpg"
+          "donkergym": "stayed-01/stayed-01-tee-bay-donkergym-v2.jpg",
+          "lichtgym": "stayed-01/stayed-01-tee-bay-lichtgym-v2.jpg",
+          "straat": "stayed-01/stayed-01-tee-bay-straat-v2.jpg",
+          "studio": "stayed-01/stayed-01-tee-bay-studio-v2.jpg"
         },
         "Ivory": {
-          "gym": "stayed-01/stayed-01-tee-ivory-gym-v1.jpg",
-          "straat": "stayed-01/stayed-01-tee-ivory-straat-v1.jpg",
-          "studio": "stayed-01/stayed-01-tee-ivory-studio-v1.jpg"
+          "donkergym": "stayed-01/stayed-01-tee-ivory-donkergym-v2.jpg",
+          "lichtgym": "stayed-01/stayed-01-tee-ivory-lichtgym-v2.jpg",
+          "straat": "stayed-01/stayed-01-tee-ivory-straat-v2.jpg",
+          "studio": "stayed-01/stayed-01-tee-ivory-studio-v2.jpg"
         }
       }
     },
@@ -33,14 +41,16 @@
       "naam": "Carbs Are Fuel",
       "kleuren": {
         "Black": {
-          "gym": "pasta-01/pasta-01-tee-black-gym-v1.jpg",
-          "straat": "pasta-01/pasta-01-tee-black-straat-v1.jpg",
-          "studio": "pasta-01/pasta-01-tee-black-studio-v1.jpg"
+          "donkergym": "pasta-01/pasta-01-tee-black-donkergym-v2.jpg",
+          "lichtgym": "pasta-01/pasta-01-tee-black-lichtgym-v2.jpg",
+          "straat": "pasta-01/pasta-01-tee-black-straat-v2.jpg",
+          "studio": "pasta-01/pasta-01-tee-black-studio-v2.jpg"
         },
         "Ivory": {
-          "gym": "pasta-01/pasta-01-tee-ivory-gym-v1.jpg",
-          "straat": "pasta-01/pasta-01-tee-ivory-straat-v1.jpg",
-          "studio": "pasta-01/pasta-01-tee-ivory-studio-v1.jpg"
+          "donkergym": "pasta-01/pasta-01-tee-ivory-donkergym-v2.jpg",
+          "lichtgym": "pasta-01/pasta-01-tee-ivory-lichtgym-v2.jpg",
+          "straat": "pasta-01/pasta-01-tee-ivory-straat-v2.jpg",
+          "studio": "pasta-01/pasta-01-tee-ivory-studio-v2.jpg"
         }
       }
     },
@@ -49,19 +59,22 @@
       "naam": "Deadlift Silhouette",
       "kleuren": {
         "Black": {
-          "gym": "deadlift-01/deadlift-01-tee-black-gym-v1.jpg",
-          "straat": "deadlift-01/deadlift-01-tee-black-straat-v1.jpg",
-          "studio": "deadlift-01/deadlift-01-tee-black-studio-v1.jpg"
+          "donkergym": "deadlift-01/deadlift-01-tee-black-donkergym-v2.jpg",
+          "lichtgym": "deadlift-01/deadlift-01-tee-black-lichtgym-v2.jpg",
+          "straat": "deadlift-01/deadlift-01-tee-black-straat-v2.jpg",
+          "studio": "deadlift-01/deadlift-01-tee-black-studio-v2.jpg"
         },
         "Bay": {
-          "gym": "deadlift-01/deadlift-01-tee-bay-gym-v1.jpg",
-          "straat": "deadlift-01/deadlift-01-tee-bay-straat-v1.jpg",
-          "studio": "deadlift-01/deadlift-01-tee-bay-studio-v1.jpg"
+          "donkergym": "deadlift-01/deadlift-01-tee-bay-donkergym-v2.jpg",
+          "lichtgym": "deadlift-01/deadlift-01-tee-bay-lichtgym-v2.jpg",
+          "straat": "deadlift-01/deadlift-01-tee-bay-straat-v2.jpg",
+          "studio": "deadlift-01/deadlift-01-tee-bay-studio-v2.jpg"
         },
         "Ivory": {
-          "gym": "deadlift-01/deadlift-01-tee-ivory-gym-v1.jpg",
-          "straat": "deadlift-01/deadlift-01-tee-ivory-straat-v1.jpg",
-          "studio": "deadlift-01/deadlift-01-tee-ivory-studio-v1.jpg"
+          "donkergym": "deadlift-01/deadlift-01-tee-ivory-donkergym-v2.jpg",
+          "lichtgym": "deadlift-01/deadlift-01-tee-ivory-lichtgym-v2.jpg",
+          "straat": "deadlift-01/deadlift-01-tee-ivory-straat-v2.jpg",
+          "studio": "deadlift-01/deadlift-01-tee-ivory-studio-v2.jpg"
         }
       }
     },
@@ -70,19 +83,22 @@
       "naam": "Physique Club",
       "kleuren": {
         "Black": {
-          "gym": "physique-club-01/physique-club-01-tee-black-gym-v1.jpg",
-          "straat": "physique-club-01/physique-club-01-tee-black-straat-v1.jpg",
-          "studio": "physique-club-01/physique-club-01-tee-black-studio-v1.jpg"
+          "donkergym": "physique-club-01/physique-club-01-tee-black-donkergym-v2.jpg",
+          "lichtgym": "physique-club-01/physique-club-01-tee-black-lichtgym-v2.jpg",
+          "straat": "physique-club-01/physique-club-01-tee-black-straat-v2.jpg",
+          "studio": "physique-club-01/physique-club-01-tee-black-studio-v2.jpg"
         },
         "Bay": {
-          "gym": "physique-club-01/physique-club-01-tee-bay-gym-v1.jpg",
-          "straat": "physique-club-01/physique-club-01-tee-bay-straat-v1.jpg",
-          "studio": "physique-club-01/physique-club-01-tee-bay-studio-v1.jpg"
+          "donkergym": "physique-club-01/physique-club-01-tee-bay-donkergym-v2.jpg",
+          "lichtgym": "physique-club-01/physique-club-01-tee-bay-lichtgym-v2.jpg",
+          "straat": "physique-club-01/physique-club-01-tee-bay-straat-v2.jpg",
+          "studio": "physique-club-01/physique-club-01-tee-bay-studio-v2.jpg"
         },
         "Ivory": {
-          "gym": "physique-club-01/physique-club-01-tee-ivory-gym-v1.jpg",
-          "straat": "physique-club-01/physique-club-01-tee-ivory-straat-v1.jpg",
-          "studio": "physique-club-01/physique-club-01-tee-ivory-studio-v1.jpg"
+          "donkergym": "physique-club-01/physique-club-01-tee-ivory-donkergym-v2.jpg",
+          "lichtgym": "physique-club-01/physique-club-01-tee-ivory-lichtgym-v2.jpg",
+          "straat": "physique-club-01/physique-club-01-tee-ivory-straat-v2.jpg",
+          "studio": "physique-club-01/physique-club-01-tee-ivory-studio-v2.jpg"
         }
       }
     },
@@ -91,19 +107,22 @@
       "naam": "Progression",
       "kleuren": {
         "Black": {
-          "gym": "progression-01/progression-01-tee-black-gym-v1.jpg",
-          "straat": "progression-01/progression-01-tee-black-straat-v1.jpg",
-          "studio": "progression-01/progression-01-tee-black-studio-v1.jpg"
+          "donkergym": "progression-01/progression-01-tee-black-donkergym-v2.jpg",
+          "lichtgym": "progression-01/progression-01-tee-black-lichtgym-v2.jpg",
+          "straat": "progression-01/progression-01-tee-black-straat-v2.jpg",
+          "studio": "progression-01/progression-01-tee-black-studio-v2.jpg"
         },
         "Bay": {
-          "gym": "progression-01/progression-01-tee-bay-gym-v1.jpg",
-          "straat": "progression-01/progression-01-tee-bay-straat-v1.jpg",
-          "studio": "progression-01/progression-01-tee-bay-studio-v1.jpg"
+          "donkergym": "progression-01/progression-01-tee-bay-donkergym-v2.jpg",
+          "lichtgym": "progression-01/progression-01-tee-bay-lichtgym-v2.jpg",
+          "straat": "progression-01/progression-01-tee-bay-straat-v2.jpg",
+          "studio": "progression-01/progression-01-tee-bay-studio-v2.jpg"
         },
         "Ivory": {
-          "gym": "progression-01/progression-01-tee-ivory-gym-v1.jpg",
-          "straat": "progression-01/progression-01-tee-ivory-straat-v1.jpg",
-          "studio": "progression-01/progression-01-tee-ivory-studio-v1.jpg"
+          "donkergym": "progression-01/progression-01-tee-ivory-donkergym-v2.jpg",
+          "lichtgym": "progression-01/progression-01-tee-ivory-lichtgym-v2.jpg",
+          "straat": "progression-01/progression-01-tee-ivory-straat-v2.jpg",
+          "studio": "progression-01/progression-01-tee-ivory-studio-v2.jpg"
         }
       }
     },
@@ -112,19 +131,22 @@
       "naam": "My Kind of Self-Care",
       "kleuren": {
         "Black": {
-          "gym": "gymheart-02/gymheart-02-tee-black-gym-v1.jpg",
-          "straat": "gymheart-02/gymheart-02-tee-black-straat-v1.jpg",
-          "studio": "gymheart-02/gymheart-02-tee-black-studio-v1.jpg"
+          "donkergym": "gymheart-02/gymheart-02-tee-black-donkergym-v2.jpg",
+          "lichtgym": "gymheart-02/gymheart-02-tee-black-lichtgym-v2.jpg",
+          "straat": "gymheart-02/gymheart-02-tee-black-straat-v2.jpg",
+          "studio": "gymheart-02/gymheart-02-tee-black-studio-v2.jpg"
         },
         "Bay": {
-          "gym": "gymheart-02/gymheart-02-tee-bay-gym-v1.jpg",
-          "straat": "gymheart-02/gymheart-02-tee-bay-straat-v1.jpg",
-          "studio": "gymheart-02/gymheart-02-tee-bay-studio-v1.jpg"
+          "donkergym": "gymheart-02/gymheart-02-tee-bay-donkergym-v2.jpg",
+          "lichtgym": "gymheart-02/gymheart-02-tee-bay-lichtgym-v2.jpg",
+          "straat": "gymheart-02/gymheart-02-tee-bay-straat-v2.jpg",
+          "studio": "gymheart-02/gymheart-02-tee-bay-studio-v2.jpg"
         },
         "Ivory": {
-          "gym": "gymheart-02/gymheart-02-tee-ivory-gym-v1.jpg",
-          "straat": "gymheart-02/gymheart-02-tee-ivory-straat-v1.jpg",
-          "studio": "gymheart-02/gymheart-02-tee-ivory-studio-v1.jpg"
+          "donkergym": "gymheart-02/gymheart-02-tee-ivory-donkergym-v2.jpg",
+          "lichtgym": "gymheart-02/gymheart-02-tee-ivory-lichtgym-v2.jpg",
+          "straat": "gymheart-02/gymheart-02-tee-ivory-straat-v2.jpg",
+          "studio": "gymheart-02/gymheart-02-tee-ivory-studio-v2.jpg"
         }
       }
     },
@@ -133,19 +155,22 @@
       "naam": "Intention",
       "kleuren": {
         "Black": {
-          "gym": "intention-01/intention-01-tee-black-gym-v1.jpg",
-          "straat": "intention-01/intention-01-tee-black-straat-v1.jpg",
-          "studio": "intention-01/intention-01-tee-black-studio-v1.jpg"
+          "donkergym": "intention-01/intention-01-tee-black-donkergym-v2.jpg",
+          "lichtgym": "intention-01/intention-01-tee-black-lichtgym-v2.jpg",
+          "straat": "intention-01/intention-01-tee-black-straat-v2.jpg",
+          "studio": "intention-01/intention-01-tee-black-studio-v2.jpg"
         },
         "Ivory": {
-          "gym": "intention-01/intention-01-tee-ivory-gym-v1.jpg",
-          "straat": "intention-01/intention-01-tee-ivory-straat-v1.jpg",
-          "studio": "intention-01/intention-01-tee-ivory-studio-v1.jpg"
+          "donkergym": "intention-01/intention-01-tee-ivory-donkergym-v2.jpg",
+          "lichtgym": "intention-01/intention-01-tee-ivory-lichtgym-v2.jpg",
+          "straat": "intention-01/intention-01-tee-ivory-straat-v2.jpg",
+          "studio": "intention-01/intention-01-tee-ivory-studio-v2.jpg"
         },
         "Bay": {
-          "gym": "intention-01/intention-01-tee-bay-gym-v1.jpg",
-          "straat": "intention-01/intention-01-tee-bay-straat-v1.jpg",
-          "studio": "intention-01/intention-01-tee-bay-studio-v1.jpg"
+          "donkergym": "intention-01/intention-01-tee-bay-donkergym-v2.jpg",
+          "lichtgym": "intention-01/intention-01-tee-bay-lichtgym-v2.jpg",
+          "straat": "intention-01/intention-01-tee-bay-straat-v2.jpg",
+          "studio": "intention-01/intention-01-tee-bay-studio-v2.jpg"
         }
       }
     },
@@ -154,9 +179,10 @@
       "naam": "Deadlift Society",
       "kleuren": {
         "Black": {
-          "gym": "deadlift-society-01/deadlift-society-01-tee-black-gym-v1.jpg",
-          "straat": "deadlift-society-01/deadlift-society-01-tee-black-straat-v1.jpg",
-          "studio": "deadlift-society-01/deadlift-society-01-tee-black-studio-v1.jpg"
+          "donkergym": "deadlift-society-01/deadlift-society-01-tee-black-donkergym-v2.jpg",
+          "lichtgym": "deadlift-society-01/deadlift-society-01-tee-black-lichtgym-v2.jpg",
+          "straat": "deadlift-society-01/deadlift-society-01-tee-black-straat-v2.jpg",
+          "studio": "deadlift-society-01/deadlift-society-01-tee-black-studio-v2.jpg"
         }
       }
     },
@@ -165,14 +191,16 @@
       "naam": "Hot Girls Hit Legs",
       "kleuren": {
         "Bay": {
-          "gym": "hot-girls-01/hot-girls-01-tee-bay-gym-v1.jpg",
-          "straat": "hot-girls-01/hot-girls-01-tee-bay-straat-v1.jpg",
-          "studio": "hot-girls-01/hot-girls-01-tee-bay-studio-v1.jpg"
+          "donkergym": "hot-girls-01/hot-girls-01-tee-bay-donkergym-v2.jpg",
+          "lichtgym": "hot-girls-01/hot-girls-01-tee-bay-lichtgym-v2.jpg",
+          "straat": "hot-girls-01/hot-girls-01-tee-bay-straat-v2.jpg",
+          "studio": "hot-girls-01/hot-girls-01-tee-bay-studio-v2.jpg"
         },
         "Ivory": {
-          "gym": "hot-girls-01/hot-girls-01-tee-ivory-gym-v1.jpg",
-          "straat": "hot-girls-01/hot-girls-01-tee-ivory-straat-v1.jpg",
-          "studio": "hot-girls-01/hot-girls-01-tee-ivory-studio-v1.jpg"
+          "donkergym": "hot-girls-01/hot-girls-01-tee-ivory-donkergym-v2.jpg",
+          "lichtgym": "hot-girls-01/hot-girls-01-tee-ivory-lichtgym-v2.jpg",
+          "straat": "hot-girls-01/hot-girls-01-tee-ivory-straat-v2.jpg",
+          "studio": "hot-girls-01/hot-girls-01-tee-ivory-studio-v2.jpg"
         }
       }
     },
@@ -181,14 +209,16 @@
       "naam": "Strong Is the New Pretty",
       "kleuren": {
         "Bay": {
-          "gym": "strong-pretty-01/strong-pretty-01-tee-bay-gym-v1.jpg",
-          "straat": "strong-pretty-01/strong-pretty-01-tee-bay-straat-v1.jpg",
-          "studio": "strong-pretty-01/strong-pretty-01-tee-bay-studio-v1.jpg"
+          "donkergym": "strong-pretty-01/strong-pretty-01-tee-bay-donkergym-v2.jpg",
+          "lichtgym": "strong-pretty-01/strong-pretty-01-tee-bay-lichtgym-v2.jpg",
+          "straat": "strong-pretty-01/strong-pretty-01-tee-bay-straat-v2.jpg",
+          "studio": "strong-pretty-01/strong-pretty-01-tee-bay-studio-v2.jpg"
         },
         "Ivory": {
-          "gym": "strong-pretty-01/strong-pretty-01-tee-ivory-gym-v1.jpg",
-          "straat": "strong-pretty-01/strong-pretty-01-tee-ivory-straat-v1.jpg",
-          "studio": "strong-pretty-01/strong-pretty-01-tee-ivory-studio-v1.jpg"
+          "donkergym": "strong-pretty-01/strong-pretty-01-tee-ivory-donkergym-v2.jpg",
+          "lichtgym": "strong-pretty-01/strong-pretty-01-tee-ivory-lichtgym-v2.jpg",
+          "straat": "strong-pretty-01/strong-pretty-01-tee-ivory-straat-v2.jpg",
+          "studio": "strong-pretty-01/strong-pretty-01-tee-ivory-studio-v2.jpg"
         }
       }
     }
