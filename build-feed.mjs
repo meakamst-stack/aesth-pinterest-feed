@@ -5,9 +5,13 @@
  * Haalt alle publieke producten op uit de Fourthwall Storefront API en schrijft
  * een Pinterest-catalogusfeed (CSV) naar docs/pinterest-feed.csv.
  *
- * Eén regel per variant (kleur x maat). Varianten van hetzelfde design worden
- * door Pinterest gegroepeerd via item_group_id, zodat er per design één
- * product-Pin ontstaat in plaats van vijftien.
+ * Eén regel per design × kleur (besluit 4 okt 2026). Pinterest maakt een pin van
+ * ELKE regel × ELKE afbeelding; met een regel per maat (7 maten) en de Fourthwall-
+ * flatlays erbij liep dat op tot ±1400 pins. Nu: alleen de eigen model-mockups
+ * (één per setting), geen maat-regels, geen flatlays → 10 designs × ~2,5 kleuren
+ * × 4 settings ≈ 100 pins. De maat kiest de klant op de productpagina; de prijs in
+ * de feed is de vanaf-prijs (kleinste maat). Kleuren van hetzelfde design delen
+ * item_group_id, zodat Pinterest ze als één product met kleurkeuze toont.
  *
  * Draaien:  FW_STOREFRONT_TOKEN=ptkn_... node build-feed.mjs
  */
@@ -39,27 +43,30 @@ const CONFIG = {
     campaign: "pinterest-catalog",
   },
 
-  // Hoeveel extra afbeeldingen per variant meesturen (Pinterest: max 10 totaal).
-  // Let op: Pinterest maakt van ELKE extra afbeelding een aparte pin.
-  additionalImages: 9,
+  // Hoeveel extra afbeeldingen per regel meesturen (Pinterest: max 10 totaal).
+  // Let op: Pinterest maakt van ELKE extra afbeelding een aparte pin. Het manifest
+  // heeft 4 settings per kleur → hoofdsetting + 3 extra = 4 pins per design × kleur.
+  // Wil je maar één pin per kleur (alleen de hoofdsetting): ADDITIONAL_IMAGES=0.
+  additionalImages: Number(process.env.ADDITIONAL_IMAGES ?? 3),
 
   // Eigen Pinterest-mockups (gemaakt met aesth_batch.py, zie docs/pins/manifest.json).
-  // Bestaat er voor een product + kleur een mockup, dan wordt de hoofdsetting (per kleur,
-  // zie manifest) de image_link en de andere settings de additional_image_link.
-  // Met onlyOwnImages=true (besluit 3 okt 2026) gaan de Fourthwall-flatlays dan NIET mee:
-  // Pinterest zou er anders een pin per flatlay van maken. Zonder mockup voor een
-  // product + kleur worden de Fourthwall-foto's wél gebruikt (anders geen regel).
-  onlyOwnImages: process.env.ONLY_OWN_IMAGES !== "0",
+  // Per design + kleur wordt de hoofdsetting (per kleur, zie manifest) de image_link en
+  // de andere settings de additional_image_link. De Fourthwall-foto's (flatlays) gaan
+  // NIET mee — we willen alleen pins met het model (besluit 3 + 4 okt 2026).
+  // Een design + kleur ZONDER eigen mockup komt niet in de feed; het script meldt dat,
+  // zodat je weet dat er nog mockups gemaakt moeten worden (aesth_batch.py). Alleen
+  // voor noodgevallen: FW_FALLBACK=1 zet voor zulke kleuren de Fourthwall-foto's in.
+  fourthwallFallback: process.env.FW_FALLBACK === "1",
   pinsManifest: "docs/pins/manifest.json",
   pinsDir: "docs/pins", // de bestanden waar het manifest naar verwijst
   pinsBaseUrl: "https://meakamst-stack.github.io/aesth-pinterest-feed/pins/",
 
   // Beveiliging tegen een haperende of verouderde API-respons (incident 3 okt 2026:
   // de API gaf een oude momentopname terug en de feed werd overschreven met 105
-  // gearchiveerde producten). De nieuwe feed wordt geweigerd als het aantal varianten
-  // of designs meer dan `maxDrop` daalt t.o.v. de bestaande CSV, of als er geen enkele
-  // eigen mockup meer in zit. Een bewuste daling (producten gearchiveerd) gaat met
-  // FORCE=1 — in GitHub via "Run workflow" met het vinkje 'force'.
+  // gearchiveerde producten). De nieuwe feed wordt geweigerd als het aantal designs of
+  // design × kleur-combinaties meer dan `maxDrop` daalt t.o.v. de bestaande CSV, of als
+  // er geen enkele eigen mockup meer in zit. Een bewuste daling (producten gearchiveerd)
+  // gaat met FORCE=1 — in GitHub via "Run workflow" met het vinkje 'force'.
   force: process.env.FORCE === "1" || process.env.FORCE === "true",
   maxDrop: Number(process.env.FEED_MAX_DROP ?? 0.3),
 
@@ -244,7 +251,28 @@ async function fetchAllProducts() {
 
 // -------------------------------------------------------------------- omzetten
 
-function variantRows(product) {
+/** Kleurnaam → stukje voor in de feed-id: "Ivory" → "ivory", "Heather Grey" → "heather-grey". */
+function colorSlug(color) {
+  return String(color)
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "") // accenten weg
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+/** Is een variant uitverkocht? (Fourthwall: alleen bij LIMITED voorraad zonder stuks.) */
+function variantSoldOut(variant) {
+  return variant.stock?.type === "LIMITED" && !(variant.stock?.inStock > 0);
+}
+
+/**
+ * Eén feedregel per design × kleur. De maten van een kleur worden samengevoegd:
+ * de regel krijgt de laagste prijs (vanaf-prijs, in de praktijk de kleinste maat —
+ * dat is ook de prijs die de productpagina standaard toont) en is "in stock" zolang
+ * ten minste één maat leverbaar is.
+ */
+function colorRows(product) {
   const slug = product.slug;
   const link = productUrl(slug);
   // Lege beschrijving zou een lege verplichte kolom geven (Pinterest keurt de regel af).
@@ -253,30 +281,42 @@ function variantRows(product) {
   const description = truncate(plain || product.name, 5000);
   const productImages = product.images || [];
 
-  return (product.variants || []).flatMap((variant) => {
+  // Varianten per kleur bij elkaar, in de volgorde waarin Fourthwall ze geeft.
+  const perColor = new Map();
+  for (const variant of product.variants || []) {
     const color = variant.attributes?.color?.name || "";
-    const size = variant.attributes?.size?.name || "";
+    if (!perColor.has(color)) perColor.set(color, []);
+    perColor.get(color).push(variant);
+  }
 
-    // Kleur-specifieke foto's als die er zijn, anders de productfoto's.
-    const fwImages = (variant.images?.length ? variant.images : productImages).map((i) => i.url);
-    // Eigen mockups (indien aanwezig) gaan vóór de Fourthwall-foto's.
-    const own = pinImages(slug, color);
-    if (PINS && !own.length) zonderMockup.add(`${slug} / ${color || "(geen kleur)"}`);
-    // Met eigen mockups: alleen die (elke extra afbeelding wordt een pin op Pinterest).
-    const images = own.length && CONFIG.onlyOwnImages ? own : [...own, ...fwImages];
-    if (!images.length) return []; // zonder afbeelding keurt Pinterest de regel af
+  return [...perColor.entries()].flatMap(([color, variants]) => {
+    const label = `${slug} / ${color || "(geen kleur)"}`;
 
-    const soldOut =
-      product.state?.type === "SOLD_OUT" ||
-      (variant.stock?.type === "LIMITED" && !(variant.stock?.inStock > 0));
+    // Alleen eigen model-mockups; zonder mockup geen regel (tenzij FW_FALLBACK=1).
+    let images = pinImages(slug, color);
+    if (!images.length) {
+      zonderMockup.add(label);
+      if (!CONFIG.fourthwallFallback) return [];
+      // Kleur-specifieke Fourthwall-foto's als die er zijn, anders de productfoto's.
+      const withImages = variants.find((v) => v.images?.length);
+      images = (withImages ? withImages.images : productImages).map((i) => i.url);
+      if (!images.length) return []; // zonder afbeelding keurt Pinterest de regel af
+    }
 
-    const price = variant.unitPrice;
-    if (!price?.value) return [];
+    // Vanaf-prijs: de laagste prijs van alle maten in deze kleur (zelfde valuta).
+    const priced = variants.filter((v) => v.unitPrice?.value > 0);
+    if (!priced.length) return [];
+    const cheapest = priced.reduce((a, b) => (Number(b.unitPrice.value) < Number(a.unitPrice.value) ? b : a));
+    const price = cheapest.unitPrice;
+
+    const soldOut = product.state?.type === "SOLD_OUT" || variants.every(variantSoldOut);
 
     return [
       {
-        id: variant.sku || variant.id,
-        title: truncate(`${product.name} — ${[color, size].filter(Boolean).join(", ")}`, 500),
+        // Vaste id per design × kleur (niet de maat-SKU): blijft gelijk zolang slug en
+        // kleurnaam gelijk blijven, zodat Pinterest de pin niet telkens opnieuw aanmaakt.
+        id: color ? `${slug}-${colorSlug(color)}` : slug,
+        title: truncate(color ? `${product.name} — ${color}` : product.name, 500),
         description,
         link,
         image_link: images[0],
@@ -285,10 +325,10 @@ function variantRows(product) {
         condition: "new",
         brand: CONFIG.brand,
         google_product_category: CONFIG.googleCategory,
-        item_group_id: slug,
+        item_group_id: slug, // kleuren van één design samen als één product met kleurkeuze
         additional_image_link: images.slice(1, 1 + CONFIG.additionalImages).join(","),
         color,
-        size,
+        size: "", // bewust leeg: de maat kiest de klant op de productpagina
         gender: CONFIG.gender,
         age_group: CONFIG.ageGroup,
         custom_label_0: slug, // per design groeperen in Pinterest-advertentiegroepen
@@ -323,14 +363,24 @@ function parseCsv(text) {
   return rows.filter((r) => r.length > 1 || r[0] !== "");
 }
 
-/** Telt varianten, designs en eigen mockups in een set feedrijen (arrays in COLUMNS-volgorde). */
+/**
+ * Telt designs, design × kleur-combinaties en eigen mockups in een set feedrijen
+ * (arrays in COLUMNS-volgorde). Bewust niet het ruwe aantal regels: de oude feed had
+ * een regel per maat, de nieuwe een regel per kleur — designs en kleuren zijn in beide
+ * vergelijkbaar, en dat is wat er bij een haperende API ineens instort.
+ */
 function feedStats(rows, header) {
   const ig = header.indexOf("item_group_id");
   const il = header.indexOf("image_link");
+  const ic = header.indexOf("color");
+  const ia = header.indexOf("additional_image_link");
+  const imgCount = (r) => 1 + (ia >= 0 && r[ia] ? String(r[ia]).split(",").length : 0);
   return {
-    variants: rows.length,
+    rows: rows.length,
     designs: new Set(rows.map((r) => r[ig])).size,
+    colors: new Set(rows.map((r) => `${r[ig]}\u0000${ic >= 0 ? r[ic] : ""}`)).size,
     withPins: rows.filter((r) => String(r[il]).startsWith(CONFIG.pinsBaseUrl)).length,
+    images: rows.reduce((n, r) => n + imgCount(r), 0), // ≈ het aantal pins dat Pinterest maakt
   };
 }
 
@@ -355,24 +405,22 @@ function guard(newRows) {
   if (oud) {
     const grens = 1 - CONFIG.maxDrop;
     const pct = Math.round(CONFIG.maxDrop * 100);
-    if (nieuw.variants < oud.variants * grens) {
-      reasons.push(`varianten dalen van ${oud.variants} naar ${nieuw.variants} (meer dan ${pct} %)`);
-    }
     if (nieuw.designs < oud.designs * grens) {
       reasons.push(`designs dalen van ${oud.designs} naar ${nieuw.designs} (meer dan ${pct} %)`);
+    }
+    if (nieuw.colors < oud.colors * grens) {
+      reasons.push(`design × kleur-combinaties dalen van ${oud.colors} naar ${nieuw.colors} (meer dan ${pct} %)`);
     }
     if (oud.withPins > 0 && nieuw.withPins === 0) {
       reasons.push(`de bestaande feed had ${oud.withPins} eigen mockups als hoofdfoto, de nieuwe 0`);
     }
   }
   if (PINS && Object.keys(PINS.producten || {}).length && nieuw.withPins === 0) {
-    reasons.push("manifest.json bevat mockups, maar geen enkele variant kreeg er een als image_link");
+    reasons.push("manifest.json bevat mockups, maar geen enkele regel kreeg er een als image_link");
   }
 
-  console.log(
-    `Controle: ${nieuw.variants} varianten / ${nieuw.designs} designs / ${nieuw.withPins} met eigen mockup` +
-      (oud ? ` (bestaande feed: ${oud.variants} / ${oud.designs} / ${oud.withPins})` : " (geen bestaande feed)")
-  );
+  const fmt = (s) => `${s.rows} regels / ${s.designs} designs / ${s.colors} kleuren / ${s.withPins} met eigen mockup / ±${s.images} pins`;
+  console.log(`Controle: ${fmt(nieuw)}` + (oud ? ` (bestaande feed: ${fmt(oud)})` : " (geen bestaande feed)"));
   return reasons;
 }
 
@@ -390,10 +438,13 @@ async function main() {
     (p) => p.type === "PRODUCT" && p.access?.type === "PUBLIC"
   );
 
-  const rows = usable.flatMap(variantRows);
+  const rows = usable.flatMap(colorRows);
 
   if (!rows.length) {
-    console.error("Fout: geen enkele bruikbare variant gevonden — feed niet weggeschreven.");
+    console.error(
+      "Fout: geen enkele bruikbare design × kleur gevonden — feed niet weggeschreven." +
+        (zonderMockup.size ? ` Zonder eigen mockup: ${[...zonderMockup].join("; ")}` : "")
+    );
     process.exit(1);
   }
 
@@ -426,7 +477,11 @@ async function main() {
     console.warn(`Let op: manifest verwijst naar bestanden die niet in ${CONFIG.pinsDir} staan (overgeslagen): ${[...ontbrekendePins].join(", ")}`);
   }
   if (zonderMockup.size) {
-    console.warn(`Let op: zonder eigen mockup (Fourthwall-foto als hoofdfoto): ${[...zonderMockup].join("; ")}`);
+    console.warn(
+      CONFIG.fourthwallFallback
+        ? `Let op: zonder eigen mockup (FW_FALLBACK=1, Fourthwall-foto als hoofdfoto): ${[...zonderMockup].join("; ")}`
+        : `Let op: NIET in de feed (geen eigen mockup — maak ze met aesth_batch.py): ${[...zonderMockup].join("; ")}`
+    );
   }
 
   const csv = [
@@ -441,19 +496,22 @@ async function main() {
   renameSync(tmp, CONFIG.outFile);
 
   const withPins = rows.filter((r) => r.image_link.startsWith(CONFIG.pinsBaseUrl)).length;
-  console.log(`${withPins} van ${rows.length} varianten met eigen mockup als hoofdfoto`);
+  const pins = rows.reduce((n, r) => n + 1 + (r.additional_image_link ? r.additional_image_link.split(",").length : 0), 0);
+  console.log(`${withPins} van ${rows.length} regels met eigen mockup als hoofdfoto; Pinterest maakt hier ±${pins} pins van`);
 
   const perDesign = {};
-  for (const r of rows) perDesign[r.item_group_id] = (perDesign[r.item_group_id] || 0) + 1;
+  for (const r of rows) (perDesign[r.item_group_id] ||= []).push(r.color || "(geen kleur)");
 
   console.log(`Feed geschreven naar ${CONFIG.outFile}`);
-  console.log(`${usable.length} designs, ${rows.length} varianten, ${csv.length} bytes`);
-  for (const [design, count] of Object.entries(perDesign)) {
-    console.log(`  ${design}: ${count} varianten`);
+  console.log(`${Object.keys(perDesign).length} designs, ${rows.length} regels (design × kleur), ${csv.length} bytes`);
+  for (const [design, colors] of Object.entries(perDesign)) {
+    console.log(`  ${design}: ${colors.join(", ")}`);
   }
 
   const skipped = all.length - usable.length;
   if (skipped > 0) console.log(`${skipped} item(s) overgeslagen (niet publiek of geen los product)`);
+  const zonderRegel = usable.filter((p) => !perDesign[p.slug]).map((p) => p.slug);
+  if (zonderRegel.length) console.log(`${zonderRegel.length} publiek design(s) zonder enige regel (geen mockups): ${zonderRegel.join(", ")}`);
 }
 
 main().catch((err) => {

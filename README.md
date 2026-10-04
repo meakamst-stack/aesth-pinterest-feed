@@ -5,30 +5,48 @@ productfeed die Pinterest elke ochtend (08:00 Amsterdam) ophaalt om de shop
 als catalogus te tonen.
 
 Normaal hoef je er niets aan te doen. Komt er een product bij in Fourthwall
-(PUBLIC), dan staat het de volgende ochtend in de feed. Alleen voor **nieuwe
-mockups** moet je zelf iets doen (zie onder).
+(PUBLIC), dan staat het de volgende ochtend in de feed — **zodra er eigen
+mockups voor zijn** (zie onder). Zonder mockups blijft een design buiten de feed.
 
 ## Hoe het werkt
 
 1. Een GitHub Action draait elke nacht (04:17 UTC) `build-feed.mjs`.
 2. Dat script haalt alle **publieke** producten op uit de Fourthwall Storefront API.
-3. Het schrijft één CSV-regel per variant (kleur × maat) naar `docs/pinterest-feed.csv`.
+3. Het schrijft **één CSV-regel per design × kleur** naar `docs/pinterest-feed.csv`
+   (maten worden samengevoegd; prijs = vanaf-prijs van de kleinste maat).
 4. GitHub Pages serveert dat bestand op een vaste URL.
 5. Pinterest haalt die URL dagelijks op.
 
-Varianten van hetzelfde product krijgen dezelfde `item_group_id`, zodat Pinterest
-er één product-pin van maakt in plaats van vijftien losse.
+Kleuren van hetzelfde design krijgen dezelfde `item_group_id`, zodat Pinterest ze
+als één product met kleurkeuze toont. De maat kiest de klant op de productpagina.
+
+## Waarom één regel per kleur (en niet per maat)
+
+Pinterest maakt een pin van **elke regel × elke afbeelding**. Met een regel per
+maat (7 maten) en de Fourthwall-flatlays erbij stonden er begin oktober 2026
+±1.400 pins in de catalogus, grotendeels dubbel en met flatlays. Sinds 4 okt 2026:
+
+| | regels | afbeeldingen per regel | pins |
+|---|---|---|---|
+| vóór 3 okt | 175 (kleur × maat) | eigen mockups + Fourthwall-flatlays | ±1.400 |
+| 3 okt | 175 (kleur × maat) | 4 eigen mockups | 700 |
+| **vanaf 4 okt** | **25 (design × kleur)** | **4 eigen mockups** | **100** |
+
+Wil je maar één pin per kleur (alleen de hoofdsetting)? `ADDITIONAL_IMAGES=0` →
+25 pins. Het aantal designs en kleuren bepaalt het verder.
 
 ## Eigen mockups als catalogusfoto
 
 - `docs/pins/<design>/…-<kleur>-<setting>-v2.jpg` + `docs/pins/manifest.json` komen uit
   `AESTH/designs/_algemeen/mockup-basis/aesth_batch.py` (uitleg in de README daar).
-- Per product + kleur wordt de **hoofdsetting** uit het manifest `image_link`
+- Per design + kleur wordt de **hoofdsetting** uit het manifest `image_link`
   (Black → lichtgym, Ivory/Bay → donkergym); de overige 3 settings worden
-  `additional_image_link`. **Fourthwall-flatlays gaan niet mee** zodra er eigen
-  mockups zijn: Pinterest maakt van elke extra afbeelding een aparte pin, en we
-  willen alleen pins met het model (`onlyOwnImages`, uit te zetten met `ONLY_OWN_IMAGES=0`).
-- Geen mockup voor een product + kleur? Dan de Fourthwall-foto's — het script meldt dat.
+  `additional_image_link`. **Fourthwall-foto's (flatlays) gaan nooit mee** — we
+  willen alleen pins met het model.
+- **Geen mockup voor een design + kleur? Dan komt die kleur niet in de feed.** Het
+  script meldt dat in de log ("NIET in de feed"), zodat je weet dat er mockups
+  gemaakt moeten worden. Alleen voor noodgevallen: `FW_FALLBACK=1` zet voor zulke
+  kleuren tijdelijk de Fourthwall-foto's in.
 - Nieuwe mockups krijgen **altijd een nieuwe versie in de bestandsnaam** (`-v3`),
   anders blijft Pinterest de oude foto tonen.
 - Pushen van `docs/pins/**` start de build vanzelf.
@@ -39,7 +57,7 @@ Op 3 okt 2026 gaf de Storefront API één nacht een verouderde lijst terug en
 schreef het script die weg. Daarom weigert het script nu te schrijven (exit 2,
 de bestaande feed blijft staan) als:
 
-- het aantal varianten of producten meer dan 30 % lager is dan in de huidige CSV;
+- het aantal designs of design × kleur-combinaties meer dan 30 % lager is dan in de huidige CSV;
 - de huidige feed eigen mockups heeft en de nieuwe ineens geen enkele;
 - het manifest mockups bevat maar er geen enkele gebruikt wordt;
 - de API minder producten teruggeeft dan ze zelf aankondigt (`elementsTotal`).
@@ -68,18 +86,22 @@ toch in een secret, zodat hij niet in de commit-historie belandt.
 ```bash
 FW_STOREFRONT_TOKEN=ptkn_... node build-feed.mjs          # gewone build
 FORCE=1 FW_STOREFRONT_TOKEN=ptkn_... node build-feed.mjs  # bewuste daling toestaan
+ADDITIONAL_IMAGES=0 FW_STOREFRONT_TOKEN=ptkn_... node build-feed.mjs  # één pin per kleur
 ```
 
 ## Wat er in de feed staat
 
 Verplicht volgens Pinterest: `id`, `title`, `description`, `link`, `image_link`,
 `price`, `availability`, `condition`, `brand`, `google_product_category`.
-Daarnaast `item_group_id`, `additional_image_link`, `color`, `size`, `gender`,
-`age_group`, `custom_label_0` (product-slug) en `custom_label_1` (kleur).
+Daarnaast `item_group_id`, `additional_image_link`, `color`, `size` (bewust leeg),
+`gender`, `age_group`, `custom_label_0` (product-slug) en `custom_label_1` (kleur).
 
-Titel = Fourthwall-naam + " — kleur, maat"; beschrijving = Fourthwall-beschrijving
-als platte tekst (max. 5.000 tekens). Zoekwoorden voor de catalogus gaan dus via
-de naam en beschrijving in Fourthwall.
+`id` = `<slug>-<kleur>` (bijv. `intention-oversized-gym-tee-black`) — vast per
+design × kleur, dus Pinterest houdt de pin zolang slug en kleurnaam gelijk blijven.
+Titel = Fourthwall-naam + " — kleur"; prijs = laagste prijs van de maten in die kleur
+(wat de productpagina standaard toont); `in stock` zolang één maat leverbaar is.
+Beschrijving = Fourthwall-beschrijving als platte tekst (max. 5.000 tekens).
+Zoekwoorden voor de catalogus gaan dus via de naam en beschrijving in Fourthwall.
 
 Elke link krijgt `utm_source=pinterest&utm_medium=catalog&utm_campaign=pinterest-catalog&utm_content=<slug>`,
 zodat Fourthwalls *Sales by UTM* catalogus-verkeer onderscheidt van `organic` en `paid`.
@@ -88,7 +110,9 @@ zodat Fourthwalls *Sales by UTM* catalogus-verkeer onderscheidt van `organic` en
 
 - Producten die niet `PUBLIC` zijn (gearchiveerde producten vallen er dus vanzelf uit)
 - Bundels
-- Varianten zonder afbeelding of zonder prijs
+- Design × kleur zonder eigen mockup in `manifest.json` (log: "NIET in de feed")
+- Kleuren zonder prijs
+- Fourthwall-foto's (flatlays) — tenzij `FW_FALLBACK=1`
 
 ## Als er iets misgaat
 
@@ -98,8 +122,9 @@ zodat Fourthwalls *Sales by UTM* catalogus-verkeer onderscheidt van `organic` en
 | Action eindigt met "GEWEIGERD" (exit 2) | de beveiliging hierboven; controleer Fourthwall, bij bewuste daling *force* |
 | Pinterest meldt "0 producten" | Pages staat uit of wijst naar de verkeerde map |
 | Pinterest keurt regels af | Catalogi → Diagnostiek → per regel de melding |
-| Waarschuwing 1306/1011 (429 op extra foto's) | GitHub Pages remt af; sinds 3 okt nog maar 3 extra per regel — blijft het: `additionalImages` verlagen |
-| Waarschuwing 1013 (aantal sterk veranderd) | normaal na archiveren; Pinterest kan oude artikelen tijdelijk vasthouden |
+| Waarschuwing 1306/1011 (429 op extra foto's) | GitHub Pages remt af; sinds 4 okt nog maar 100 afbeeldingen in totaal — blijft het: `ADDITIONAL_IMAGES` verlagen |
+| Waarschuwing 1013 (aantal sterk veranderd) | normaal na archiveren én eenmalig op 4 okt 2026 (175 → 25 regels, nieuwe id's); Pinterest kan oude artikelen tijdelijk vasthouden |
+| Een design ontbreekt in Pinterest | staat het in de log als "NIET in de feed"? Dan mockups maken (aesth_batch.py) en `docs/pins/**` pushen |
 | Oude foto's in Pinterest | versie in de bestandsnaam niet opgehoogd |
 | Feed staat stil | kijk of de Action nog draait (groen vinkje elke nacht, `docs/last-build.txt` van vandaag) |
 

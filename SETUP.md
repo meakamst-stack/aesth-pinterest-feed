@@ -1,6 +1,6 @@
 # Hoe dit is ingericht
 
-Opgezet op 29 sep 2026, beveiliging toegevoegd 3 okt 2026. Staat hier zodat je het kunt terugvinden of opnieuw kunt doen.
+Opgezet op 29 sep 2026, beveiliging toegevoegd 3 okt 2026, één regel per design × kleur sinds 4 okt 2026. Staat hier zodat je het kunt terugvinden of opnieuw kunt doen.
 
 | Onderdeel | Instelling |
 |---|---|
@@ -36,14 +36,15 @@ Catalogi → Gegevensbronnen → AESTH feed → *Gegevensopname beheren* → *Ge
 
 - **Actions-tabblad:** elke nacht een groen vinkje; `docs/last-build.txt` heeft de datum van vandaag.
   Rood = open de run; "GEWEIGERD" betekent dat de beveiliging de feed heeft beschermd (zie README).
-- **Feed-URL openen:** hoort ±175 regels te tonen (10 producten × kleuren × maten), hoofdfoto's op `…/pins/…`.
+- **Feed-URL openen:** hoort ±25 regels te tonen (10 designs × kleuren, géén maten), alle foto's op `…/pins/…`.
 - **Pinterest → Catalogi → Diagnostiek:** laatste opname hooguit een dag oud, geslaagd = aantal regels, 0 mislukt.
-- **Pinterest → Producten:** aantal hoort gelijk te zijn aan het aantal regels in de feed.
+- **Pinterest → Producten:** aantal hoort gelijk te zijn aan het aantal regels in de feed (±25); pins ≈ regels × 4 (±100).
 
 ## Mockups (sinds 2 okt 2026, v2 sinds 3 okt)
 
 - `docs/pins/` + `manifest.json` komen uit `AESTH/designs/_algemeen/mockup-basis/aesth_batch.py`
   (`--uit ../../../../aesth-pinterest-feed/docs/pins`). Uitleg: README.md in die map.
 - `build-feed.mjs` leest het manifest: hoofdsetting per kleur als `image_link`, de overige settings
-  als `additional_image_link`; Fourthwall-foto's alleen als er geen mockup is (`onlyOwnImages`).
+  als `additional_image_link`. Fourthwall-foto's gaan nooit mee; een design × kleur zonder mockup
+  komt niet in de feed (sinds 4 okt 2026; noodknop `FW_FALLBACK=1`).
 - Nieuwe mockups? Nieuwe versie in de bestandsnaam, anders toont Pinterest de oude foto.
