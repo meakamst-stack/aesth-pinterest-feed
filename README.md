@@ -40,8 +40,10 @@ Wil je maar één pin per kleur (alleen de hoofdsetting)? `ADDITIONAL_IMAGES=0` 
 - `docs/pins/<design>/…-<kleur>-<setting>-v2.jpg` + `docs/pins/manifest.json` komen uit
   `AESTH/designs/_algemeen/mockup-basis/aesth_batch.py` (uitleg in de README daar).
 - Per design + kleur wordt de **hoofdsetting** uit het manifest `image_link`
-  (Black → lichtgym, Ivory/Bay → donkergym); de overige 3 settings worden
-  `additional_image_link`. **Fourthwall-foto's (flatlays) gaan nooit mee** — we
+  (standaard Black → lichtgym, Ivory/Bay → donkergym); de overige settings worden
+  `additional_image_link`. Sinds 4 okt 2026 staat per product + kleur een `volgorde`
+  in het manifest (hoofdfoto eerst), zodat een design eigen settings/hoofdfoto kan
+  hebben; zonder `volgorde` geldt de globale hoofdsetting. **Fourthwall-foto's (flatlays) gaan nooit mee** — we
   willen alleen pins met het model.
 - **Geen mockup voor een design + kleur? Dan komt die kleur niet in de feed.** Het
   script meldt dat in de log ("NIET in de feed"), zodat je weet dat er mockups

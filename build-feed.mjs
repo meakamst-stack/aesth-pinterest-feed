@@ -45,7 +45,8 @@ const CONFIG = {
 
   // Hoeveel extra afbeeldingen per regel meesturen (Pinterest: max 10 totaal).
   // Let op: Pinterest maakt van ELKE extra afbeelding een aparte pin. Het manifest
-  // heeft 4 settings per kleur → hoofdsetting + 3 extra = 4 pins per design × kleur.
+  // heeft standaard 4 settings per kleur → hoofdsetting + 3 extra = 4 pins per design × kleur
+  // (minder als een design in designs.json minder settings heeft; dit is alleen het maximum).
   // Wil je maar één pin per kleur (alleen de hoofdsetting): ADDITIONAL_IMAGES=0.
   additionalImages: Number(process.env.ADDITIONAL_IMAGES ?? 3),
 
@@ -97,10 +98,16 @@ const ontbrekendePins = new Set();
 function pinImages(slug, color) {
   const perColor = PINS?.producten?.[slug]?.kleuren?.[color];
   if (!perColor) return [];
-  // hoofdsetting is één setting ("gym") of per kleur ({"Black": "lichtgym", "Ivory": "donkergym"}).
-  const hs = PINS.hoofdsetting;
-  const main = typeof hs === "string" ? hs : hs?.[color] || PINS.settings[0];
-  const order = [main, ...PINS.settings.filter((s) => s !== main)];
+  // Sinds 4 okt 2026 zet aesth_batch.py per product + kleur de volgorde in het manifest
+  // ("volgorde": {"Black": ["lichtgym", "straat", ...]}, hoofdfoto eerst) — zo kan elk design
+  // eigen settings en een eigen hoofdfoto hebben. Oudere manifests: globale hoofdsetting.
+  let order = PINS.producten[slug].volgorde?.[color];
+  if (!Array.isArray(order) || order.length === 0) {
+    // hoofdsetting is één setting ("gym") of per kleur ({"Black": "lichtgym", "Ivory": "donkergym"}).
+    const hs = PINS.hoofdsetting;
+    const main = typeof hs === "string" ? hs : hs?.[color] || PINS.settings[0];
+    order = [main, ...PINS.settings.filter((s) => s !== main)];
+  }
   return order
     .filter((s) => perColor[s])
     .filter((s) => {
