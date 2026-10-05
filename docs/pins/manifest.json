@@ -322,6 +322,56 @@
           "lichtgym"
         ]
       }
+    },
+    "dear-me-oversized-gym-tee": {
+      "design": "dear-me-01",
+      "naam": "Dear Me",
+      "versie": "v2",
+      "kleuren": {
+        "Black": {
+          "lichtgym": "dear-me-01/dear-me-01-tee-black-lichtgym-v2.jpg",
+          "donkergym": "dear-me-01/dear-me-01-tee-black-donkergym-v2.jpg"
+        },
+        "Ivory": {
+          "donkergym": "dear-me-01/dear-me-01-tee-ivory-donkergym-v2.jpg",
+          "lichtgym": "dear-me-01/dear-me-01-tee-ivory-lichtgym-v2.jpg"
+        },
+        "Bay": {
+          "donkergym": "dear-me-01/dear-me-01-tee-bay-donkergym-v2.jpg",
+          "lichtgym": "dear-me-01/dear-me-01-tee-bay-lichtgym-v2.jpg"
+        }
+      },
+      "volgorde": {
+        "Black": [
+          "lichtgym",
+          "donkergym"
+        ],
+        "Ivory": [
+          "donkergym",
+          "lichtgym"
+        ],
+        "Bay": [
+          "donkergym",
+          "lichtgym"
+        ]
+      }
+    },
+    "bloom-anyway-oversized-gym-tee": {
+      "design": "grow-through-02",
+      "naam": "Bloom Anyway",
+      "versie": "v2",
+      "kleuren": {
+        "Ivory": {
+          "donkergym": "grow-through-02/grow-through-02-tee-ivory-donkergym-v2.jpg",
+          "lichtgym": "grow-through-02/grow-through-02-tee-ivory-lichtgym-v2.jpg"
+        }
+      },
+      "volgorde": {
+        "Ivory": [
+          "donkergym",
+          "lichtgym"
+        ]
+      }
     }
   }
 }
