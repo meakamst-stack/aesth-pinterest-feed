@@ -372,6 +372,39 @@
           "lichtgym"
         ]
       }
+    },
+    "grace-and-grit-oversized-gym-tee": {
+      "design": "feminine-force-01",
+      "naam": "Grace & Grit",
+      "versie": "v2",
+      "kleuren": {
+        "Black": {
+          "lichtgym": "feminine-force-01/feminine-force-01-tee-black-lichtgym-v2.jpg",
+          "donkergym": "feminine-force-01/feminine-force-01-tee-black-donkergym-v2.jpg"
+        },
+        "Ivory": {
+          "donkergym": "feminine-force-01/feminine-force-01-tee-ivory-donkergym-v2.jpg",
+          "lichtgym": "feminine-force-01/feminine-force-01-tee-ivory-lichtgym-v2.jpg"
+        },
+        "Bay": {
+          "donkergym": "feminine-force-01/feminine-force-01-tee-bay-donkergym-v2.jpg",
+          "lichtgym": "feminine-force-01/feminine-force-01-tee-bay-lichtgym-v2.jpg"
+        }
+      },
+      "volgorde": {
+        "Black": [
+          "lichtgym",
+          "donkergym"
+        ],
+        "Ivory": [
+          "donkergym",
+          "lichtgym"
+        ],
+        "Bay": [
+          "donkergym",
+          "lichtgym"
+        ]
+      }
     }
   }
 }
