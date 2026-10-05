@@ -289,6 +289,39 @@
           "lichtgym"
         ]
       }
+    },
+    "wash-lift-repeat-oversized-gym-tee": {
+      "design": "wash-lift-repeat-01",
+      "naam": "Wash Lift Repeat",
+      "versie": "v2",
+      "kleuren": {
+        "Black": {
+          "lichtgym": "wash-lift-repeat-01/wash-lift-repeat-01-tee-black-lichtgym-v2.jpg",
+          "donkergym": "wash-lift-repeat-01/wash-lift-repeat-01-tee-black-donkergym-v2.jpg"
+        },
+        "Ivory": {
+          "donkergym": "wash-lift-repeat-01/wash-lift-repeat-01-tee-ivory-donkergym-v2.jpg",
+          "lichtgym": "wash-lift-repeat-01/wash-lift-repeat-01-tee-ivory-lichtgym-v2.jpg"
+        },
+        "Bay": {
+          "donkergym": "wash-lift-repeat-01/wash-lift-repeat-01-tee-bay-donkergym-v2.jpg",
+          "lichtgym": "wash-lift-repeat-01/wash-lift-repeat-01-tee-bay-lichtgym-v2.jpg"
+        }
+      },
+      "volgorde": {
+        "Black": [
+          "lichtgym",
+          "donkergym"
+        ],
+        "Ivory": [
+          "donkergym",
+          "lichtgym"
+        ],
+        "Bay": [
+          "donkergym",
+          "lichtgym"
+        ]
+      }
     }
   }
 }
