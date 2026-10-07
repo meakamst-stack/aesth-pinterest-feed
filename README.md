@@ -8,6 +8,19 @@ Normaal hoef je er niets aan te doen. Komt er een product bij in Fourthwall
 (PUBLIC), dan staat het de volgende ochtend in de feed — **zodra er eigen
 mockups voor zijn** (zie onder). Zonder mockups blijft een design buiten de feed.
 
+## AESTH 2.0 (vanaf 7 okt 2026)
+
+- Eén product (Comfort Colors 1717) in **één kleur: Pepper**, 50 designs → **50 regels, 100 pins**
+  (per regel `image_link` = straatfoto, `additional_image_link` = gymfoto).
+- `docs/pins/<design>/<design>-pepper-straat-v1.jpg` en `…-gym-v1.jpg` (1000×1500) komen uit
+  `AESTH/designs-v2/_make/mockup-fotos.py` (bestanden `pin-straat`/`pin-gym` in `AESTH/designs-v2/fotos/<design>/`).
+  Mockups: straat = TheVibeMocks (Etsy), gym = MockupellaStudio (Etsy). Print op ware grootte.
+- `manifest.json`: `producten["<design>-oversized-gym-tee"].kleuren.Pepper = {straat, gym}`, `volgorde.Pepper = ["straat","gym"]`.
+- De oude pins (14 designs, Black/Ivory/Bay, `-v2`) zijn uit `docs/pins` gehaald; de oude producten zijn in
+  Fourthwall gearchiveerd en vallen dus uit de feed. Pinterest verwijdert artikelen die niet meer in de feed
+  staan bij de volgende opname.
+- Nieuwe mockups? Versie ophogen (`-v2`), anders blijft Pinterest de oude foto tonen.
+
 ## Hoe het werkt
 
 1. Een GitHub Action draait elke nacht (04:17 UTC) `build-feed.mjs`.

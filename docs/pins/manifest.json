@@ -1,410 +1,761 @@
 {
-  "versie": "v2",
-  "hoofdsetting": {
-    "Black": "lichtgym",
-    "Ivory": "donkergym",
-    "Bay": "donkergym"
-  },
-  "settings": [
-    "donkergym",
-    "lichtgym"
-  ],
-  "producten": {
-    "i-stayed-oversized-gym-tee": {
-      "design": "stayed-01",
-      "naam": "I Stayed",
-      "kleuren": {
-        "Black": {
-          "donkergym": "stayed-01/stayed-01-tee-black-donkergym-v2.jpg",
-          "lichtgym": "stayed-01/stayed-01-tee-black-lichtgym-v2.jpg"
-        },
-        "Bay": {
-          "donkergym": "stayed-01/stayed-01-tee-bay-donkergym-v2.jpg",
-          "lichtgym": "stayed-01/stayed-01-tee-bay-lichtgym-v2.jpg"
-        },
-        "Ivory": {
-          "donkergym": "stayed-01/stayed-01-tee-ivory-donkergym-v2.jpg",
-          "lichtgym": "stayed-01/stayed-01-tee-ivory-lichtgym-v2.jpg"
-        }
-      },
-      "volgorde": {
-        "Black": [
-          "lichtgym",
-          "donkergym"
-        ],
-        "Bay": [
-          "donkergym",
-          "lichtgym"
-        ],
-        "Ivory": [
-          "donkergym",
-          "lichtgym"
-        ]
-      }
-    },
-    "carbs-are-fuel-oversized-gym-tee": {
-      "design": "pasta-01",
-      "naam": "Carbs Are Fuel",
-      "kleuren": {
-        "Black": {
-          "donkergym": "pasta-01/pasta-01-tee-black-donkergym-v2.jpg",
-          "lichtgym": "pasta-01/pasta-01-tee-black-lichtgym-v2.jpg"
-        },
-        "Ivory": {
-          "donkergym": "pasta-01/pasta-01-tee-ivory-donkergym-v2.jpg",
-          "lichtgym": "pasta-01/pasta-01-tee-ivory-lichtgym-v2.jpg"
-        }
-      },
-      "volgorde": {
-        "Black": [
-          "lichtgym",
-          "donkergym"
-        ],
-        "Ivory": [
-          "donkergym",
-          "lichtgym"
-        ]
-      }
-    },
-    "deadlift-silhouette-oversized-gym-tee": {
-      "design": "deadlift-01",
-      "naam": "Deadlift Silhouette",
-      "kleuren": {
-        "Black": {
-          "donkergym": "deadlift-01/deadlift-01-tee-black-donkergym-v2.jpg",
-          "lichtgym": "deadlift-01/deadlift-01-tee-black-lichtgym-v2.jpg"
-        },
-        "Bay": {
-          "donkergym": "deadlift-01/deadlift-01-tee-bay-donkergym-v2.jpg",
-          "lichtgym": "deadlift-01/deadlift-01-tee-bay-lichtgym-v2.jpg"
-        },
-        "Ivory": {
-          "donkergym": "deadlift-01/deadlift-01-tee-ivory-donkergym-v2.jpg",
-          "lichtgym": "deadlift-01/deadlift-01-tee-ivory-lichtgym-v2.jpg"
-        }
-      },
-      "volgorde": {
-        "Black": [
-          "lichtgym",
-          "donkergym"
-        ],
-        "Bay": [
-          "donkergym",
-          "lichtgym"
-        ],
-        "Ivory": [
-          "donkergym",
-          "lichtgym"
-        ]
-      }
-    },
-    "physique-club-oversized-gym-tee": {
-      "design": "physique-club-01",
-      "naam": "Physique Club",
-      "kleuren": {
-        "Black": {
-          "donkergym": "physique-club-01/physique-club-01-tee-black-donkergym-v2.jpg",
-          "lichtgym": "physique-club-01/physique-club-01-tee-black-lichtgym-v2.jpg"
-        },
-        "Bay": {
-          "donkergym": "physique-club-01/physique-club-01-tee-bay-donkergym-v2.jpg",
-          "lichtgym": "physique-club-01/physique-club-01-tee-bay-lichtgym-v2.jpg"
-        },
-        "Ivory": {
-          "donkergym": "physique-club-01/physique-club-01-tee-ivory-donkergym-v2.jpg",
-          "lichtgym": "physique-club-01/physique-club-01-tee-ivory-lichtgym-v2.jpg"
-        }
-      },
-      "volgorde": {
-        "Black": [
-          "lichtgym",
-          "donkergym"
-        ],
-        "Bay": [
-          "donkergym",
-          "lichtgym"
-        ],
-        "Ivory": [
-          "donkergym",
-          "lichtgym"
-        ]
-      }
-    },
-    "progression-oversized-gym-tee": {
-      "design": "progression-01",
-      "naam": "Progression",
-      "kleuren": {
-        "Black": {
-          "donkergym": "progression-01/progression-01-tee-black-donkergym-v2.jpg",
-          "lichtgym": "progression-01/progression-01-tee-black-lichtgym-v2.jpg"
-        },
-        "Bay": {
-          "donkergym": "progression-01/progression-01-tee-bay-donkergym-v2.jpg",
-          "lichtgym": "progression-01/progression-01-tee-bay-lichtgym-v2.jpg"
-        },
-        "Ivory": {
-          "donkergym": "progression-01/progression-01-tee-ivory-donkergym-v2.jpg",
-          "lichtgym": "progression-01/progression-01-tee-ivory-lichtgym-v2.jpg"
-        }
-      },
-      "volgorde": {
-        "Black": [
-          "lichtgym",
-          "donkergym"
-        ],
-        "Bay": [
-          "donkergym",
-          "lichtgym"
-        ],
-        "Ivory": [
-          "donkergym",
-          "lichtgym"
-        ]
-      }
-    },
-    "my-kind-of-self-care-oversized-gym-tee": {
-      "design": "gymheart-02",
-      "naam": "My Kind of Self-Care",
-      "kleuren": {
-        "Black": {
-          "donkergym": "gymheart-02/gymheart-02-tee-black-donkergym-v2.jpg",
-          "lichtgym": "gymheart-02/gymheart-02-tee-black-lichtgym-v2.jpg"
-        },
-        "Bay": {
-          "donkergym": "gymheart-02/gymheart-02-tee-bay-donkergym-v2.jpg",
-          "lichtgym": "gymheart-02/gymheart-02-tee-bay-lichtgym-v2.jpg"
-        },
-        "Ivory": {
-          "donkergym": "gymheart-02/gymheart-02-tee-ivory-donkergym-v2.jpg",
-          "lichtgym": "gymheart-02/gymheart-02-tee-ivory-lichtgym-v2.jpg"
-        }
-      },
-      "volgorde": {
-        "Black": [
-          "lichtgym",
-          "donkergym"
-        ],
-        "Bay": [
-          "donkergym",
-          "lichtgym"
-        ],
-        "Ivory": [
-          "donkergym",
-          "lichtgym"
-        ]
-      }
-    },
-    "intention-oversized-gym-tee": {
-      "design": "intention-01",
-      "naam": "Intention",
-      "kleuren": {
-        "Black": {
-          "donkergym": "intention-01/intention-01-tee-black-donkergym-v2.jpg",
-          "lichtgym": "intention-01/intention-01-tee-black-lichtgym-v2.jpg"
-        },
-        "Ivory": {
-          "donkergym": "intention-01/intention-01-tee-ivory-donkergym-v2.jpg",
-          "lichtgym": "intention-01/intention-01-tee-ivory-lichtgym-v2.jpg"
-        },
-        "Bay": {
-          "donkergym": "intention-01/intention-01-tee-bay-donkergym-v2.jpg",
-          "lichtgym": "intention-01/intention-01-tee-bay-lichtgym-v2.jpg"
-        }
-      },
-      "volgorde": {
-        "Black": [
-          "lichtgym",
-          "donkergym"
-        ],
-        "Ivory": [
-          "donkergym",
-          "lichtgym"
-        ],
-        "Bay": [
-          "donkergym",
-          "lichtgym"
-        ]
-      }
-    },
-    "deadlift-society-oversized-gym-tee": {
-      "design": "deadlift-society-01",
-      "naam": "Deadlift Society",
-      "kleuren": {
-        "Black": {
-          "donkergym": "deadlift-society-01/deadlift-society-01-tee-black-donkergym-v2.jpg",
-          "lichtgym": "deadlift-society-01/deadlift-society-01-tee-black-lichtgym-v2.jpg"
-        }
-      },
-      "volgorde": {
-        "Black": [
-          "lichtgym",
-          "donkergym"
-        ]
-      }
-    },
-    "hot-girls-hit-legs-oversized-gym-tee": {
-      "design": "hot-girls-01",
-      "naam": "Hot Girls Hit Legs",
-      "kleuren": {
-        "Bay": {
-          "donkergym": "hot-girls-01/hot-girls-01-tee-bay-donkergym-v2.jpg",
-          "lichtgym": "hot-girls-01/hot-girls-01-tee-bay-lichtgym-v2.jpg"
-        },
-        "Ivory": {
-          "donkergym": "hot-girls-01/hot-girls-01-tee-ivory-donkergym-v2.jpg",
-          "lichtgym": "hot-girls-01/hot-girls-01-tee-ivory-lichtgym-v2.jpg"
-        }
-      },
-      "volgorde": {
-        "Bay": [
-          "donkergym",
-          "lichtgym"
-        ],
-        "Ivory": [
-          "donkergym",
-          "lichtgym"
-        ]
-      }
-    },
-    "strong-is-the-new-pretty-oversized-gym-tee": {
-      "design": "strong-pretty-01",
-      "naam": "Strong Is the New Pretty",
-      "kleuren": {
-        "Bay": {
-          "donkergym": "strong-pretty-01/strong-pretty-01-tee-bay-donkergym-v2.jpg",
-          "lichtgym": "strong-pretty-01/strong-pretty-01-tee-bay-lichtgym-v2.jpg"
-        },
-        "Ivory": {
-          "donkergym": "strong-pretty-01/strong-pretty-01-tee-ivory-donkergym-v2.jpg",
-          "lichtgym": "strong-pretty-01/strong-pretty-01-tee-ivory-lichtgym-v2.jpg"
-        }
-      },
-      "volgorde": {
-        "Bay": [
-          "donkergym",
-          "lichtgym"
-        ],
-        "Ivory": [
-          "donkergym",
-          "lichtgym"
-        ]
-      }
-    },
-    "wash-lift-repeat-oversized-gym-tee": {
-      "design": "wash-lift-repeat-01",
-      "naam": "Wash Lift Repeat",
-      "versie": "v2",
-      "kleuren": {
-        "Black": {
-          "lichtgym": "wash-lift-repeat-01/wash-lift-repeat-01-tee-black-lichtgym-v2.jpg",
-          "donkergym": "wash-lift-repeat-01/wash-lift-repeat-01-tee-black-donkergym-v2.jpg"
-        },
-        "Ivory": {
-          "donkergym": "wash-lift-repeat-01/wash-lift-repeat-01-tee-ivory-donkergym-v2.jpg",
-          "lichtgym": "wash-lift-repeat-01/wash-lift-repeat-01-tee-ivory-lichtgym-v2.jpg"
-        },
-        "Bay": {
-          "donkergym": "wash-lift-repeat-01/wash-lift-repeat-01-tee-bay-donkergym-v2.jpg",
-          "lichtgym": "wash-lift-repeat-01/wash-lift-repeat-01-tee-bay-lichtgym-v2.jpg"
-        }
-      },
-      "volgorde": {
-        "Black": [
-          "lichtgym",
-          "donkergym"
-        ],
-        "Ivory": [
-          "donkergym",
-          "lichtgym"
-        ],
-        "Bay": [
-          "donkergym",
-          "lichtgym"
-        ]
-      }
-    },
-    "dear-me-oversized-gym-tee": {
-      "design": "dear-me-01",
-      "naam": "Dear Me",
-      "versie": "v2",
-      "kleuren": {
-        "Black": {
-          "lichtgym": "dear-me-01/dear-me-01-tee-black-lichtgym-v2.jpg",
-          "donkergym": "dear-me-01/dear-me-01-tee-black-donkergym-v2.jpg"
-        },
-        "Ivory": {
-          "donkergym": "dear-me-01/dear-me-01-tee-ivory-donkergym-v2.jpg",
-          "lichtgym": "dear-me-01/dear-me-01-tee-ivory-lichtgym-v2.jpg"
-        },
-        "Bay": {
-          "donkergym": "dear-me-01/dear-me-01-tee-bay-donkergym-v2.jpg",
-          "lichtgym": "dear-me-01/dear-me-01-tee-bay-lichtgym-v2.jpg"
-        }
-      },
-      "volgorde": {
-        "Black": [
-          "lichtgym",
-          "donkergym"
-        ],
-        "Ivory": [
-          "donkergym",
-          "lichtgym"
-        ],
-        "Bay": [
-          "donkergym",
-          "lichtgym"
-        ]
-      }
-    },
-    "bloom-anyway-oversized-gym-tee": {
-      "design": "grow-through-02",
-      "naam": "Bloom Anyway",
-      "versie": "v2",
-      "kleuren": {
-        "Ivory": {
-          "donkergym": "grow-through-02/grow-through-02-tee-ivory-donkergym-v2.jpg",
-          "lichtgym": "grow-through-02/grow-through-02-tee-ivory-lichtgym-v2.jpg"
-        }
-      },
-      "volgorde": {
-        "Ivory": [
-          "donkergym",
-          "lichtgym"
-        ]
-      }
-    },
-    "grace-and-grit-oversized-gym-tee": {
-      "design": "feminine-force-01",
-      "naam": "Grace & Grit",
-      "versie": "v2",
-      "kleuren": {
-        "Black": {
-          "lichtgym": "feminine-force-01/feminine-force-01-tee-black-lichtgym-v2.jpg",
-          "donkergym": "feminine-force-01/feminine-force-01-tee-black-donkergym-v2.jpg"
-        },
-        "Ivory": {
-          "donkergym": "feminine-force-01/feminine-force-01-tee-ivory-donkergym-v2.jpg",
-          "lichtgym": "feminine-force-01/feminine-force-01-tee-ivory-lichtgym-v2.jpg"
-        },
-        "Bay": {
-          "donkergym": "feminine-force-01/feminine-force-01-tee-bay-donkergym-v2.jpg",
-          "lichtgym": "feminine-force-01/feminine-force-01-tee-bay-lichtgym-v2.jpg"
-        }
-      },
-      "volgorde": {
-        "Black": [
-          "lichtgym",
-          "donkergym"
-        ],
-        "Ivory": [
-          "donkergym",
-          "lichtgym"
-        ],
-        "Bay": [
-          "donkergym",
-          "lichtgym"
-        ]
-      }
+ "versie": "aesth2-v1",
+ "_uitleg": "AESTH 2.0 (7 okt 2026): één kleur (Pepper) per product. 'straat' = hoofdfoto (TheVibeMocks), 'gym' = extra pin (MockupellaStudio). Gemaakt met AESTH/designs-v2/_make/mockup-fotos.py (pin-straat/pin-gym, 1000x1500).",
+ "hoofdsetting": "straat",
+ "settings": [
+  "straat",
+  "gym"
+ ],
+ "producten": {
+  "and-she-lifted-heavily-ever-after-oversized-gym-tee": {
+   "design": "and-she-lifted-heavily-ever-after",
+   "kleuren": {
+    "Pepper": {
+     "straat": "and-she-lifted-heavily-ever-after/and-she-lifted-heavily-ever-after-pepper-straat-v1.jpg",
+     "gym": "and-she-lifted-heavily-ever-after/and-she-lifted-heavily-ever-after-pepper-gym-v1.jpg"
     }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
+  },
+  "apparently-my-trainer-cant-count-oversized-gym-tee": {
+   "design": "apparently-my-trainer-cant-count",
+   "kleuren": {
+    "Pepper": {
+     "straat": "apparently-my-trainer-cant-count/apparently-my-trainer-cant-count-pepper-straat-v1.jpg",
+     "gym": "apparently-my-trainer-cant-count/apparently-my-trainer-cant-count-pepper-gym-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
+  },
+  "barbell-baddie-oversized-gym-tee": {
+   "design": "barbell-baddie",
+   "kleuren": {
+    "Pepper": {
+     "straat": "barbell-baddie/barbell-baddie-pepper-straat-v1.jpg",
+     "gym": "barbell-baddie/barbell-baddie-pepper-gym-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
+  },
+  "barbells-and-coffee-club-oversized-gym-tee": {
+   "design": "barbells-and-coffee-club",
+   "kleuren": {
+    "Pepper": {
+     "straat": "barbells-and-coffee-club/barbells-and-coffee-club-pepper-straat-v1.jpg",
+     "gym": "barbells-and-coffee-club/barbells-and-coffee-club-pepper-gym-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
+  },
+  "cardio-hater-oversized-gym-tee": {
+   "design": "cardio-hater",
+   "kleuren": {
+    "Pepper": {
+     "straat": "cardio-hater/cardio-hater-pepper-straat-v1.jpg",
+     "gym": "cardio-hater/cardio-hater-pepper-gym-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
+  },
+  "cardio-is-hardio-oversized-gym-tee": {
+   "design": "cardio-is-hardio",
+   "kleuren": {
+    "Pepper": {
+     "straat": "cardio-is-hardio/cardio-is-hardio-pepper-straat-v1.jpg",
+     "gym": "cardio-is-hardio/cardio-is-hardio-pepper-gym-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
+  },
+  "chaos-is-my-cardio-oversized-gym-tee": {
+   "design": "chaos-is-my-cardio",
+   "kleuren": {
+    "Pepper": {
+     "straat": "chaos-is-my-cardio/chaos-is-my-cardio-pepper-straat-v1.jpg",
+     "gym": "chaos-is-my-cardio/chaos-is-my-cardio-pepper-gym-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
+  },
+  "cool-aunts-lift-heavy-oversized-gym-tee": {
+   "design": "cool-aunts-lift-heavy",
+   "kleuren": {
+    "Pepper": {
+     "straat": "cool-aunts-lift-heavy/cool-aunts-lift-heavy-pepper-straat-v1.jpg",
+     "gym": "cool-aunts-lift-heavy/cool-aunts-lift-heavy-pepper-gym-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
+  },
+  "cool-moms-lift-heavy-oversized-gym-tee": {
+   "design": "cool-moms-lift-heavy",
+   "kleuren": {
+    "Pepper": {
+     "straat": "cool-moms-lift-heavy/cool-moms-lift-heavy-pepper-straat-v1.jpg",
+     "gym": "cool-moms-lift-heavy/cool-moms-lift-heavy-pepper-gym-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
+  },
+  "currently-unavailable-at-the-gym-oversized-gym-tee": {
+   "design": "currently-unavailable-at-the-gym",
+   "kleuren": {
+    "Pepper": {
+     "straat": "currently-unavailable-at-the-gym/currently-unavailable-at-the-gym-pepper-straat-v1.jpg",
+     "gym": "currently-unavailable-at-the-gym/currently-unavailable-at-the-gym-pepper-gym-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
+  },
+  "drink-coffee-lift-weights-be-happy-oversized-gym-tee": {
+   "design": "drink-coffee-lift-weights-be-happy",
+   "kleuren": {
+    "Pepper": {
+     "straat": "drink-coffee-lift-weights-be-happy/drink-coffee-lift-weights-be-happy-pepper-straat-v1.jpg",
+     "gym": "drink-coffee-lift-weights-be-happy/drink-coffee-lift-weights-be-happy-pepper-gym-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
+  },
+  "dumbbells-over-dumb-people-oversized-gym-tee": {
+   "design": "dumbbells-over-dumb-people",
+   "kleuren": {
+    "Pepper": {
+     "straat": "dumbbells-over-dumb-people/dumbbells-over-dumb-people-pepper-straat-v1.jpg",
+     "gym": "dumbbells-over-dumb-people/dumbbells-over-dumb-people-pepper-gym-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
+  },
+  "eat-clean-lift-dirty-oversized-gym-tee": {
+   "design": "eat-clean-lift-dirty",
+   "kleuren": {
+    "Pepper": {
+     "straat": "eat-clean-lift-dirty/eat-clean-lift-dirty-pepper-straat-v1.jpg",
+     "gym": "eat-clean-lift-dirty/eat-clean-lift-dirty-pepper-gym-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
+  },
+  "eat-your-protein-oversized-gym-tee": {
+   "design": "eat-your-protein",
+   "kleuren": {
+    "Pepper": {
+     "straat": "eat-your-protein/eat-your-protein-pepper-straat-v1.jpg",
+     "gym": "eat-your-protein/eat-your-protein-pepper-gym-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
+  },
+  "every-day-is-leg-day-oversized-gym-tee": {
+   "design": "every-day-is-leg-day",
+   "kleuren": {
+    "Pepper": {
+     "straat": "every-day-is-leg-day/every-day-is-leg-day-pepper-straat-v1.jpg",
+     "gym": "every-day-is-leg-day/every-day-is-leg-day-pepper-gym-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
+  },
+  "everything-hurts-oversized-gym-tee": {
+   "design": "everything-hurts",
+   "kleuren": {
+    "Pepper": {
+     "straat": "everything-hurts/everything-hurts-pepper-straat-v1.jpg",
+     "gym": "everything-hurts/everything-hurts-pepper-gym-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
+  },
+  "fitness-model-the-before-picture-oversized-gym-tee": {
+   "design": "fitness-model-the-before-picture",
+   "kleuren": {
+    "Pepper": {
+     "straat": "fitness-model-the-before-picture/fitness-model-the-before-picture-pepper-straat-v1.jpg",
+     "gym": "fitness-model-the-before-picture/fitness-model-the-before-picture-pepper-gym-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
+  },
+  "hot-girls-hit-legs-oversized-gym-tee": {
+   "design": "hot-girls-hit-legs",
+   "kleuren": {
+    "Pepper": {
+     "straat": "hot-girls-hit-legs/hot-girls-hit-legs-pepper-straat-v1.jpg",
+     "gym": "hot-girls-hit-legs/hot-girls-hit-legs-pepper-gym-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
+  },
+  "i-workout-to-burn-off-the-crazy-oversized-gym-tee": {
+   "design": "i-workout-to-burn-off-the-crazy",
+   "kleuren": {
+    "Pepper": {
+     "straat": "i-workout-to-burn-off-the-crazy/i-workout-to-burn-off-the-crazy-pepper-straat-v1.jpg",
+     "gym": "i-workout-to-burn-off-the-crazy/i-workout-to-burn-off-the-crazy-pepper-gym-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
+  },
+  "in-creatine-we-trust-oversized-gym-tee": {
+   "design": "in-creatine-we-trust",
+   "kleuren": {
+    "Pepper": {
+     "straat": "in-creatine-we-trust/in-creatine-we-trust-pepper-straat-v1.jpg",
+     "gym": "in-creatine-we-trust/in-creatine-we-trust-pepper-gym-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
+  },
+  "in-my-lifting-era-oversized-gym-tee": {
+   "design": "in-my-lifting-era",
+   "kleuren": {
+    "Pepper": {
+     "straat": "in-my-lifting-era/in-my-lifting-era-pepper-straat-v1.jpg",
+     "gym": "in-my-lifting-era/in-my-lifting-era-pepper-gym-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
+  },
+  "leg-day-club-oversized-gym-tee": {
+   "design": "leg-day-club",
+   "kleuren": {
+    "Pepper": {
+     "straat": "leg-day-club/leg-day-club-pepper-straat-v1.jpg",
+     "gym": "leg-day-club/leg-day-club-pepper-gym-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
+  },
+  "leg-day-loyalist-oversized-gym-tee": {
+   "design": "leg-day-loyalist",
+   "kleuren": {
+    "Pepper": {
+     "straat": "leg-day-loyalist/leg-day-loyalist-pepper-straat-v1.jpg",
+     "gym": "leg-day-loyalist/leg-day-loyalist-pepper-gym-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
+  },
+  "leg-day-survivor-oversized-gym-tee": {
+   "design": "leg-day-survivor",
+   "kleuren": {
+    "Pepper": {
+     "straat": "leg-day-survivor/leg-day-survivor-pepper-straat-v1.jpg",
+     "gym": "leg-day-survivor/leg-day-survivor-pepper-gym-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
+  },
+  "lift-anyway-oversized-gym-tee": {
+   "design": "lift-anyway",
+   "kleuren": {
+    "Pepper": {
+     "straat": "lift-anyway/lift-anyway-pepper-straat-v1.jpg",
+     "gym": "lift-anyway/lift-anyway-pepper-gym-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
+  },
+  "lift-heavy-pray-hard-oversized-gym-tee": {
+   "design": "lift-heavy-pray-hard",
+   "kleuren": {
+    "Pepper": {
+     "straat": "lift-heavy-pray-hard/lift-heavy-pray-hard-pepper-straat-v1.jpg",
+     "gym": "lift-heavy-pray-hard/lift-heavy-pray-hard-pepper-gym-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
+  },
+  "lift-heavy-read-smut-oversized-gym-tee": {
+   "design": "lift-heavy-read-smut",
+   "kleuren": {
+    "Pepper": {
+     "straat": "lift-heavy-read-smut/lift-heavy-read-smut-pepper-straat-v1.jpg",
+     "gym": "lift-heavy-read-smut/lift-heavy-read-smut-pepper-gym-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
+  },
+  "lifter-of-weights-avoider-of-cardio-oversized-gym-tee": {
+   "design": "lifter-of-weights-avoider-of-cardio",
+   "kleuren": {
+    "Pepper": {
+     "straat": "lifter-of-weights-avoider-of-cardio/lifter-of-weights-avoider-of-cardio-pepper-straat-v1.jpg",
+     "gym": "lifter-of-weights-avoider-of-cardio/lifter-of-weights-avoider-of-cardio-pepper-gym-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
+  },
+  "lifting-girls-club-oversized-gym-tee": {
+   "design": "lifting-girls-club",
+   "kleuren": {
+    "Pepper": {
+     "straat": "lifting-girls-club/lifting-girls-club-pepper-straat-v1.jpg",
+     "gym": "lifting-girls-club/lifting-girls-club-pepper-gym-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
+  },
+  "lifting-is-my-therapy-oversized-gym-tee": {
+   "design": "lifting-is-my-therapy",
+   "kleuren": {
+    "Pepper": {
+     "straat": "lifting-is-my-therapy/lifting-is-my-therapy-pepper-straat-v1.jpg",
+     "gym": "lifting-is-my-therapy/lifting-is-my-therapy-pepper-gym-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
+  },
+  "my-money-keeps-turning-into-protein-powder-oversized-gym-tee": {
+   "design": "my-money-keeps-turning-into-protein-powder",
+   "kleuren": {
+    "Pepper": {
+     "straat": "my-money-keeps-turning-into-protein-powder/my-money-keeps-turning-into-protein-powder-pepper-straat-v1.jpg",
+     "gym": "my-money-keeps-turning-into-protein-powder/my-money-keeps-turning-into-protein-powder-pepper-gym-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
+  },
+  "one-more-rep-oversized-gym-tee": {
+   "design": "one-more-rep",
+   "kleuren": {
+    "Pepper": {
+     "straat": "one-more-rep/one-more-rep-pepper-straat-v1.jpg",
+     "gym": "one-more-rep/one-more-rep-pepper-gym-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
+  },
+  "only-here-so-i-can-eat-later-oversized-gym-tee": {
+   "design": "only-here-so-i-can-eat-later",
+   "kleuren": {
+    "Pepper": {
+     "straat": "only-here-so-i-can-eat-later/only-here-so-i-can-eat-later-pepper-straat-v1.jpg",
+     "gym": "only-here-so-i-can-eat-later/only-here-so-i-can-eat-later-pepper-gym-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
+  },
+  "pray-hard-train-harder-oversized-gym-tee": {
+   "design": "pray-hard-train-harder",
+   "kleuren": {
+    "Pepper": {
+     "straat": "pray-hard-train-harder/pray-hard-train-harder-pepper-straat-v1.jpg",
+     "gym": "pray-hard-train-harder/pray-hard-train-harder-pepper-gym-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
+  },
+  "read-books-lift-weights-be-happy-oversized-gym-tee": {
+   "design": "read-books-lift-weights-be-happy",
+   "kleuren": {
+    "Pepper": {
+     "straat": "read-books-lift-weights-be-happy/read-books-lift-weights-be-happy-pepper-straat-v1.jpg",
+     "gym": "read-books-lift-weights-be-happy/read-books-lift-weights-be-happy-pepper-gym-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
+  },
+  "rest-day-never-heard-of-her-oversized-gym-tee": {
+   "design": "rest-day-never-heard-of-her",
+   "kleuren": {
+    "Pepper": {
+     "straat": "rest-day-never-heard-of-her/rest-day-never-heard-of-her-pepper-straat-v1.jpg",
+     "gym": "rest-day-never-heard-of-her/rest-day-never-heard-of-her-pepper-gym-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
+  },
+  "sarcasm-is-my-cardio-oversized-gym-tee": {
+   "design": "sarcasm-is-my-cardio",
+   "kleuren": {
+    "Pepper": {
+     "straat": "sarcasm-is-my-cardio/sarcasm-is-my-cardio-pepper-straat-v1.jpg",
+     "gym": "sarcasm-is-my-cardio/sarcasm-is-my-cardio-pepper-gym-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
+  },
+  "sleep-is-my-cardio-oversized-gym-tee": {
+   "design": "sleep-is-my-cardio",
+   "kleuren": {
+    "Pepper": {
+     "straat": "sleep-is-my-cardio/sleep-is-my-cardio-pepper-straat-v1.jpg",
+     "gym": "sleep-is-my-cardio/sleep-is-my-cardio-pepper-gym-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
+  },
+  "sorry-for-what-my-face-said-during-leg-day-oversized-gym-tee": {
+   "design": "sorry-for-what-my-face-said-during-leg-day",
+   "kleuren": {
+    "Pepper": {
+     "straat": "sorry-for-what-my-face-said-during-leg-day/sorry-for-what-my-face-said-during-leg-day-pepper-straat-v1.jpg",
+     "gym": "sorry-for-what-my-face-said-during-leg-day/sorry-for-what-my-face-said-during-leg-day-pepper-gym-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
+  },
+  "squat-society-oversized-gym-tee": {
+   "design": "squat-society",
+   "kleuren": {
+    "Pepper": {
+     "straat": "squat-society/squat-society-pepper-straat-v1.jpg",
+     "gym": "squat-society/squat-society-pepper-gym-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
+  },
+  "squat-till-you-drop-oversized-gym-tee": {
+   "design": "squat-till-you-drop",
+   "kleuren": {
+    "Pepper": {
+     "straat": "squat-till-you-drop/squat-till-you-drop-pepper-straat-v1.jpg",
+     "gym": "squat-till-you-drop/squat-till-you-drop-pepper-gym-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
+  },
+  "strong-girl-energy-oversized-gym-tee": {
+   "design": "strong-girl-energy",
+   "kleuren": {
+    "Pepper": {
+     "straat": "strong-girl-energy/strong-girl-energy-pepper-straat-v1.jpg",
+     "gym": "strong-girl-energy/strong-girl-energy-pepper-gym-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
+  },
+  "thick-thighs-and-sleep-deprived-oversized-gym-tee": {
+   "design": "thick-thighs-and-sleep-deprived",
+   "kleuren": {
+    "Pepper": {
+     "straat": "thick-thighs-and-sleep-deprived/thick-thighs-and-sleep-deprived-pepper-straat-v1.jpg",
+     "gym": "thick-thighs-and-sleep-deprived/thick-thighs-and-sleep-deprived-pepper-gym-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
+  },
+  "thick-thighs-thin-patience-oversized-gym-tee": {
+   "design": "thick-thighs-thin-patience",
+   "kleuren": {
+    "Pepper": {
+     "straat": "thick-thighs-thin-patience/thick-thighs-thin-patience-pepper-straat-v1.jpg",
+     "gym": "thick-thighs-thin-patience/thick-thighs-thin-patience-pepper-gym-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
+  },
+  "train-your-body-discipline-your-soul-oversized-gym-tee": {
+   "design": "train-your-body-discipline-your-soul",
+   "kleuren": {
+    "Pepper": {
+     "straat": "train-your-body-discipline-your-soul/train-your-body-discipline-your-soul-pepper-straat-v1.jpg",
+     "gym": "train-your-body-discipline-your-soul/train-your-body-discipline-your-soul-pepper-gym-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
+  },
+  "victimized-by-leg-day-oversized-gym-tee": {
+   "design": "victimized-by-leg-day",
+   "kleuren": {
+    "Pepper": {
+     "straat": "victimized-by-leg-day/victimized-by-leg-day-pepper-straat-v1.jpg",
+     "gym": "victimized-by-leg-day/victimized-by-leg-day-pepper-gym-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
+  },
+  "wake-up-worship-workout-oversized-gym-tee": {
+   "design": "wake-up-worship-workout",
+   "kleuren": {
+    "Pepper": {
+     "straat": "wake-up-worship-workout/wake-up-worship-workout-pepper-straat-v1.jpg",
+     "gym": "wake-up-worship-workout/wake-up-worship-workout-pepper-gym-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
+  },
+  "wanna-be-my-cardio-oversized-gym-tee": {
+   "design": "wanna-be-my-cardio",
+   "kleuren": {
+    "Pepper": {
+     "straat": "wanna-be-my-cardio/wanna-be-my-cardio-pepper-straat-v1.jpg",
+     "gym": "wanna-be-my-cardio/wanna-be-my-cardio-pepper-gym-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
+  },
+  "we-lift-at-dawn-oversized-gym-tee": {
+   "design": "we-lift-at-dawn",
+   "kleuren": {
+    "Pepper": {
+     "straat": "we-lift-at-dawn/we-lift-at-dawn-pepper-straat-v1.jpg",
+     "gym": "we-lift-at-dawn/we-lift-at-dawn-pepper-gym-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
+  },
+  "your-dad-is-my-cardio-oversized-gym-tee": {
+   "design": "your-dad-is-my-cardio",
+   "kleuren": {
+    "Pepper": {
+     "straat": "your-dad-is-my-cardio/your-dad-is-my-cardio-pepper-straat-v1.jpg",
+     "gym": "your-dad-is-my-cardio/your-dad-is-my-cardio-pepper-gym-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym"
+    ]
+   }
   }
+ }
 }
