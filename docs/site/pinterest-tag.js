@@ -1,7 +1,4 @@
-<!-- AESTH — Pinterest tag (2612972022570), v2.1 7 okt 2026. Laadt alleen na toestemming voor 'targeting'.
-     Stuurt pagevisit / addtocart / checkout met product_id (= id in de Pinterest-catalogus: <slug>-pepper),
-     line_items, waarde en Enhanced Match (e-mail + anoniem external_id, beide SHA-256). -->
-<script>
+
 (function () {
   var TAG_ID = "2612972022570";
   var BRAND = "AESTH.";
@@ -217,5 +214,3 @@
     setTimeout(function () { clearInterval(timer); }, 120000);
   }
 })();
-</script>
-<!-- einde Pinterest tag -->
