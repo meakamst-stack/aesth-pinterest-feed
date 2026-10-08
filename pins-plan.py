@@ -109,7 +109,8 @@ def main():
         setting, _, idee, zin = t
         titel = idee.format(naam=naam)
         if "{naam}" not in idee: titel = f"{titel} | {naam}"
-        tekst = f"{zin.format(naam=naam)} {BORDZIN[g]} Garment-dyed Comfort Colors 1717, cream back print, no logos. {CTA}"
+        stof = "Cream back print, no logos." if "Comfort Colors" in zin else "Garment-dyed Comfort Colors 1717, cream back print, no logos."
+        tekst = f"{zin.format(naam=naam)} {BORDZIN[g]} {stof} {CTA}"
         link = f"{SITE}{slug_full}?utm_source=pinterest&utm_medium=organic&utm_campaign=pins-week&utm_content={slug}-{setting}"
         plan.append({
             "datum": f"{dag.isoformat()}T{TIJDEN[n % 7]}:00",
