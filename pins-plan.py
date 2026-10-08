@@ -3,7 +3,7 @@
 
 Opzet na het content-onderzoek van 8 okt (onderzoek/2026-10-08-content-tshirts-pinterest-instagram.md):
 - idee-titels (wat vrouwen zoeken: "gym outfit", "oversized tee outfit", "leg day") in plaats van producttitels;
-- mix per week van 7: 5 outfit-/inspiratiepins, 1 uitlegpin (size-up of flatlay), 1 productpin (studio of quote);
+- mix per week van 7: 5 outfit-/inspiratiepins, 1 uitlegpin (size-up; om de week een studio-productpin), 1 productpin (studio of quote);
 - negen beeldtypes per design (docs/pins/<slug>/<slug>-pepper-<setting>-v1.jpg).
 
 Leest docs/pinterest-feed.csv, wijst elk design een bord toe en schrijft pins-week.json met per dag één pin:
@@ -104,7 +104,7 @@ def main():
         slug, slug_full, naam, b = volgorde[n % len(volgorde)]
         g = groep(b)
         if soort == "outfit": t = outfits[n_out % len(outfits)]; n_out += 1
-        elif soort == "uitleg": t = uitleg[0]
+        elif soort == "uitleg": t = (uitleg or product)[0]   # geen uitleg-beeldtype → productpin (studio)
         else: t = product[n_prod % len(product)]; n_prod += 1
         setting, _, idee, zin = t
         titel = idee.format(naam=naam)
