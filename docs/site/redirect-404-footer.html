@@ -1,0 +1,32 @@
+<!-- AESTH — vangnet voor verwijderde producten, v1 8 okt 2026.
+     Draait alleen op de 404-pagina van een productlink (/products/<slug> of /<taal>-<valuta>/products/<slug>).
+     Stuurt de bezoeker door naar een opvolger (product of collectie) uit NAAR, anders naar de hoofdcollectie.
+     De oorspronkelijke query (UTM's van pins) blijft behouden; extra parameter from=retired-<slug> voor de statistiek.
+     Plaatsen: Fourthwall → Site design → Edit HTML code → footer, ONDER de Pinterest-tag. -->
+<script>
+(function () {
+  try {
+    // Opvolgers: "oude-slug": "/products/nieuwe-slug" of "/collections/naam". Slug zonder taal-/valutaprefix.
+    var NAAR = {
+      // "sleep-is-my-cardio-oversized-gym-tee": "/collections/cardio-humor",
+    };
+    var STANDAARD = "/collections/oversized-gym-tees";
+
+    var h1 = document.querySelector("h1");
+    var is404 = /\(404\)/.test(document.title || "") || (h1 && h1.textContent.trim() === "404");
+    if (!is404) return;
+
+    var m = location.pathname.match(/^(\/[a-z]{2}-[a-z]{3})?\/products\/([^\/?#]+)\/?$/i);
+    if (!m) return;
+
+    var prefix = m[1] || "";
+    var slug = decodeURIComponent(m[2]).toLowerCase();
+    var doel = NAAR[slug] || STANDAARD;
+    if (doel.indexOf("/products/" + slug) !== -1) doel = STANDAARD; // nooit naar zichzelf
+
+    var q = location.search || "";
+    q += (q ? "&" : "?") + "from=retired-" + encodeURIComponent(slug);
+    location.replace(prefix + doel + q);
+  } catch (e) { /* bij twijfel niets doen: gewone 404 blijft staan */ }
+})();
+</script>
