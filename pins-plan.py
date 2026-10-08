@@ -49,7 +49,6 @@ TYPES = [
     ("straat",   "outfit",  "Oversized Gym Tee Outfit Idea for Women",                "'{naam}' on the back of a heavyweight oversized tee. Wear it to the gym and everywhere after."),
     ("gym",      "outfit",  "Leg Day Outfit: Oversized Pump Cover Tee",               "Pump cover first, reveal later. '{naam}' back print on a Comfort Colors 1717."),
     ("gymspiegel","outfit", "Gym Mirror Selfie Outfit: Oversized Tee + Biker Shorts", "Mirror check before the first set. '{naam}' across the back of a heavyweight oversized tee."),
-    ("flatlay",  "uitleg",  "Size Up 2 for the Pump Cover Look | Back Print Gym Tee", "Blank front, print on the back. Your size = regular fit; two sizes up = the oversized pump cover look. '{naam}'."),
     ("studio",   "product", "{naam} Oversized Gym Tee — Back Print Only",             "'{naam}' printed on the back of a heavyweight garment-dyed Comfort Colors 1717 tee in Pepper. Nothing on the front."),
     ("quote",    "product", "{naam} — Funny Gym Shirt Quote",                         "The back print says it so you don't have to: '{naam}'. Heavyweight oversized tee, cream print on Pepper."),
 ]
