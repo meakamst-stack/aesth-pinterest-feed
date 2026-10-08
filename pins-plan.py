@@ -54,9 +54,9 @@ TYPES = [
 ]
 # Vaste uitlegpin (geen design): size-up gids
 SIZEUP = dict(bord=BORDEN["pump"], titel="Size Up for the Pump Cover Look | Oversized Gym Tee Fit Guide",
-              tekst="Same tee, four looks. Comfort Colors 1717 is unisex and true to size: your usual size = regular fit, one up = relaxed, two up = oversized pump cover. Size chart in cm included. Save for your next order.",
+              tekst="Same tee, same model, four sizes. Comfort Colors 1717 is unisex: your usual size = relaxed fit, one size up = oversized, two up = pump cover, three up = t-shirt dress. Size chart in cm included. Save for your next order.",
               link="https://aesthwear.com/?utm_source=pinterest&utm_medium=organic&utm_campaign=pins-week&utm_content=sizeup",
-              afbeelding="https://meakamst-stack.github.io/aesth-pinterest-feed/pins/_uitleg/pin-sizeup.jpg")
+              afbeelding="https://meakamst-stack.github.io/aesth-pinterest-feed/pins/_uitleg/pin-sizeup-v2.jpg")
 
 # Bord-specifieke trefwoordzin (voor de beschrijving) en CTA
 BORDZIN = {
