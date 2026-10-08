@@ -1,10 +1,12 @@
 {
- "versie": "aesth2-v1",
- "_uitleg": "AESTH 2.0 (7 okt 2026): één kleur (Pepper) per product. 'straat' = hoofdfoto (TheVibeMocks), 'gym' = extra pin (MockupellaStudio). Gemaakt met AESTH/designs-v2/_make/mockup-fotos.py (pin-straat/pin-gym, 1000x1500).",
+ "versie": "aesth2-v2",
+ "_uitleg": "AESTH 2.0 (7 okt 2026): één kleur (Pepper) per product. 'straat' = hoofdfoto (TheVibeMocks), 'gym' = extra pin (MockupellaStudio). Gemaakt met AESTH/designs-v2/_make/mockup-fotos.py (pin-straat/pin-gym, 1000x1500). | 8 okt 2026 (v2): extra catalogusbeelden 'terras' en 'bed' (serie 2, scratchpad/mk2/render2.py) -> 4 pins per design.",
  "hoofdsetting": "straat",
  "settings": [
   "straat",
-  "gym"
+  "gym",
+  "terras",
+  "bed"
  ],
  "producten": {
   "and-she-lifted-heavily-ever-after-oversized-gym-tee": {
@@ -12,13 +14,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "and-she-lifted-heavily-ever-after/and-she-lifted-heavily-ever-after-pepper-straat-v1.jpg",
-     "gym": "and-she-lifted-heavily-ever-after/and-she-lifted-heavily-ever-after-pepper-gym-v1.jpg"
+     "gym": "and-she-lifted-heavily-ever-after/and-she-lifted-heavily-ever-after-pepper-gym-v1.jpg",
+     "terras": "and-she-lifted-heavily-ever-after/and-she-lifted-heavily-ever-after-pepper-terras-v1.jpg",
+     "bed": "and-she-lifted-heavily-ever-after/and-she-lifted-heavily-ever-after-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   },
@@ -27,13 +33,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "apparently-my-trainer-cant-count/apparently-my-trainer-cant-count-pepper-straat-v1.jpg",
-     "gym": "apparently-my-trainer-cant-count/apparently-my-trainer-cant-count-pepper-gym-v1.jpg"
+     "gym": "apparently-my-trainer-cant-count/apparently-my-trainer-cant-count-pepper-gym-v1.jpg",
+     "terras": "apparently-my-trainer-cant-count/apparently-my-trainer-cant-count-pepper-terras-v1.jpg",
+     "bed": "apparently-my-trainer-cant-count/apparently-my-trainer-cant-count-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   },
@@ -42,13 +52,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "barbell-baddie/barbell-baddie-pepper-straat-v1.jpg",
-     "gym": "barbell-baddie/barbell-baddie-pepper-gym-v1.jpg"
+     "gym": "barbell-baddie/barbell-baddie-pepper-gym-v1.jpg",
+     "terras": "barbell-baddie/barbell-baddie-pepper-terras-v1.jpg",
+     "bed": "barbell-baddie/barbell-baddie-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   },
@@ -57,13 +71,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "barbells-and-coffee-club/barbells-and-coffee-club-pepper-straat-v1.jpg",
-     "gym": "barbells-and-coffee-club/barbells-and-coffee-club-pepper-gym-v1.jpg"
+     "gym": "barbells-and-coffee-club/barbells-and-coffee-club-pepper-gym-v1.jpg",
+     "terras": "barbells-and-coffee-club/barbells-and-coffee-club-pepper-terras-v1.jpg",
+     "bed": "barbells-and-coffee-club/barbells-and-coffee-club-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   },
@@ -72,13 +90,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "cardio-hater/cardio-hater-pepper-straat-v1.jpg",
-     "gym": "cardio-hater/cardio-hater-pepper-gym-v1.jpg"
+     "gym": "cardio-hater/cardio-hater-pepper-gym-v1.jpg",
+     "terras": "cardio-hater/cardio-hater-pepper-terras-v1.jpg",
+     "bed": "cardio-hater/cardio-hater-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   },
@@ -87,13 +109,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "cardio-is-hardio/cardio-is-hardio-pepper-straat-v1.jpg",
-     "gym": "cardio-is-hardio/cardio-is-hardio-pepper-gym-v1.jpg"
+     "gym": "cardio-is-hardio/cardio-is-hardio-pepper-gym-v1.jpg",
+     "terras": "cardio-is-hardio/cardio-is-hardio-pepper-terras-v1.jpg",
+     "bed": "cardio-is-hardio/cardio-is-hardio-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   },
@@ -102,13 +128,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "chaos-is-my-cardio/chaos-is-my-cardio-pepper-straat-v1.jpg",
-     "gym": "chaos-is-my-cardio/chaos-is-my-cardio-pepper-gym-v1.jpg"
+     "gym": "chaos-is-my-cardio/chaos-is-my-cardio-pepper-gym-v1.jpg",
+     "terras": "chaos-is-my-cardio/chaos-is-my-cardio-pepper-terras-v1.jpg",
+     "bed": "chaos-is-my-cardio/chaos-is-my-cardio-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   },
@@ -117,13 +147,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "cool-aunts-lift-heavy/cool-aunts-lift-heavy-pepper-straat-v1.jpg",
-     "gym": "cool-aunts-lift-heavy/cool-aunts-lift-heavy-pepper-gym-v1.jpg"
+     "gym": "cool-aunts-lift-heavy/cool-aunts-lift-heavy-pepper-gym-v1.jpg",
+     "terras": "cool-aunts-lift-heavy/cool-aunts-lift-heavy-pepper-terras-v1.jpg",
+     "bed": "cool-aunts-lift-heavy/cool-aunts-lift-heavy-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   },
@@ -132,13 +166,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "cool-moms-lift-heavy/cool-moms-lift-heavy-pepper-straat-v1.jpg",
-     "gym": "cool-moms-lift-heavy/cool-moms-lift-heavy-pepper-gym-v1.jpg"
+     "gym": "cool-moms-lift-heavy/cool-moms-lift-heavy-pepper-gym-v1.jpg",
+     "terras": "cool-moms-lift-heavy/cool-moms-lift-heavy-pepper-terras-v1.jpg",
+     "bed": "cool-moms-lift-heavy/cool-moms-lift-heavy-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   },
@@ -147,13 +185,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "currently-unavailable-at-the-gym/currently-unavailable-at-the-gym-pepper-straat-v1.jpg",
-     "gym": "currently-unavailable-at-the-gym/currently-unavailable-at-the-gym-pepper-gym-v1.jpg"
+     "gym": "currently-unavailable-at-the-gym/currently-unavailable-at-the-gym-pepper-gym-v1.jpg",
+     "terras": "currently-unavailable-at-the-gym/currently-unavailable-at-the-gym-pepper-terras-v1.jpg",
+     "bed": "currently-unavailable-at-the-gym/currently-unavailable-at-the-gym-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   },
@@ -162,13 +204,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "drink-coffee-lift-weights-be-happy/drink-coffee-lift-weights-be-happy-pepper-straat-v1.jpg",
-     "gym": "drink-coffee-lift-weights-be-happy/drink-coffee-lift-weights-be-happy-pepper-gym-v1.jpg"
+     "gym": "drink-coffee-lift-weights-be-happy/drink-coffee-lift-weights-be-happy-pepper-gym-v1.jpg",
+     "terras": "drink-coffee-lift-weights-be-happy/drink-coffee-lift-weights-be-happy-pepper-terras-v1.jpg",
+     "bed": "drink-coffee-lift-weights-be-happy/drink-coffee-lift-weights-be-happy-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   },
@@ -177,13 +223,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "dumbbells-over-dumb-people/dumbbells-over-dumb-people-pepper-straat-v1.jpg",
-     "gym": "dumbbells-over-dumb-people/dumbbells-over-dumb-people-pepper-gym-v1.jpg"
+     "gym": "dumbbells-over-dumb-people/dumbbells-over-dumb-people-pepper-gym-v1.jpg",
+     "terras": "dumbbells-over-dumb-people/dumbbells-over-dumb-people-pepper-terras-v1.jpg",
+     "bed": "dumbbells-over-dumb-people/dumbbells-over-dumb-people-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   },
@@ -192,13 +242,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "eat-clean-lift-dirty/eat-clean-lift-dirty-pepper-straat-v1.jpg",
-     "gym": "eat-clean-lift-dirty/eat-clean-lift-dirty-pepper-gym-v1.jpg"
+     "gym": "eat-clean-lift-dirty/eat-clean-lift-dirty-pepper-gym-v1.jpg",
+     "terras": "eat-clean-lift-dirty/eat-clean-lift-dirty-pepper-terras-v1.jpg",
+     "bed": "eat-clean-lift-dirty/eat-clean-lift-dirty-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   },
@@ -207,13 +261,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "eat-your-protein/eat-your-protein-pepper-straat-v1.jpg",
-     "gym": "eat-your-protein/eat-your-protein-pepper-gym-v1.jpg"
+     "gym": "eat-your-protein/eat-your-protein-pepper-gym-v1.jpg",
+     "terras": "eat-your-protein/eat-your-protein-pepper-terras-v1.jpg",
+     "bed": "eat-your-protein/eat-your-protein-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   },
@@ -222,13 +280,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "every-day-is-leg-day/every-day-is-leg-day-pepper-straat-v1.jpg",
-     "gym": "every-day-is-leg-day/every-day-is-leg-day-pepper-gym-v1.jpg"
+     "gym": "every-day-is-leg-day/every-day-is-leg-day-pepper-gym-v1.jpg",
+     "terras": "every-day-is-leg-day/every-day-is-leg-day-pepper-terras-v1.jpg",
+     "bed": "every-day-is-leg-day/every-day-is-leg-day-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   },
@@ -237,13 +299,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "everything-hurts/everything-hurts-pepper-straat-v1.jpg",
-     "gym": "everything-hurts/everything-hurts-pepper-gym-v1.jpg"
+     "gym": "everything-hurts/everything-hurts-pepper-gym-v1.jpg",
+     "terras": "everything-hurts/everything-hurts-pepper-terras-v1.jpg",
+     "bed": "everything-hurts/everything-hurts-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   },
@@ -252,13 +318,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "fitness-model-the-before-picture/fitness-model-the-before-picture-pepper-straat-v1.jpg",
-     "gym": "fitness-model-the-before-picture/fitness-model-the-before-picture-pepper-gym-v1.jpg"
+     "gym": "fitness-model-the-before-picture/fitness-model-the-before-picture-pepper-gym-v1.jpg",
+     "terras": "fitness-model-the-before-picture/fitness-model-the-before-picture-pepper-terras-v1.jpg",
+     "bed": "fitness-model-the-before-picture/fitness-model-the-before-picture-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   },
@@ -267,13 +337,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "hot-girls-hit-legs/hot-girls-hit-legs-pepper-straat-v1.jpg",
-     "gym": "hot-girls-hit-legs/hot-girls-hit-legs-pepper-gym-v1.jpg"
+     "gym": "hot-girls-hit-legs/hot-girls-hit-legs-pepper-gym-v1.jpg",
+     "terras": "hot-girls-hit-legs/hot-girls-hit-legs-pepper-terras-v1.jpg",
+     "bed": "hot-girls-hit-legs/hot-girls-hit-legs-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   },
@@ -282,13 +356,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "i-workout-to-burn-off-the-crazy/i-workout-to-burn-off-the-crazy-pepper-straat-v1.jpg",
-     "gym": "i-workout-to-burn-off-the-crazy/i-workout-to-burn-off-the-crazy-pepper-gym-v1.jpg"
+     "gym": "i-workout-to-burn-off-the-crazy/i-workout-to-burn-off-the-crazy-pepper-gym-v1.jpg",
+     "terras": "i-workout-to-burn-off-the-crazy/i-workout-to-burn-off-the-crazy-pepper-terras-v1.jpg",
+     "bed": "i-workout-to-burn-off-the-crazy/i-workout-to-burn-off-the-crazy-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   },
@@ -297,13 +375,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "in-creatine-we-trust/in-creatine-we-trust-pepper-straat-v1.jpg",
-     "gym": "in-creatine-we-trust/in-creatine-we-trust-pepper-gym-v1.jpg"
+     "gym": "in-creatine-we-trust/in-creatine-we-trust-pepper-gym-v1.jpg",
+     "terras": "in-creatine-we-trust/in-creatine-we-trust-pepper-terras-v1.jpg",
+     "bed": "in-creatine-we-trust/in-creatine-we-trust-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   },
@@ -312,13 +394,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "in-my-lifting-era/in-my-lifting-era-pepper-straat-v1.jpg",
-     "gym": "in-my-lifting-era/in-my-lifting-era-pepper-gym-v1.jpg"
+     "gym": "in-my-lifting-era/in-my-lifting-era-pepper-gym-v1.jpg",
+     "terras": "in-my-lifting-era/in-my-lifting-era-pepper-terras-v1.jpg",
+     "bed": "in-my-lifting-era/in-my-lifting-era-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   },
@@ -327,13 +413,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "leg-day-club/leg-day-club-pepper-straat-v1.jpg",
-     "gym": "leg-day-club/leg-day-club-pepper-gym-v1.jpg"
+     "gym": "leg-day-club/leg-day-club-pepper-gym-v1.jpg",
+     "terras": "leg-day-club/leg-day-club-pepper-terras-v1.jpg",
+     "bed": "leg-day-club/leg-day-club-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   },
@@ -342,13 +432,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "leg-day-loyalist/leg-day-loyalist-pepper-straat-v1.jpg",
-     "gym": "leg-day-loyalist/leg-day-loyalist-pepper-gym-v1.jpg"
+     "gym": "leg-day-loyalist/leg-day-loyalist-pepper-gym-v1.jpg",
+     "terras": "leg-day-loyalist/leg-day-loyalist-pepper-terras-v1.jpg",
+     "bed": "leg-day-loyalist/leg-day-loyalist-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   },
@@ -357,13 +451,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "leg-day-survivor/leg-day-survivor-pepper-straat-v1.jpg",
-     "gym": "leg-day-survivor/leg-day-survivor-pepper-gym-v1.jpg"
+     "gym": "leg-day-survivor/leg-day-survivor-pepper-gym-v1.jpg",
+     "terras": "leg-day-survivor/leg-day-survivor-pepper-terras-v1.jpg",
+     "bed": "leg-day-survivor/leg-day-survivor-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   },
@@ -372,13 +470,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "lift-anyway/lift-anyway-pepper-straat-v1.jpg",
-     "gym": "lift-anyway/lift-anyway-pepper-gym-v1.jpg"
+     "gym": "lift-anyway/lift-anyway-pepper-gym-v1.jpg",
+     "terras": "lift-anyway/lift-anyway-pepper-terras-v1.jpg",
+     "bed": "lift-anyway/lift-anyway-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   },
@@ -387,13 +489,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "lift-heavy-pray-hard/lift-heavy-pray-hard-pepper-straat-v1.jpg",
-     "gym": "lift-heavy-pray-hard/lift-heavy-pray-hard-pepper-gym-v1.jpg"
+     "gym": "lift-heavy-pray-hard/lift-heavy-pray-hard-pepper-gym-v1.jpg",
+     "terras": "lift-heavy-pray-hard/lift-heavy-pray-hard-pepper-terras-v1.jpg",
+     "bed": "lift-heavy-pray-hard/lift-heavy-pray-hard-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   },
@@ -402,13 +508,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "lift-heavy-read-smut/lift-heavy-read-smut-pepper-straat-v1.jpg",
-     "gym": "lift-heavy-read-smut/lift-heavy-read-smut-pepper-gym-v1.jpg"
+     "gym": "lift-heavy-read-smut/lift-heavy-read-smut-pepper-gym-v1.jpg",
+     "terras": "lift-heavy-read-smut/lift-heavy-read-smut-pepper-terras-v1.jpg",
+     "bed": "lift-heavy-read-smut/lift-heavy-read-smut-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   },
@@ -417,13 +527,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "lifter-of-weights-avoider-of-cardio/lifter-of-weights-avoider-of-cardio-pepper-straat-v1.jpg",
-     "gym": "lifter-of-weights-avoider-of-cardio/lifter-of-weights-avoider-of-cardio-pepper-gym-v1.jpg"
+     "gym": "lifter-of-weights-avoider-of-cardio/lifter-of-weights-avoider-of-cardio-pepper-gym-v1.jpg",
+     "terras": "lifter-of-weights-avoider-of-cardio/lifter-of-weights-avoider-of-cardio-pepper-terras-v1.jpg",
+     "bed": "lifter-of-weights-avoider-of-cardio/lifter-of-weights-avoider-of-cardio-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   },
@@ -432,13 +546,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "lifting-girls-club/lifting-girls-club-pepper-straat-v1.jpg",
-     "gym": "lifting-girls-club/lifting-girls-club-pepper-gym-v1.jpg"
+     "gym": "lifting-girls-club/lifting-girls-club-pepper-gym-v1.jpg",
+     "terras": "lifting-girls-club/lifting-girls-club-pepper-terras-v1.jpg",
+     "bed": "lifting-girls-club/lifting-girls-club-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   },
@@ -447,13 +565,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "lifting-is-my-therapy/lifting-is-my-therapy-pepper-straat-v1.jpg",
-     "gym": "lifting-is-my-therapy/lifting-is-my-therapy-pepper-gym-v1.jpg"
+     "gym": "lifting-is-my-therapy/lifting-is-my-therapy-pepper-gym-v1.jpg",
+     "terras": "lifting-is-my-therapy/lifting-is-my-therapy-pepper-terras-v1.jpg",
+     "bed": "lifting-is-my-therapy/lifting-is-my-therapy-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   },
@@ -462,13 +584,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "my-money-keeps-turning-into-protein-powder/my-money-keeps-turning-into-protein-powder-pepper-straat-v1.jpg",
-     "gym": "my-money-keeps-turning-into-protein-powder/my-money-keeps-turning-into-protein-powder-pepper-gym-v1.jpg"
+     "gym": "my-money-keeps-turning-into-protein-powder/my-money-keeps-turning-into-protein-powder-pepper-gym-v1.jpg",
+     "terras": "my-money-keeps-turning-into-protein-powder/my-money-keeps-turning-into-protein-powder-pepper-terras-v1.jpg",
+     "bed": "my-money-keeps-turning-into-protein-powder/my-money-keeps-turning-into-protein-powder-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   },
@@ -477,13 +603,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "one-more-rep/one-more-rep-pepper-straat-v1.jpg",
-     "gym": "one-more-rep/one-more-rep-pepper-gym-v1.jpg"
+     "gym": "one-more-rep/one-more-rep-pepper-gym-v1.jpg",
+     "terras": "one-more-rep/one-more-rep-pepper-terras-v1.jpg",
+     "bed": "one-more-rep/one-more-rep-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   },
@@ -492,13 +622,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "only-here-so-i-can-eat-later/only-here-so-i-can-eat-later-pepper-straat-v1.jpg",
-     "gym": "only-here-so-i-can-eat-later/only-here-so-i-can-eat-later-pepper-gym-v1.jpg"
+     "gym": "only-here-so-i-can-eat-later/only-here-so-i-can-eat-later-pepper-gym-v1.jpg",
+     "terras": "only-here-so-i-can-eat-later/only-here-so-i-can-eat-later-pepper-terras-v1.jpg",
+     "bed": "only-here-so-i-can-eat-later/only-here-so-i-can-eat-later-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   },
@@ -507,13 +641,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "pray-hard-train-harder/pray-hard-train-harder-pepper-straat-v1.jpg",
-     "gym": "pray-hard-train-harder/pray-hard-train-harder-pepper-gym-v1.jpg"
+     "gym": "pray-hard-train-harder/pray-hard-train-harder-pepper-gym-v1.jpg",
+     "terras": "pray-hard-train-harder/pray-hard-train-harder-pepper-terras-v1.jpg",
+     "bed": "pray-hard-train-harder/pray-hard-train-harder-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   },
@@ -522,13 +660,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "read-books-lift-weights-be-happy/read-books-lift-weights-be-happy-pepper-straat-v1.jpg",
-     "gym": "read-books-lift-weights-be-happy/read-books-lift-weights-be-happy-pepper-gym-v1.jpg"
+     "gym": "read-books-lift-weights-be-happy/read-books-lift-weights-be-happy-pepper-gym-v1.jpg",
+     "terras": "read-books-lift-weights-be-happy/read-books-lift-weights-be-happy-pepper-terras-v1.jpg",
+     "bed": "read-books-lift-weights-be-happy/read-books-lift-weights-be-happy-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   },
@@ -537,13 +679,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "rest-day-never-heard-of-her/rest-day-never-heard-of-her-pepper-straat-v1.jpg",
-     "gym": "rest-day-never-heard-of-her/rest-day-never-heard-of-her-pepper-gym-v1.jpg"
+     "gym": "rest-day-never-heard-of-her/rest-day-never-heard-of-her-pepper-gym-v1.jpg",
+     "terras": "rest-day-never-heard-of-her/rest-day-never-heard-of-her-pepper-terras-v1.jpg",
+     "bed": "rest-day-never-heard-of-her/rest-day-never-heard-of-her-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   },
@@ -552,13 +698,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "sarcasm-is-my-cardio/sarcasm-is-my-cardio-pepper-straat-v1.jpg",
-     "gym": "sarcasm-is-my-cardio/sarcasm-is-my-cardio-pepper-gym-v1.jpg"
+     "gym": "sarcasm-is-my-cardio/sarcasm-is-my-cardio-pepper-gym-v1.jpg",
+     "terras": "sarcasm-is-my-cardio/sarcasm-is-my-cardio-pepper-terras-v1.jpg",
+     "bed": "sarcasm-is-my-cardio/sarcasm-is-my-cardio-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   },
@@ -567,13 +717,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "sleep-is-my-cardio/sleep-is-my-cardio-pepper-straat-v1.jpg",
-     "gym": "sleep-is-my-cardio/sleep-is-my-cardio-pepper-gym-v1.jpg"
+     "gym": "sleep-is-my-cardio/sleep-is-my-cardio-pepper-gym-v1.jpg",
+     "terras": "sleep-is-my-cardio/sleep-is-my-cardio-pepper-terras-v1.jpg",
+     "bed": "sleep-is-my-cardio/sleep-is-my-cardio-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   },
@@ -582,13 +736,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "sorry-for-what-my-face-said-during-leg-day/sorry-for-what-my-face-said-during-leg-day-pepper-straat-v1.jpg",
-     "gym": "sorry-for-what-my-face-said-during-leg-day/sorry-for-what-my-face-said-during-leg-day-pepper-gym-v1.jpg"
+     "gym": "sorry-for-what-my-face-said-during-leg-day/sorry-for-what-my-face-said-during-leg-day-pepper-gym-v1.jpg",
+     "terras": "sorry-for-what-my-face-said-during-leg-day/sorry-for-what-my-face-said-during-leg-day-pepper-terras-v1.jpg",
+     "bed": "sorry-for-what-my-face-said-during-leg-day/sorry-for-what-my-face-said-during-leg-day-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   },
@@ -597,13 +755,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "squat-society/squat-society-pepper-straat-v1.jpg",
-     "gym": "squat-society/squat-society-pepper-gym-v1.jpg"
+     "gym": "squat-society/squat-society-pepper-gym-v1.jpg",
+     "terras": "squat-society/squat-society-pepper-terras-v1.jpg",
+     "bed": "squat-society/squat-society-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   },
@@ -612,13 +774,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "squat-till-you-drop/squat-till-you-drop-pepper-straat-v1.jpg",
-     "gym": "squat-till-you-drop/squat-till-you-drop-pepper-gym-v1.jpg"
+     "gym": "squat-till-you-drop/squat-till-you-drop-pepper-gym-v1.jpg",
+     "terras": "squat-till-you-drop/squat-till-you-drop-pepper-terras-v1.jpg",
+     "bed": "squat-till-you-drop/squat-till-you-drop-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   },
@@ -627,13 +793,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "strong-girl-energy/strong-girl-energy-pepper-straat-v1.jpg",
-     "gym": "strong-girl-energy/strong-girl-energy-pepper-gym-v1.jpg"
+     "gym": "strong-girl-energy/strong-girl-energy-pepper-gym-v1.jpg",
+     "terras": "strong-girl-energy/strong-girl-energy-pepper-terras-v1.jpg",
+     "bed": "strong-girl-energy/strong-girl-energy-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   },
@@ -642,13 +812,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "thick-thighs-and-sleep-deprived/thick-thighs-and-sleep-deprived-pepper-straat-v1.jpg",
-     "gym": "thick-thighs-and-sleep-deprived/thick-thighs-and-sleep-deprived-pepper-gym-v1.jpg"
+     "gym": "thick-thighs-and-sleep-deprived/thick-thighs-and-sleep-deprived-pepper-gym-v1.jpg",
+     "terras": "thick-thighs-and-sleep-deprived/thick-thighs-and-sleep-deprived-pepper-terras-v1.jpg",
+     "bed": "thick-thighs-and-sleep-deprived/thick-thighs-and-sleep-deprived-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   },
@@ -657,13 +831,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "thick-thighs-thin-patience/thick-thighs-thin-patience-pepper-straat-v1.jpg",
-     "gym": "thick-thighs-thin-patience/thick-thighs-thin-patience-pepper-gym-v1.jpg"
+     "gym": "thick-thighs-thin-patience/thick-thighs-thin-patience-pepper-gym-v1.jpg",
+     "terras": "thick-thighs-thin-patience/thick-thighs-thin-patience-pepper-terras-v1.jpg",
+     "bed": "thick-thighs-thin-patience/thick-thighs-thin-patience-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   },
@@ -672,13 +850,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "train-your-body-discipline-your-soul/train-your-body-discipline-your-soul-pepper-straat-v1.jpg",
-     "gym": "train-your-body-discipline-your-soul/train-your-body-discipline-your-soul-pepper-gym-v1.jpg"
+     "gym": "train-your-body-discipline-your-soul/train-your-body-discipline-your-soul-pepper-gym-v1.jpg",
+     "terras": "train-your-body-discipline-your-soul/train-your-body-discipline-your-soul-pepper-terras-v1.jpg",
+     "bed": "train-your-body-discipline-your-soul/train-your-body-discipline-your-soul-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   },
@@ -687,13 +869,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "victimized-by-leg-day/victimized-by-leg-day-pepper-straat-v1.jpg",
-     "gym": "victimized-by-leg-day/victimized-by-leg-day-pepper-gym-v1.jpg"
+     "gym": "victimized-by-leg-day/victimized-by-leg-day-pepper-gym-v1.jpg",
+     "terras": "victimized-by-leg-day/victimized-by-leg-day-pepper-terras-v1.jpg",
+     "bed": "victimized-by-leg-day/victimized-by-leg-day-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   },
@@ -702,13 +888,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "wake-up-worship-workout/wake-up-worship-workout-pepper-straat-v1.jpg",
-     "gym": "wake-up-worship-workout/wake-up-worship-workout-pepper-gym-v1.jpg"
+     "gym": "wake-up-worship-workout/wake-up-worship-workout-pepper-gym-v1.jpg",
+     "terras": "wake-up-worship-workout/wake-up-worship-workout-pepper-terras-v1.jpg",
+     "bed": "wake-up-worship-workout/wake-up-worship-workout-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   },
@@ -717,13 +907,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "wanna-be-my-cardio/wanna-be-my-cardio-pepper-straat-v1.jpg",
-     "gym": "wanna-be-my-cardio/wanna-be-my-cardio-pepper-gym-v1.jpg"
+     "gym": "wanna-be-my-cardio/wanna-be-my-cardio-pepper-gym-v1.jpg",
+     "terras": "wanna-be-my-cardio/wanna-be-my-cardio-pepper-terras-v1.jpg",
+     "bed": "wanna-be-my-cardio/wanna-be-my-cardio-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   },
@@ -732,13 +926,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "we-lift-at-dawn/we-lift-at-dawn-pepper-straat-v1.jpg",
-     "gym": "we-lift-at-dawn/we-lift-at-dawn-pepper-gym-v1.jpg"
+     "gym": "we-lift-at-dawn/we-lift-at-dawn-pepper-gym-v1.jpg",
+     "terras": "we-lift-at-dawn/we-lift-at-dawn-pepper-terras-v1.jpg",
+     "bed": "we-lift-at-dawn/we-lift-at-dawn-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   },
@@ -747,13 +945,17 @@
    "kleuren": {
     "Pepper": {
      "straat": "your-dad-is-my-cardio/your-dad-is-my-cardio-pepper-straat-v1.jpg",
-     "gym": "your-dad-is-my-cardio/your-dad-is-my-cardio-pepper-gym-v1.jpg"
+     "gym": "your-dad-is-my-cardio/your-dad-is-my-cardio-pepper-gym-v1.jpg",
+     "terras": "your-dad-is-my-cardio/your-dad-is-my-cardio-pepper-terras-v1.jpg",
+     "bed": "your-dad-is-my-cardio/your-dad-is-my-cardio-pepper-bed-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
      "straat",
-     "gym"
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   }
