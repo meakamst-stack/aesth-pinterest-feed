@@ -72,13 +72,13 @@ Op 3 okt 2026 gaf de Storefront API één nacht een verouderde lijst terug en
 schreef het script die weg. Daarom weigert het script nu te schrijven (exit 2,
 de bestaande feed blijft staan) als:
 
-- het aantal designs of design × kleur-combinaties meer dan 30 % lager is dan in de huidige CSV;
+- het aantal designs of design × kleur-combinaties meer dan 5 % lager is dan in de huidige CSV (sinds 10 okt 2026; was 30 %);
 - de huidige feed eigen mockups heeft en de nieuwe ineens geen enkele;
 - het manifest mockups bevat maar er geen enkele gebruikt wordt;
 - de API minder producten teruggeeft dan ze zelf aankondigt (`elementsTotal`).
 
 Is de daling **bewust** (producten gearchiveerd)? Actions → *Build Pinterest feed*
-→ *Run workflow* → vinkje **force**. Lokaal: `FORCE=1`. Drempel aanpassen: `FEED_MAX_DROP=0.3`.
+→ *Run workflow* → vinkje **force**. Lokaal: `FORCE=1`. Drempel aanpassen: `FEED_MAX_DROP=0.05` (standaard).
 
 Verder: time-out van 30 s en 3 pogingen bij 5xx/429, cache-buster op elke
 API-aanroep, de CSV wordt pas vervangen als hij volledig geschreven is, en

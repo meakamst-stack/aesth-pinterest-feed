@@ -69,7 +69,7 @@ const CONFIG = {
   // er geen enkele eigen mockup meer in zit. Een bewuste daling (producten gearchiveerd)
   // gaat met FORCE=1 — in GitHub via "Run workflow" met het vinkje 'force'.
   force: process.env.FORCE === "1" || process.env.FORCE === "true",
-  maxDrop: Number(process.env.FEED_MAX_DROP ?? 0.3),
+  maxDrop: Number(process.env.FEED_MAX_DROP ?? 0.05), // 10 okt 2026: was 0.3; nacht-API gaf 50 i.p.v. 69 (−27 %) en glipte erdoor
 
   // Netwerk: een hangende verbinding mag het script niet eindeloos laten wachten.
   fetchTimeoutMs: 30_000,
