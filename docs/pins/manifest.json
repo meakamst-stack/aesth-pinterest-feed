@@ -1,6 +1,6 @@
 {
  "versie": "aesth2-v2",
- "_uitleg": "AESTH 2.0 (7 okt 2026): één kleur (Pepper) per product. 'straat' = hoofdfoto (TheVibeMocks), 'gym' = extra pin (MockupellaStudio). Gemaakt met AESTH/designs-v2/_make/mockup-fotos.py (pin-straat/pin-gym, 1000x1500). | 8 okt 2026 (v2): extra catalogusbeelden 'terras' en 'bed' (serie 2, scratchpad/mk2/render2.py) -> 4 pins per design.",
+ "_uitleg": "AESTH 2.0 (7 okt 2026): één kleur (Pepper) per product. 'straat' = hoofdfoto (TheVibeMocks), 'gym' = extra pin (MockupellaStudio). Gemaakt met AESTH/designs-v2/_make/mockup-fotos.py (pin-straat/pin-gym, 1000x1500). | 8 okt 2026 (v2): extra catalogusbeelden 'terras' en 'bed' (serie 2, scratchpad/mk2/render2.py) -> 4 pins per design. | 11 okt 2026: batch 7 (19 designs) + heren-settings 'straat-man', 'gym-man', 'park-man', 'duo' (per product in 'volgorde'; heren-designs met man als hoofdfoto).",
  "hoofdsetting": "straat",
  "settings": [
   "straat",
@@ -1317,6 +1317,383 @@
      "gym",
      "terras",
      "bed"
+    ]
+   }
+  },
+  "strong-girl-club-bow-oversized-gym-tee": {
+   "design": "strong-girl-club-bow",
+   "kleuren": {
+    "Pepper": {
+     "bed": "strong-girl-club-bow/strong-girl-club-bow-pepper-bed-v1.jpg",
+     "gym": "strong-girl-club-bow/strong-girl-club-bow-pepper-gym-v1.jpg",
+     "straat": "strong-girl-club-bow/strong-girl-club-bow-pepper-straat-v1.jpg",
+     "terras": "strong-girl-club-bow/strong-girl-club-bow-pepper-terras-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym",
+     "terras",
+     "bed"
+    ]
+   }
+  },
+  "one-more-rep-babe-oversized-gym-tee": {
+   "design": "one-more-rep-babe",
+   "kleuren": {
+    "Pepper": {
+     "bed": "one-more-rep-babe/one-more-rep-babe-pepper-bed-v1.jpg",
+     "gym": "one-more-rep-babe/one-more-rep-babe-pepper-gym-v1.jpg",
+     "straat": "one-more-rep-babe/one-more-rep-babe-pepper-straat-v1.jpg",
+     "terras": "one-more-rep-babe/one-more-rep-babe-pepper-terras-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym",
+     "terras",
+     "bed"
+    ]
+   }
+  },
+  "unbothered-lifting-oversized-gym-tee": {
+   "design": "unbothered-lifting",
+   "kleuren": {
+    "Pepper": {
+     "bed": "unbothered-lifting/unbothered-lifting-pepper-bed-v1.jpg",
+     "gym": "unbothered-lifting/unbothered-lifting-pepper-gym-v1.jpg",
+     "straat": "unbothered-lifting/unbothered-lifting-pepper-straat-v1.jpg",
+     "terras": "unbothered-lifting/unbothered-lifting-pepper-terras-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym",
+     "terras",
+     "bed"
+    ]
+   }
+  },
+  "confidence-is-my-pre-workout-oversized-gym-tee": {
+   "design": "confidence-is-my-pre-workout",
+   "kleuren": {
+    "Pepper": {
+     "bed": "confidence-is-my-pre-workout/confidence-is-my-pre-workout-pepper-bed-v1.jpg",
+     "gym": "confidence-is-my-pre-workout/confidence-is-my-pre-workout-pepper-gym-v1.jpg",
+     "straat": "confidence-is-my-pre-workout/confidence-is-my-pre-workout-pepper-straat-v1.jpg",
+     "terras": "confidence-is-my-pre-workout/confidence-is-my-pre-workout-pepper-terras-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym",
+     "terras",
+     "bed"
+    ]
+   }
+  },
+  "mom-off-duty-oversized-gym-tee": {
+   "design": "mom-off-duty",
+   "kleuren": {
+    "Pepper": {
+     "bed": "mom-off-duty/mom-off-duty-pepper-bed-v1.jpg",
+     "gym": "mom-off-duty/mom-off-duty-pepper-gym-v1.jpg",
+     "straat": "mom-off-duty/mom-off-duty-pepper-straat-v1.jpg",
+     "terras": "mom-off-duty/mom-off-duty-pepper-terras-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym",
+     "terras",
+     "bed"
+    ]
+   }
+  },
+  "strong-in-him-oversized-gym-tee": {
+   "design": "strong-in-him",
+   "kleuren": {
+    "Pepper": {
+     "bed": "strong-in-him/strong-in-him-pepper-bed-v1.jpg",
+     "gym": "strong-in-him/strong-in-him-pepper-gym-v1.jpg",
+     "straat": "strong-in-him/strong-in-him-pepper-straat-v1.jpg",
+     "terras": "strong-in-him/strong-in-him-pepper-terras-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym",
+     "terras",
+     "bed"
+    ]
+   }
+  },
+  "gingerbread-and-gains-oversized-gym-tee": {
+   "design": "gingerbread-and-gains",
+   "kleuren": {
+    "Pepper": {
+     "bed": "gingerbread-and-gains/gingerbread-and-gains-pepper-bed-v1.jpg",
+     "gym": "gingerbread-and-gains/gingerbread-and-gains-pepper-gym-v1.jpg",
+     "straat": "gingerbread-and-gains/gingerbread-and-gains-pepper-straat-v1.jpg",
+     "terras": "gingerbread-and-gains/gingerbread-and-gains-pepper-terras-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym",
+     "terras",
+     "bed"
+    ]
+   }
+  },
+  "merry-lift-club-oversized-gym-tee": {
+   "design": "merry-lift-club",
+   "kleuren": {
+    "Pepper": {
+     "bed": "merry-lift-club/merry-lift-club-pepper-bed-v1.jpg",
+     "gym": "merry-lift-club/merry-lift-club-pepper-gym-v1.jpg",
+     "straat": "merry-lift-club/merry-lift-club-pepper-straat-v1.jpg",
+     "terras": "merry-lift-club/merry-lift-club-pepper-terras-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym",
+     "terras",
+     "bed"
+    ]
+   }
+  },
+  "merry-liftmas-plates-oversized-gym-tee": {
+   "design": "merry-liftmas-plates",
+   "kleuren": {
+    "Pepper": {
+     "bed": "merry-liftmas-plates/merry-liftmas-plates-pepper-bed-v1.jpg",
+     "gym": "merry-liftmas-plates/merry-liftmas-plates-pepper-gym-v1.jpg",
+     "straat": "merry-liftmas-plates/merry-liftmas-plates-pepper-straat-v1.jpg",
+     "straat-man": "merry-liftmas-plates/merry-liftmas-plates-pepper-straat-man-v1.jpg",
+     "terras": "merry-liftmas-plates/merry-liftmas-plates-pepper-terras-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym",
+     "straat-man",
+     "terras"
+    ]
+   }
+  },
+  "merry-liftmas-santa-oversized-gym-tee": {
+   "design": "merry-liftmas-santa",
+   "kleuren": {
+    "Pepper": {
+     "bed": "merry-liftmas-santa/merry-liftmas-santa-pepper-bed-v1.jpg",
+     "gym": "merry-liftmas-santa/merry-liftmas-santa-pepper-gym-v1.jpg",
+     "straat": "merry-liftmas-santa/merry-liftmas-santa-pepper-straat-v1.jpg",
+     "straat-man": "merry-liftmas-santa/merry-liftmas-santa-pepper-straat-man-v1.jpg",
+     "terras": "merry-liftmas-santa/merry-liftmas-santa-pepper-terras-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym",
+     "straat-man",
+     "terras"
+    ]
+   }
+  },
+  "dad-bod-under-construction-oversized-gym-tee": {
+   "design": "dad-bod-under-construction",
+   "kleuren": {
+    "Pepper": {
+     "bed": "dad-bod-under-construction/dad-bod-under-construction-pepper-bed-v1.jpg",
+     "gym": "dad-bod-under-construction/dad-bod-under-construction-pepper-gym-v1.jpg",
+     "gym-man": "dad-bod-under-construction/dad-bod-under-construction-pepper-gym-man-v1.jpg",
+     "park-man": "dad-bod-under-construction/dad-bod-under-construction-pepper-park-man-v1.jpg",
+     "straat": "dad-bod-under-construction/dad-bod-under-construction-pepper-straat-v1.jpg",
+     "straat-man": "dad-bod-under-construction/dad-bod-under-construction-pepper-straat-man-v1.jpg",
+     "terras": "dad-bod-under-construction/dad-bod-under-construction-pepper-terras-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat-man",
+     "gym-man",
+     "park-man"
+    ]
+   }
+  },
+  "strong-dad-club-oversized-gym-tee": {
+   "design": "strong-dad-club",
+   "kleuren": {
+    "Pepper": {
+     "bed": "strong-dad-club/strong-dad-club-pepper-bed-v1.jpg",
+     "gym": "strong-dad-club/strong-dad-club-pepper-gym-v1.jpg",
+     "gym-man": "strong-dad-club/strong-dad-club-pepper-gym-man-v1.jpg",
+     "park-man": "strong-dad-club/strong-dad-club-pepper-park-man-v1.jpg",
+     "straat": "strong-dad-club/strong-dad-club-pepper-straat-v1.jpg",
+     "straat-man": "strong-dad-club/strong-dad-club-pepper-straat-man-v1.jpg",
+     "terras": "strong-dad-club/strong-dad-club-pepper-terras-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat-man",
+     "gym-man",
+     "park-man"
+    ]
+   }
+  },
+  "dad-strength-oversized-gym-tee": {
+   "design": "dad-strength",
+   "kleuren": {
+    "Pepper": {
+     "bed": "dad-strength/dad-strength-pepper-bed-v1.jpg",
+     "gym": "dad-strength/dad-strength-pepper-gym-v1.jpg",
+     "gym-man": "dad-strength/dad-strength-pepper-gym-man-v1.jpg",
+     "park-man": "dad-strength/dad-strength-pepper-park-man-v1.jpg",
+     "straat": "dad-strength/dad-strength-pepper-straat-v1.jpg",
+     "straat-man": "dad-strength/dad-strength-pepper-straat-man-v1.jpg",
+     "terras": "dad-strength/dad-strength-pepper-terras-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat-man",
+     "gym-man",
+     "park-man"
+    ]
+   }
+  },
+  "strong-guy-club-oversized-gym-tee": {
+   "design": "strong-guy-club",
+   "kleuren": {
+    "Pepper": {
+     "bed": "strong-guy-club/strong-guy-club-pepper-bed-v1.jpg",
+     "duo": "strong-guy-club/strong-guy-club-pepper-duo-v1.jpg",
+     "gym": "strong-guy-club/strong-guy-club-pepper-gym-v1.jpg",
+     "gym-man": "strong-guy-club/strong-guy-club-pepper-gym-man-v1.jpg",
+     "straat": "strong-guy-club/strong-guy-club-pepper-straat-v1.jpg",
+     "straat-man": "strong-guy-club/strong-guy-club-pepper-straat-man-v1.jpg",
+     "terras": "strong-guy-club/strong-guy-club-pepper-terras-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat-man",
+     "gym-man",
+     "duo"
+    ]
+   }
+  },
+  "iron-therapy-oversized-gym-tee": {
+   "design": "iron-therapy",
+   "kleuren": {
+    "Pepper": {
+     "bed": "iron-therapy/iron-therapy-pepper-bed-v1.jpg",
+     "gym": "iron-therapy/iron-therapy-pepper-gym-v1.jpg",
+     "straat": "iron-therapy/iron-therapy-pepper-straat-v1.jpg",
+     "straat-man": "iron-therapy/iron-therapy-pepper-straat-man-v1.jpg",
+     "terras": "iron-therapy/iron-therapy-pepper-terras-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat-man",
+     "straat",
+     "gym",
+     "terras"
+    ]
+   }
+  },
+  "will-lift-for-tacos-oversized-gym-tee": {
+   "design": "will-lift-for-tacos",
+   "kleuren": {
+    "Pepper": {
+     "bed": "will-lift-for-tacos/will-lift-for-tacos-pepper-bed-v1.jpg",
+     "gym": "will-lift-for-tacos/will-lift-for-tacos-pepper-gym-v1.jpg",
+     "straat": "will-lift-for-tacos/will-lift-for-tacos-pepper-straat-v1.jpg",
+     "straat-man": "will-lift-for-tacos/will-lift-for-tacos-pepper-straat-man-v1.jpg",
+     "terras": "will-lift-for-tacos/will-lift-for-tacos-pepper-terras-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym",
+     "straat-man",
+     "terras"
+    ]
+   }
+  },
+  "her-favorite-heavy-lifter-oversized-gym-tee": {
+   "design": "her-favorite-heavy-lifter",
+   "kleuren": {
+    "Pepper": {
+     "bed": "her-favorite-heavy-lifter/her-favorite-heavy-lifter-pepper-bed-v1.jpg",
+     "duo": "her-favorite-heavy-lifter/her-favorite-heavy-lifter-pepper-duo-v1.jpg",
+     "gym": "her-favorite-heavy-lifter/her-favorite-heavy-lifter-pepper-gym-v1.jpg",
+     "gym-man": "her-favorite-heavy-lifter/her-favorite-heavy-lifter-pepper-gym-man-v1.jpg",
+     "straat": "her-favorite-heavy-lifter/her-favorite-heavy-lifter-pepper-straat-v1.jpg",
+     "straat-man": "her-favorite-heavy-lifter/her-favorite-heavy-lifter-pepper-straat-man-v1.jpg",
+     "terras": "her-favorite-heavy-lifter/her-favorite-heavy-lifter-pepper-terras-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat-man",
+     "gym-man",
+     "duo"
+    ]
+   }
+  },
+  "discipline-over-motivation-oversized-gym-tee": {
+   "design": "discipline-over-motivation",
+   "kleuren": {
+    "Pepper": {
+     "bed": "discipline-over-motivation/discipline-over-motivation-pepper-bed-v1.jpg",
+     "gym": "discipline-over-motivation/discipline-over-motivation-pepper-gym-v1.jpg",
+     "straat": "discipline-over-motivation/discipline-over-motivation-pepper-straat-v1.jpg",
+     "straat-man": "discipline-over-motivation/discipline-over-motivation-pepper-straat-man-v1.jpg",
+     "terras": "discipline-over-motivation/discipline-over-motivation-pepper-terras-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym",
+     "straat-man",
+     "terras"
+    ]
+   }
+  },
+  "trust-the-process-oversized-gym-tee": {
+   "design": "trust-the-process",
+   "kleuren": {
+    "Pepper": {
+     "bed": "trust-the-process/trust-the-process-pepper-bed-v1.jpg",
+     "gym": "trust-the-process/trust-the-process-pepper-gym-v1.jpg",
+     "straat": "trust-the-process/trust-the-process-pepper-straat-v1.jpg",
+     "straat-man": "trust-the-process/trust-the-process-pepper-straat-man-v1.jpg",
+     "terras": "trust-the-process/trust-the-process-pepper-terras-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym",
+     "straat-man",
+     "terras"
     ]
    }
   }
