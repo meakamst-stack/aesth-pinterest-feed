@@ -1,6 +1,6 @@
 {
  "versie": "aesth2-v2",
- "_uitleg": "AESTH 2.0 (7 okt 2026): één kleur (Pepper) per product. 'straat' = hoofdfoto (TheVibeMocks), 'gym' = extra pin (MockupellaStudio). Gemaakt met AESTH/designs-v2/_make/mockup-fotos.py (pin-straat/pin-gym, 1000x1500). | 8 okt 2026 (v2): extra catalogusbeelden 'terras' en 'bed' (serie 2, scratchpad/mk2/render2.py) -> 4 pins per design. | 11 okt 2026: batch 7 (19 designs) + heren-settings 'straat-man', 'gym-man', 'park-man', 'duo' (per product in 'volgorde'; heren-designs met man als hoofdfoto).",
+ "_uitleg": "AESTH 2.0 (7 okt 2026): één kleur (Pepper) per product. 'straat' = hoofdfoto (TheVibeMocks), 'gym' = extra pin (MockupellaStudio). Gemaakt met AESTH/designs-v2/_make/mockup-fotos.py (pin-straat/pin-gym, 1000x1500). | 8 okt 2026 (v2): extra catalogusbeelden 'terras' en 'bed' (serie 2, scratchpad/mk2/render2.py) -> 4 pins per design. | 11 okt 2026: batch 7 (19 designs) + heren-settings 'straat-man', 'gym-man', 'park-man', 'duo' (per product in 'volgorde'; heren-designs met man als hoofdfoto). | 20 okt 2026: batch 8 (25 designs, gekochte bundels, crème). Heren-designs zonder mannelijke scènes: volgorde quote, studio, gym2.",
  "hoofdsetting": "straat",
  "settings": [
   "straat",
@@ -1694,6 +1694,651 @@
      "gym",
      "straat-man",
      "terras"
+    ]
+   }
+  },
+  "but-did-you-die-oversized-gym-tee": {
+   "design": "but-did-you-die",
+   "kleuren": {
+    "Pepper": {
+     "bed": "but-did-you-die/but-did-you-die-pepper-bed-v1.jpg",
+     "gym": "but-did-you-die/but-did-you-die-pepper-gym-v1.jpg",
+     "gym2": "but-did-you-die/but-did-you-die-pepper-gym2-v1.jpg",
+     "gymspiegel": "but-did-you-die/but-did-you-die-pepper-gymspiegel-v1.jpg",
+     "quote": "but-did-you-die/but-did-you-die-pepper-quote-v1.jpg",
+     "straat": "but-did-you-die/but-did-you-die-pepper-straat-v1.jpg",
+     "straat2": "but-did-you-die/but-did-you-die-pepper-straat2-v1.jpg",
+     "studio": "but-did-you-die/but-did-you-die-pepper-studio-v1.jpg",
+     "terras": "but-did-you-die/but-did-you-die-pepper-terras-v1.jpg",
+     "vlonder": "but-did-you-die/but-did-you-die-pepper-vlonder-v1.jpg",
+     "zebrapad": "but-did-you-die/but-did-you-die-pepper-zebrapad-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym",
+     "terras",
+     "bed"
+    ]
+   }
+  },
+  "lift-heavy-oversized-gym-tee": {
+   "design": "lift-heavy",
+   "kleuren": {
+    "Pepper": {
+     "bed": "lift-heavy/lift-heavy-pepper-bed-v1.jpg",
+     "gym": "lift-heavy/lift-heavy-pepper-gym-v1.jpg",
+     "gym2": "lift-heavy/lift-heavy-pepper-gym2-v1.jpg",
+     "gymspiegel": "lift-heavy/lift-heavy-pepper-gymspiegel-v1.jpg",
+     "quote": "lift-heavy/lift-heavy-pepper-quote-v1.jpg",
+     "straat": "lift-heavy/lift-heavy-pepper-straat-v1.jpg",
+     "straat2": "lift-heavy/lift-heavy-pepper-straat2-v1.jpg",
+     "studio": "lift-heavy/lift-heavy-pepper-studio-v1.jpg",
+     "terras": "lift-heavy/lift-heavy-pepper-terras-v1.jpg",
+     "vlonder": "lift-heavy/lift-heavy-pepper-vlonder-v1.jpg",
+     "zebrapad": "lift-heavy/lift-heavy-pepper-zebrapad-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "quote",
+     "studio",
+     "gym2"
+    ]
+   }
+  },
+  "glute-day-oversized-gym-tee": {
+   "design": "glute-day",
+   "kleuren": {
+    "Pepper": {
+     "bed": "glute-day/glute-day-pepper-bed-v1.jpg",
+     "gym": "glute-day/glute-day-pepper-gym-v1.jpg",
+     "gym2": "glute-day/glute-day-pepper-gym2-v1.jpg",
+     "gymspiegel": "glute-day/glute-day-pepper-gymspiegel-v1.jpg",
+     "quote": "glute-day/glute-day-pepper-quote-v1.jpg",
+     "straat": "glute-day/glute-day-pepper-straat-v1.jpg",
+     "straat2": "glute-day/glute-day-pepper-straat2-v1.jpg",
+     "studio": "glute-day/glute-day-pepper-studio-v1.jpg",
+     "terras": "glute-day/glute-day-pepper-terras-v1.jpg",
+     "vlonder": "glute-day/glute-day-pepper-vlonder-v1.jpg",
+     "zebrapad": "glute-day/glute-day-pepper-zebrapad-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym",
+     "terras",
+     "bed"
+    ]
+   }
+  },
+  "its-leg-day-oversized-gym-tee": {
+   "design": "its-leg-day",
+   "kleuren": {
+    "Pepper": {
+     "bed": "its-leg-day/its-leg-day-pepper-bed-v1.jpg",
+     "gym": "its-leg-day/its-leg-day-pepper-gym-v1.jpg",
+     "gym2": "its-leg-day/its-leg-day-pepper-gym2-v1.jpg",
+     "gymspiegel": "its-leg-day/its-leg-day-pepper-gymspiegel-v1.jpg",
+     "quote": "its-leg-day/its-leg-day-pepper-quote-v1.jpg",
+     "straat": "its-leg-day/its-leg-day-pepper-straat-v1.jpg",
+     "straat2": "its-leg-day/its-leg-day-pepper-straat2-v1.jpg",
+     "studio": "its-leg-day/its-leg-day-pepper-studio-v1.jpg",
+     "terras": "its-leg-day/its-leg-day-pepper-terras-v1.jpg",
+     "vlonder": "its-leg-day/its-leg-day-pepper-vlonder-v1.jpg",
+     "zebrapad": "its-leg-day/its-leg-day-pepper-zebrapad-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym",
+     "terras",
+     "bed"
+    ]
+   }
+  },
+  "squat-because-nobody-raps-about-little-butts-oversized-gym-tee": {
+   "design": "squat-because-nobody-raps-about-little-butts",
+   "kleuren": {
+    "Pepper": {
+     "bed": "squat-because-nobody-raps-about-little-butts/squat-because-nobody-raps-about-little-butts-pepper-bed-v1.jpg",
+     "gym": "squat-because-nobody-raps-about-little-butts/squat-because-nobody-raps-about-little-butts-pepper-gym-v1.jpg",
+     "gym2": "squat-because-nobody-raps-about-little-butts/squat-because-nobody-raps-about-little-butts-pepper-gym2-v1.jpg",
+     "gymspiegel": "squat-because-nobody-raps-about-little-butts/squat-because-nobody-raps-about-little-butts-pepper-gymspiegel-v1.jpg",
+     "quote": "squat-because-nobody-raps-about-little-butts/squat-because-nobody-raps-about-little-butts-pepper-quote-v1.jpg",
+     "straat": "squat-because-nobody-raps-about-little-butts/squat-because-nobody-raps-about-little-butts-pepper-straat-v1.jpg",
+     "straat2": "squat-because-nobody-raps-about-little-butts/squat-because-nobody-raps-about-little-butts-pepper-straat2-v1.jpg",
+     "studio": "squat-because-nobody-raps-about-little-butts/squat-because-nobody-raps-about-little-butts-pepper-studio-v1.jpg",
+     "terras": "squat-because-nobody-raps-about-little-butts/squat-because-nobody-raps-about-little-butts-pepper-terras-v1.jpg",
+     "vlonder": "squat-because-nobody-raps-about-little-butts/squat-because-nobody-raps-about-little-butts-pepper-vlonder-v1.jpg",
+     "zebrapad": "squat-because-nobody-raps-about-little-butts/squat-because-nobody-raps-about-little-butts-pepper-zebrapad-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym",
+     "terras",
+     "bed"
+    ]
+   }
+  },
+  "id-give-up-carbs-but-im-not-a-quitter-oversized-gym-tee": {
+   "design": "id-give-up-carbs-but-im-not-a-quitter",
+   "kleuren": {
+    "Pepper": {
+     "bed": "id-give-up-carbs-but-im-not-a-quitter/id-give-up-carbs-but-im-not-a-quitter-pepper-bed-v1.jpg",
+     "gym": "id-give-up-carbs-but-im-not-a-quitter/id-give-up-carbs-but-im-not-a-quitter-pepper-gym-v1.jpg",
+     "gym2": "id-give-up-carbs-but-im-not-a-quitter/id-give-up-carbs-but-im-not-a-quitter-pepper-gym2-v1.jpg",
+     "gymspiegel": "id-give-up-carbs-but-im-not-a-quitter/id-give-up-carbs-but-im-not-a-quitter-pepper-gymspiegel-v1.jpg",
+     "quote": "id-give-up-carbs-but-im-not-a-quitter/id-give-up-carbs-but-im-not-a-quitter-pepper-quote-v1.jpg",
+     "straat": "id-give-up-carbs-but-im-not-a-quitter/id-give-up-carbs-but-im-not-a-quitter-pepper-straat-v1.jpg",
+     "straat2": "id-give-up-carbs-but-im-not-a-quitter/id-give-up-carbs-but-im-not-a-quitter-pepper-straat2-v1.jpg",
+     "studio": "id-give-up-carbs-but-im-not-a-quitter/id-give-up-carbs-but-im-not-a-quitter-pepper-studio-v1.jpg",
+     "terras": "id-give-up-carbs-but-im-not-a-quitter/id-give-up-carbs-but-im-not-a-quitter-pepper-terras-v1.jpg",
+     "vlonder": "id-give-up-carbs-but-im-not-a-quitter/id-give-up-carbs-but-im-not-a-quitter-pepper-vlonder-v1.jpg",
+     "zebrapad": "id-give-up-carbs-but-im-not-a-quitter/id-give-up-carbs-but-im-not-a-quitter-pepper-zebrapad-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym",
+     "terras",
+     "bed"
+    ]
+   }
+  },
+  "alexa-do-cardio-for-me-oversized-gym-tee": {
+   "design": "alexa-do-cardio-for-me",
+   "kleuren": {
+    "Pepper": {
+     "bed": "alexa-do-cardio-for-me/alexa-do-cardio-for-me-pepper-bed-v1.jpg",
+     "gym": "alexa-do-cardio-for-me/alexa-do-cardio-for-me-pepper-gym-v1.jpg",
+     "gym2": "alexa-do-cardio-for-me/alexa-do-cardio-for-me-pepper-gym2-v1.jpg",
+     "gymspiegel": "alexa-do-cardio-for-me/alexa-do-cardio-for-me-pepper-gymspiegel-v1.jpg",
+     "quote": "alexa-do-cardio-for-me/alexa-do-cardio-for-me-pepper-quote-v1.jpg",
+     "straat": "alexa-do-cardio-for-me/alexa-do-cardio-for-me-pepper-straat-v1.jpg",
+     "straat2": "alexa-do-cardio-for-me/alexa-do-cardio-for-me-pepper-straat2-v1.jpg",
+     "studio": "alexa-do-cardio-for-me/alexa-do-cardio-for-me-pepper-studio-v1.jpg",
+     "terras": "alexa-do-cardio-for-me/alexa-do-cardio-for-me-pepper-terras-v1.jpg",
+     "vlonder": "alexa-do-cardio-for-me/alexa-do-cardio-for-me-pepper-vlonder-v1.jpg",
+     "zebrapad": "alexa-do-cardio-for-me/alexa-do-cardio-for-me-pepper-zebrapad-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym",
+     "terras",
+     "bed"
+    ]
+   }
+  },
+  "i-workout-because-punching-people-is-frowned-upon-oversized-gym-tee": {
+   "design": "i-workout-because-punching-people-is-frowned-upon",
+   "kleuren": {
+    "Pepper": {
+     "bed": "i-workout-because-punching-people-is-frowned-upon/i-workout-because-punching-people-is-frowned-upon-pepper-bed-v1.jpg",
+     "gym": "i-workout-because-punching-people-is-frowned-upon/i-workout-because-punching-people-is-frowned-upon-pepper-gym-v1.jpg",
+     "gym2": "i-workout-because-punching-people-is-frowned-upon/i-workout-because-punching-people-is-frowned-upon-pepper-gym2-v1.jpg",
+     "gymspiegel": "i-workout-because-punching-people-is-frowned-upon/i-workout-because-punching-people-is-frowned-upon-pepper-gymspiegel-v1.jpg",
+     "quote": "i-workout-because-punching-people-is-frowned-upon/i-workout-because-punching-people-is-frowned-upon-pepper-quote-v1.jpg",
+     "straat": "i-workout-because-punching-people-is-frowned-upon/i-workout-because-punching-people-is-frowned-upon-pepper-straat-v1.jpg",
+     "straat2": "i-workout-because-punching-people-is-frowned-upon/i-workout-because-punching-people-is-frowned-upon-pepper-straat2-v1.jpg",
+     "studio": "i-workout-because-punching-people-is-frowned-upon/i-workout-because-punching-people-is-frowned-upon-pepper-studio-v1.jpg",
+     "terras": "i-workout-because-punching-people-is-frowned-upon/i-workout-because-punching-people-is-frowned-upon-pepper-terras-v1.jpg",
+     "vlonder": "i-workout-because-punching-people-is-frowned-upon/i-workout-because-punching-people-is-frowned-upon-pepper-vlonder-v1.jpg",
+     "zebrapad": "i-workout-because-punching-people-is-frowned-upon/i-workout-because-punching-people-is-frowned-upon-pepper-zebrapad-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym",
+     "terras",
+     "bed"
+    ]
+   }
+  },
+  "its-not-swagger-im-just-sore-oversized-gym-tee": {
+   "design": "its-not-swagger-im-just-sore",
+   "kleuren": {
+    "Pepper": {
+     "bed": "its-not-swagger-im-just-sore/its-not-swagger-im-just-sore-pepper-bed-v1.jpg",
+     "gym": "its-not-swagger-im-just-sore/its-not-swagger-im-just-sore-pepper-gym-v1.jpg",
+     "gym2": "its-not-swagger-im-just-sore/its-not-swagger-im-just-sore-pepper-gym2-v1.jpg",
+     "gymspiegel": "its-not-swagger-im-just-sore/its-not-swagger-im-just-sore-pepper-gymspiegel-v1.jpg",
+     "quote": "its-not-swagger-im-just-sore/its-not-swagger-im-just-sore-pepper-quote-v1.jpg",
+     "straat": "its-not-swagger-im-just-sore/its-not-swagger-im-just-sore-pepper-straat-v1.jpg",
+     "straat2": "its-not-swagger-im-just-sore/its-not-swagger-im-just-sore-pepper-straat2-v1.jpg",
+     "studio": "its-not-swagger-im-just-sore/its-not-swagger-im-just-sore-pepper-studio-v1.jpg",
+     "terras": "its-not-swagger-im-just-sore/its-not-swagger-im-just-sore-pepper-terras-v1.jpg",
+     "vlonder": "its-not-swagger-im-just-sore/its-not-swagger-im-just-sore-pepper-vlonder-v1.jpg",
+     "zebrapad": "its-not-swagger-im-just-sore/its-not-swagger-im-just-sore-pepper-zebrapad-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym",
+     "terras",
+     "bed"
+    ]
+   }
+  },
+  "practice-safe-sets-oversized-gym-tee": {
+   "design": "practice-safe-sets",
+   "kleuren": {
+    "Pepper": {
+     "bed": "practice-safe-sets/practice-safe-sets-pepper-bed-v1.jpg",
+     "gym": "practice-safe-sets/practice-safe-sets-pepper-gym-v1.jpg",
+     "gym2": "practice-safe-sets/practice-safe-sets-pepper-gym2-v1.jpg",
+     "gymspiegel": "practice-safe-sets/practice-safe-sets-pepper-gymspiegel-v1.jpg",
+     "quote": "practice-safe-sets/practice-safe-sets-pepper-quote-v1.jpg",
+     "straat": "practice-safe-sets/practice-safe-sets-pepper-straat-v1.jpg",
+     "straat2": "practice-safe-sets/practice-safe-sets-pepper-straat2-v1.jpg",
+     "studio": "practice-safe-sets/practice-safe-sets-pepper-studio-v1.jpg",
+     "terras": "practice-safe-sets/practice-safe-sets-pepper-terras-v1.jpg",
+     "vlonder": "practice-safe-sets/practice-safe-sets-pepper-vlonder-v1.jpg",
+     "zebrapad": "practice-safe-sets/practice-safe-sets-pepper-zebrapad-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "quote",
+     "studio",
+     "gym2"
+    ]
+   }
+  },
+  "we-are-getting-pizza-after-this-oversized-gym-tee": {
+   "design": "we-are-getting-pizza-after-this",
+   "kleuren": {
+    "Pepper": {
+     "bed": "we-are-getting-pizza-after-this/we-are-getting-pizza-after-this-pepper-bed-v1.jpg",
+     "gym": "we-are-getting-pizza-after-this/we-are-getting-pizza-after-this-pepper-gym-v1.jpg",
+     "gym2": "we-are-getting-pizza-after-this/we-are-getting-pizza-after-this-pepper-gym2-v1.jpg",
+     "gymspiegel": "we-are-getting-pizza-after-this/we-are-getting-pizza-after-this-pepper-gymspiegel-v1.jpg",
+     "quote": "we-are-getting-pizza-after-this/we-are-getting-pizza-after-this-pepper-quote-v1.jpg",
+     "straat": "we-are-getting-pizza-after-this/we-are-getting-pizza-after-this-pepper-straat-v1.jpg",
+     "straat2": "we-are-getting-pizza-after-this/we-are-getting-pizza-after-this-pepper-straat2-v1.jpg",
+     "studio": "we-are-getting-pizza-after-this/we-are-getting-pizza-after-this-pepper-studio-v1.jpg",
+     "terras": "we-are-getting-pizza-after-this/we-are-getting-pizza-after-this-pepper-terras-v1.jpg",
+     "vlonder": "we-are-getting-pizza-after-this/we-are-getting-pizza-after-this-pepper-vlonder-v1.jpg",
+     "zebrapad": "we-are-getting-pizza-after-this/we-are-getting-pizza-after-this-pepper-zebrapad-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym",
+     "terras",
+     "bed"
+    ]
+   }
+  },
+  "morning-gym-crew-oversized-gym-tee": {
+   "design": "morning-gym-crew",
+   "kleuren": {
+    "Pepper": {
+     "bed": "morning-gym-crew/morning-gym-crew-pepper-bed-v1.jpg",
+     "gym": "morning-gym-crew/morning-gym-crew-pepper-gym-v1.jpg",
+     "gym2": "morning-gym-crew/morning-gym-crew-pepper-gym2-v1.jpg",
+     "gymspiegel": "morning-gym-crew/morning-gym-crew-pepper-gymspiegel-v1.jpg",
+     "quote": "morning-gym-crew/morning-gym-crew-pepper-quote-v1.jpg",
+     "straat": "morning-gym-crew/morning-gym-crew-pepper-straat-v1.jpg",
+     "straat2": "morning-gym-crew/morning-gym-crew-pepper-straat2-v1.jpg",
+     "studio": "morning-gym-crew/morning-gym-crew-pepper-studio-v1.jpg",
+     "terras": "morning-gym-crew/morning-gym-crew-pepper-terras-v1.jpg",
+     "vlonder": "morning-gym-crew/morning-gym-crew-pepper-vlonder-v1.jpg",
+     "zebrapad": "morning-gym-crew/morning-gym-crew-pepper-zebrapad-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym",
+     "terras",
+     "bed"
+    ]
+   }
+  },
+  "squat-until-you-walk-funny-oversized-gym-tee": {
+   "design": "squat-until-you-walk-funny",
+   "kleuren": {
+    "Pepper": {
+     "bed": "squat-until-you-walk-funny/squat-until-you-walk-funny-pepper-bed-v1.jpg",
+     "gym": "squat-until-you-walk-funny/squat-until-you-walk-funny-pepper-gym-v1.jpg",
+     "gym2": "squat-until-you-walk-funny/squat-until-you-walk-funny-pepper-gym2-v1.jpg",
+     "gymspiegel": "squat-until-you-walk-funny/squat-until-you-walk-funny-pepper-gymspiegel-v1.jpg",
+     "quote": "squat-until-you-walk-funny/squat-until-you-walk-funny-pepper-quote-v1.jpg",
+     "straat": "squat-until-you-walk-funny/squat-until-you-walk-funny-pepper-straat-v1.jpg",
+     "straat2": "squat-until-you-walk-funny/squat-until-you-walk-funny-pepper-straat2-v1.jpg",
+     "studio": "squat-until-you-walk-funny/squat-until-you-walk-funny-pepper-studio-v1.jpg",
+     "terras": "squat-until-you-walk-funny/squat-until-you-walk-funny-pepper-terras-v1.jpg",
+     "vlonder": "squat-until-you-walk-funny/squat-until-you-walk-funny-pepper-vlonder-v1.jpg",
+     "zebrapad": "squat-until-you-walk-funny/squat-until-you-walk-funny-pepper-zebrapad-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym",
+     "terras",
+     "bed"
+    ]
+   }
+  },
+  "beast-mode-oversized-gym-tee": {
+   "design": "beast-mode",
+   "kleuren": {
+    "Pepper": {
+     "bed": "beast-mode/beast-mode-pepper-bed-v1.jpg",
+     "gym": "beast-mode/beast-mode-pepper-gym-v1.jpg",
+     "gym2": "beast-mode/beast-mode-pepper-gym2-v1.jpg",
+     "gymspiegel": "beast-mode/beast-mode-pepper-gymspiegel-v1.jpg",
+     "quote": "beast-mode/beast-mode-pepper-quote-v1.jpg",
+     "straat": "beast-mode/beast-mode-pepper-straat-v1.jpg",
+     "straat2": "beast-mode/beast-mode-pepper-straat2-v1.jpg",
+     "studio": "beast-mode/beast-mode-pepper-studio-v1.jpg",
+     "terras": "beast-mode/beast-mode-pepper-terras-v1.jpg",
+     "vlonder": "beast-mode/beast-mode-pepper-vlonder-v1.jpg",
+     "zebrapad": "beast-mode/beast-mode-pepper-zebrapad-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "quote",
+     "studio",
+     "gym2"
+    ]
+   }
+  },
+  "go-hard-or-go-home-oversized-gym-tee": {
+   "design": "go-hard-or-go-home",
+   "kleuren": {
+    "Pepper": {
+     "bed": "go-hard-or-go-home/go-hard-or-go-home-pepper-bed-v1.jpg",
+     "gym": "go-hard-or-go-home/go-hard-or-go-home-pepper-gym-v1.jpg",
+     "gym2": "go-hard-or-go-home/go-hard-or-go-home-pepper-gym2-v1.jpg",
+     "gymspiegel": "go-hard-or-go-home/go-hard-or-go-home-pepper-gymspiegel-v1.jpg",
+     "quote": "go-hard-or-go-home/go-hard-or-go-home-pepper-quote-v1.jpg",
+     "straat": "go-hard-or-go-home/go-hard-or-go-home-pepper-straat-v1.jpg",
+     "straat2": "go-hard-or-go-home/go-hard-or-go-home-pepper-straat2-v1.jpg",
+     "studio": "go-hard-or-go-home/go-hard-or-go-home-pepper-studio-v1.jpg",
+     "terras": "go-hard-or-go-home/go-hard-or-go-home-pepper-terras-v1.jpg",
+     "vlonder": "go-hard-or-go-home/go-hard-or-go-home-pepper-vlonder-v1.jpg",
+     "zebrapad": "go-hard-or-go-home/go-hard-or-go-home-pepper-zebrapad-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "quote",
+     "studio",
+     "gym2"
+    ]
+   }
+  },
+  "powered-by-protein-oversized-gym-tee": {
+   "design": "powered-by-protein",
+   "kleuren": {
+    "Pepper": {
+     "bed": "powered-by-protein/powered-by-protein-pepper-bed-v1.jpg",
+     "gym": "powered-by-protein/powered-by-protein-pepper-gym-v1.jpg",
+     "gym2": "powered-by-protein/powered-by-protein-pepper-gym2-v1.jpg",
+     "gymspiegel": "powered-by-protein/powered-by-protein-pepper-gymspiegel-v1.jpg",
+     "quote": "powered-by-protein/powered-by-protein-pepper-quote-v1.jpg",
+     "straat": "powered-by-protein/powered-by-protein-pepper-straat-v1.jpg",
+     "straat2": "powered-by-protein/powered-by-protein-pepper-straat2-v1.jpg",
+     "studio": "powered-by-protein/powered-by-protein-pepper-studio-v1.jpg",
+     "terras": "powered-by-protein/powered-by-protein-pepper-terras-v1.jpg",
+     "vlonder": "powered-by-protein/powered-by-protein-pepper-vlonder-v1.jpg",
+     "zebrapad": "powered-by-protein/powered-by-protein-pepper-zebrapad-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "quote",
+     "studio",
+     "gym2"
+    ]
+   }
+  },
+  "i-wont-quit-until-im-fit-oversized-gym-tee": {
+   "design": "i-wont-quit-until-im-fit",
+   "kleuren": {
+    "Pepper": {
+     "bed": "i-wont-quit-until-im-fit/i-wont-quit-until-im-fit-pepper-bed-v1.jpg",
+     "gym": "i-wont-quit-until-im-fit/i-wont-quit-until-im-fit-pepper-gym-v1.jpg",
+     "gym2": "i-wont-quit-until-im-fit/i-wont-quit-until-im-fit-pepper-gym2-v1.jpg",
+     "gymspiegel": "i-wont-quit-until-im-fit/i-wont-quit-until-im-fit-pepper-gymspiegel-v1.jpg",
+     "quote": "i-wont-quit-until-im-fit/i-wont-quit-until-im-fit-pepper-quote-v1.jpg",
+     "straat": "i-wont-quit-until-im-fit/i-wont-quit-until-im-fit-pepper-straat-v1.jpg",
+     "straat2": "i-wont-quit-until-im-fit/i-wont-quit-until-im-fit-pepper-straat2-v1.jpg",
+     "studio": "i-wont-quit-until-im-fit/i-wont-quit-until-im-fit-pepper-studio-v1.jpg",
+     "terras": "i-wont-quit-until-im-fit/i-wont-quit-until-im-fit-pepper-terras-v1.jpg",
+     "vlonder": "i-wont-quit-until-im-fit/i-wont-quit-until-im-fit-pepper-vlonder-v1.jpg",
+     "zebrapad": "i-wont-quit-until-im-fit/i-wont-quit-until-im-fit-pepper-zebrapad-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym",
+     "terras",
+     "bed"
+    ]
+   }
+  },
+  "my-legs-are-hungover-oversized-gym-tee": {
+   "design": "my-legs-are-hungover",
+   "kleuren": {
+    "Pepper": {
+     "bed": "my-legs-are-hungover/my-legs-are-hungover-pepper-bed-v1.jpg",
+     "gym": "my-legs-are-hungover/my-legs-are-hungover-pepper-gym-v1.jpg",
+     "gym2": "my-legs-are-hungover/my-legs-are-hungover-pepper-gym2-v1.jpg",
+     "gymspiegel": "my-legs-are-hungover/my-legs-are-hungover-pepper-gymspiegel-v1.jpg",
+     "quote": "my-legs-are-hungover/my-legs-are-hungover-pepper-quote-v1.jpg",
+     "straat": "my-legs-are-hungover/my-legs-are-hungover-pepper-straat-v1.jpg",
+     "straat2": "my-legs-are-hungover/my-legs-are-hungover-pepper-straat2-v1.jpg",
+     "studio": "my-legs-are-hungover/my-legs-are-hungover-pepper-studio-v1.jpg",
+     "terras": "my-legs-are-hungover/my-legs-are-hungover-pepper-terras-v1.jpg",
+     "vlonder": "my-legs-are-hungover/my-legs-are-hungover-pepper-vlonder-v1.jpg",
+     "zebrapad": "my-legs-are-hungover/my-legs-are-hungover-pepper-zebrapad-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym",
+     "terras",
+     "bed"
+    ]
+   }
+  },
+  "i-only-do-butt-stuff-at-the-gym-oversized-gym-tee": {
+   "design": "i-only-do-butt-stuff-at-the-gym",
+   "kleuren": {
+    "Pepper": {
+     "bed": "i-only-do-butt-stuff-at-the-gym/i-only-do-butt-stuff-at-the-gym-pepper-bed-v1.jpg",
+     "gym": "i-only-do-butt-stuff-at-the-gym/i-only-do-butt-stuff-at-the-gym-pepper-gym-v1.jpg",
+     "gym2": "i-only-do-butt-stuff-at-the-gym/i-only-do-butt-stuff-at-the-gym-pepper-gym2-v1.jpg",
+     "gymspiegel": "i-only-do-butt-stuff-at-the-gym/i-only-do-butt-stuff-at-the-gym-pepper-gymspiegel-v1.jpg",
+     "quote": "i-only-do-butt-stuff-at-the-gym/i-only-do-butt-stuff-at-the-gym-pepper-quote-v1.jpg",
+     "straat": "i-only-do-butt-stuff-at-the-gym/i-only-do-butt-stuff-at-the-gym-pepper-straat-v1.jpg",
+     "straat2": "i-only-do-butt-stuff-at-the-gym/i-only-do-butt-stuff-at-the-gym-pepper-straat2-v1.jpg",
+     "studio": "i-only-do-butt-stuff-at-the-gym/i-only-do-butt-stuff-at-the-gym-pepper-studio-v1.jpg",
+     "terras": "i-only-do-butt-stuff-at-the-gym/i-only-do-butt-stuff-at-the-gym-pepper-terras-v1.jpg",
+     "vlonder": "i-only-do-butt-stuff-at-the-gym/i-only-do-butt-stuff-at-the-gym-pepper-vlonder-v1.jpg",
+     "zebrapad": "i-only-do-butt-stuff-at-the-gym/i-only-do-butt-stuff-at-the-gym-pepper-zebrapad-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym",
+     "terras",
+     "bed"
+    ]
+   }
+  },
+  "i-hate-it-here-but-i-love-looking-good-oversized-gym-tee": {
+   "design": "i-hate-it-here-but-i-love-looking-good",
+   "kleuren": {
+    "Pepper": {
+     "bed": "i-hate-it-here-but-i-love-looking-good/i-hate-it-here-but-i-love-looking-good-pepper-bed-v1.jpg",
+     "gym": "i-hate-it-here-but-i-love-looking-good/i-hate-it-here-but-i-love-looking-good-pepper-gym-v1.jpg",
+     "gym2": "i-hate-it-here-but-i-love-looking-good/i-hate-it-here-but-i-love-looking-good-pepper-gym2-v1.jpg",
+     "gymspiegel": "i-hate-it-here-but-i-love-looking-good/i-hate-it-here-but-i-love-looking-good-pepper-gymspiegel-v1.jpg",
+     "quote": "i-hate-it-here-but-i-love-looking-good/i-hate-it-here-but-i-love-looking-good-pepper-quote-v1.jpg",
+     "straat": "i-hate-it-here-but-i-love-looking-good/i-hate-it-here-but-i-love-looking-good-pepper-straat-v1.jpg",
+     "straat2": "i-hate-it-here-but-i-love-looking-good/i-hate-it-here-but-i-love-looking-good-pepper-straat2-v1.jpg",
+     "studio": "i-hate-it-here-but-i-love-looking-good/i-hate-it-here-but-i-love-looking-good-pepper-studio-v1.jpg",
+     "terras": "i-hate-it-here-but-i-love-looking-good/i-hate-it-here-but-i-love-looking-good-pepper-terras-v1.jpg",
+     "vlonder": "i-hate-it-here-but-i-love-looking-good/i-hate-it-here-but-i-love-looking-good-pepper-vlonder-v1.jpg",
+     "zebrapad": "i-hate-it-here-but-i-love-looking-good/i-hate-it-here-but-i-love-looking-good-pepper-zebrapad-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym",
+     "terras",
+     "bed"
+    ]
+   }
+  },
+  "wake-up-beauty-its-time-to-beast-oversized-gym-tee": {
+   "design": "wake-up-beauty-its-time-to-beast",
+   "kleuren": {
+    "Pepper": {
+     "bed": "wake-up-beauty-its-time-to-beast/wake-up-beauty-its-time-to-beast-pepper-bed-v1.jpg",
+     "gym": "wake-up-beauty-its-time-to-beast/wake-up-beauty-its-time-to-beast-pepper-gym-v1.jpg",
+     "gym2": "wake-up-beauty-its-time-to-beast/wake-up-beauty-its-time-to-beast-pepper-gym2-v1.jpg",
+     "gymspiegel": "wake-up-beauty-its-time-to-beast/wake-up-beauty-its-time-to-beast-pepper-gymspiegel-v1.jpg",
+     "quote": "wake-up-beauty-its-time-to-beast/wake-up-beauty-its-time-to-beast-pepper-quote-v1.jpg",
+     "straat": "wake-up-beauty-its-time-to-beast/wake-up-beauty-its-time-to-beast-pepper-straat-v1.jpg",
+     "straat2": "wake-up-beauty-its-time-to-beast/wake-up-beauty-its-time-to-beast-pepper-straat2-v1.jpg",
+     "studio": "wake-up-beauty-its-time-to-beast/wake-up-beauty-its-time-to-beast-pepper-studio-v1.jpg",
+     "terras": "wake-up-beauty-its-time-to-beast/wake-up-beauty-its-time-to-beast-pepper-terras-v1.jpg",
+     "vlonder": "wake-up-beauty-its-time-to-beast/wake-up-beauty-its-time-to-beast-pepper-vlonder-v1.jpg",
+     "zebrapad": "wake-up-beauty-its-time-to-beast/wake-up-beauty-its-time-to-beast-pepper-zebrapad-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym",
+     "terras",
+     "bed"
+    ]
+   }
+  },
+  "i-dont-sweat-i-sparkle-oversized-gym-tee": {
+   "design": "i-dont-sweat-i-sparkle",
+   "kleuren": {
+    "Pepper": {
+     "bed": "i-dont-sweat-i-sparkle/i-dont-sweat-i-sparkle-pepper-bed-v1.jpg",
+     "gym": "i-dont-sweat-i-sparkle/i-dont-sweat-i-sparkle-pepper-gym-v1.jpg",
+     "gym2": "i-dont-sweat-i-sparkle/i-dont-sweat-i-sparkle-pepper-gym2-v1.jpg",
+     "gymspiegel": "i-dont-sweat-i-sparkle/i-dont-sweat-i-sparkle-pepper-gymspiegel-v1.jpg",
+     "quote": "i-dont-sweat-i-sparkle/i-dont-sweat-i-sparkle-pepper-quote-v1.jpg",
+     "straat": "i-dont-sweat-i-sparkle/i-dont-sweat-i-sparkle-pepper-straat-v1.jpg",
+     "straat2": "i-dont-sweat-i-sparkle/i-dont-sweat-i-sparkle-pepper-straat2-v1.jpg",
+     "studio": "i-dont-sweat-i-sparkle/i-dont-sweat-i-sparkle-pepper-studio-v1.jpg",
+     "terras": "i-dont-sweat-i-sparkle/i-dont-sweat-i-sparkle-pepper-terras-v1.jpg",
+     "vlonder": "i-dont-sweat-i-sparkle/i-dont-sweat-i-sparkle-pepper-vlonder-v1.jpg",
+     "zebrapad": "i-dont-sweat-i-sparkle/i-dont-sweat-i-sparkle-pepper-zebrapad-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym",
+     "terras",
+     "bed"
+    ]
+   }
+  },
+  "resting-gym-face-oversized-gym-tee": {
+   "design": "resting-gym-face",
+   "kleuren": {
+    "Pepper": {
+     "bed": "resting-gym-face/resting-gym-face-pepper-bed-v1.jpg",
+     "gym": "resting-gym-face/resting-gym-face-pepper-gym-v1.jpg",
+     "gym2": "resting-gym-face/resting-gym-face-pepper-gym2-v1.jpg",
+     "gymspiegel": "resting-gym-face/resting-gym-face-pepper-gymspiegel-v1.jpg",
+     "quote": "resting-gym-face/resting-gym-face-pepper-quote-v1.jpg",
+     "straat": "resting-gym-face/resting-gym-face-pepper-straat-v1.jpg",
+     "straat2": "resting-gym-face/resting-gym-face-pepper-straat2-v1.jpg",
+     "studio": "resting-gym-face/resting-gym-face-pepper-studio-v1.jpg",
+     "terras": "resting-gym-face/resting-gym-face-pepper-terras-v1.jpg",
+     "vlonder": "resting-gym-face/resting-gym-face-pepper-vlonder-v1.jpg",
+     "zebrapad": "resting-gym-face/resting-gym-face-pepper-zebrapad-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym",
+     "terras",
+     "bed"
+    ]
+   }
+  },
+  "sore-today-strong-tomorrow-oversized-gym-tee": {
+   "design": "sore-today-strong-tomorrow",
+   "kleuren": {
+    "Pepper": {
+     "bed": "sore-today-strong-tomorrow/sore-today-strong-tomorrow-pepper-bed-v1.jpg",
+     "gym": "sore-today-strong-tomorrow/sore-today-strong-tomorrow-pepper-gym-v1.jpg",
+     "gym2": "sore-today-strong-tomorrow/sore-today-strong-tomorrow-pepper-gym2-v1.jpg",
+     "gymspiegel": "sore-today-strong-tomorrow/sore-today-strong-tomorrow-pepper-gymspiegel-v1.jpg",
+     "quote": "sore-today-strong-tomorrow/sore-today-strong-tomorrow-pepper-quote-v1.jpg",
+     "straat": "sore-today-strong-tomorrow/sore-today-strong-tomorrow-pepper-straat-v1.jpg",
+     "straat2": "sore-today-strong-tomorrow/sore-today-strong-tomorrow-pepper-straat2-v1.jpg",
+     "studio": "sore-today-strong-tomorrow/sore-today-strong-tomorrow-pepper-studio-v1.jpg",
+     "terras": "sore-today-strong-tomorrow/sore-today-strong-tomorrow-pepper-terras-v1.jpg",
+     "vlonder": "sore-today-strong-tomorrow/sore-today-strong-tomorrow-pepper-vlonder-v1.jpg",
+     "zebrapad": "sore-today-strong-tomorrow/sore-today-strong-tomorrow-pepper-zebrapad-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym",
+     "terras",
+     "bed"
+    ]
+   }
+  },
+  "the-body-achieves-what-the-mind-believes-oversized-gym-tee": {
+   "design": "the-body-achieves-what-the-mind-believes",
+   "kleuren": {
+    "Pepper": {
+     "bed": "the-body-achieves-what-the-mind-believes/the-body-achieves-what-the-mind-believes-pepper-bed-v1.jpg",
+     "gym": "the-body-achieves-what-the-mind-believes/the-body-achieves-what-the-mind-believes-pepper-gym-v1.jpg",
+     "gym2": "the-body-achieves-what-the-mind-believes/the-body-achieves-what-the-mind-believes-pepper-gym2-v1.jpg",
+     "gymspiegel": "the-body-achieves-what-the-mind-believes/the-body-achieves-what-the-mind-believes-pepper-gymspiegel-v1.jpg",
+     "quote": "the-body-achieves-what-the-mind-believes/the-body-achieves-what-the-mind-believes-pepper-quote-v1.jpg",
+     "straat": "the-body-achieves-what-the-mind-believes/the-body-achieves-what-the-mind-believes-pepper-straat-v1.jpg",
+     "straat2": "the-body-achieves-what-the-mind-believes/the-body-achieves-what-the-mind-believes-pepper-straat2-v1.jpg",
+     "studio": "the-body-achieves-what-the-mind-believes/the-body-achieves-what-the-mind-believes-pepper-studio-v1.jpg",
+     "terras": "the-body-achieves-what-the-mind-believes/the-body-achieves-what-the-mind-believes-pepper-terras-v1.jpg",
+     "vlonder": "the-body-achieves-what-the-mind-believes/the-body-achieves-what-the-mind-believes-pepper-vlonder-v1.jpg",
+     "zebrapad": "the-body-achieves-what-the-mind-believes/the-body-achieves-what-the-mind-believes-pepper-zebrapad-v1.jpg"
+    }
+   },
+   "volgorde": {
+    "Pepper": [
+     "straat",
+     "gym",
+     "terras",
+     "bed"
     ]
    }
   }
