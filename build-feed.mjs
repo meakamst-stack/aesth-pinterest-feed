@@ -431,6 +431,97 @@ function guard(newRows) {
   return reasons;
 }
 
+// ------------------------------------------------------------ Google-feed
+//
+// 20 okt 2026: tweede uitvoer voor Google Merchant Center (gratis productvermeldingen).
+// Anders dan Pinterest: één regel per MAAT (Google eist bij kleding size, color,
+// gender en age_group per variant), productfoto's van Fourthwall (flatlay + close-up,
+// geen modellen) en gratis verzending binnen de VS in de feed zelf.
+// Een fout hier mag de Pinterest-feed nooit raken: die is dan al weggeschreven.
+
+const GOOGLE = {
+  outFile: "docs/google-feed.tsv",
+  utm: { source: "google", medium: "free-listing", campaign: "google-shopping" },
+  shipping: "US:::0.00 USD", // gratis verzending in de VS (actie 'Free US shipping')
+  productType: "Oversized Gym Tees",
+  minRows: 50, // minder regels = waarschijnlijk een haperende API → niet wegschrijven
+};
+
+function tsvField(value) {
+  // Tabs en regeleinden zouden de kolommen verschuiven.
+  return String(value ?? "").replace(/[\t\r\n]+/g, " ").trim();
+}
+
+function googleLink(slug) {
+  const u = new URL(`${CONFIG.siteBase}/products/${slug}`);
+  u.searchParams.set("utm_source", GOOGLE.utm.source);
+  u.searchParams.set("utm_medium", GOOGLE.utm.medium);
+  u.searchParams.set("utm_campaign", GOOGLE.utm.campaign);
+  u.searchParams.set("utm_content", slug);
+  return u.toString();
+}
+
+const GOOGLE_COLUMNS = [
+  "id", "item_group_id", "title", "description", "link", "image_link", "additional_image_link",
+  "price", "availability", "condition", "brand", "identifier_exists", "google_product_category",
+  "product_type", "color", "size", "size_system", "gender", "age_group", "shipping",
+];
+
+function googleRows(product) {
+  const slug = product.slug;
+  const plain = toPlainText(product.description) || product.name;
+  const images = (product.images || []).map((i) => i.url).filter(Boolean);
+  if (!images.length) return [];
+  return (product.variants || []).flatMap((v) => {
+    const size = v.attributes?.size?.name || "";
+    const color = v.attributes?.color?.name || "";
+    const price = v.unitPrice;
+    if (!price?.value || !size || !v.id) return [];
+    const vImages = (v.images?.length ? v.images.map((i) => i.url) : images).filter(Boolean);
+    return [{
+      id: String(v.id).slice(0, 50),
+      item_group_id: slug.slice(0, 50),
+      title: truncate(`${product.name}${size ? ` — ${size}` : ""}`, 150),
+      description: truncate(plain, 5000),
+      link: googleLink(slug),
+      image_link: vImages[0],
+      additional_image_link: vImages.slice(1, 4).join(","),
+      price: `${Number(price.value).toFixed(2)} ${price.currency}`,
+      availability: product.state?.type === "SOLD_OUT" || variantSoldOut(v) ? "out_of_stock" : "in_stock",
+      condition: "new",
+      brand: CONFIG.brand,
+      identifier_exists: "no",
+      google_product_category: CONFIG.googleCategory,
+      product_type: GOOGLE.productType,
+      color,
+      size,
+      size_system: "US",
+      gender: CONFIG.gender,
+      age_group: CONFIG.ageGroup,
+      shipping: GOOGLE.shipping,
+    }];
+  });
+}
+
+function writeGoogleFeed(usable) {
+  try {
+    const rows = usable.flatMap(googleRows);
+    const ids = new Set(rows.map((r) => r.id));
+    if (ids.size !== rows.length) throw new Error("dubbele id's");
+    if (rows.length < GOOGLE.minRows && !CONFIG.force) {
+      throw new Error(`maar ${rows.length} regels (minimum ${GOOGLE.minRows}) — bestaande Google-feed blijft staan`);
+    }
+    const tsv = [GOOGLE_COLUMNS.join("\t"), ...rows.map((r) => GOOGLE_COLUMNS.map((c) => tsvField(r[c])).join("\t"))].join("\n");
+    const tmp = GOOGLE.outFile + ".tmp";
+    writeFileSync(tmp, tsv + "\n", "utf8");
+    renameSync(tmp, GOOGLE.outFile);
+    const designs = new Set(rows.map((r) => r.item_group_id)).size;
+    console.log(`Google-feed geschreven naar ${GOOGLE.outFile}: ${rows.length} regels (${designs} designs × maten)`);
+  } catch (err) {
+    console.warn(`Let op: Google-feed NIET bijgewerkt (${err.message}). Pinterest-feed is wel geschreven.`);
+  }
+}
+
 // ------------------------------------------------------------------ uitvoeren
 
 async function main() {
@@ -514,6 +605,8 @@ async function main() {
   for (const [design, colors] of Object.entries(perDesign)) {
     console.log(`  ${design}: ${colors.join(", ")}`);
   }
+
+  writeGoogleFeed(usable);
 
   const skipped = all.length - usable.length;
   if (skipped > 0) console.log(`${skipped} item(s) overgeslagen (niet publiek of geen los product)`);

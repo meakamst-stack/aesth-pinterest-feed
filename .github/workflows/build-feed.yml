@@ -48,14 +48,15 @@ jobs:
           # Heartbeat: GitHub schakelt geplande workflows in een publieke repo uit na
           # 60 dagen zonder commits. Een dagelijkse datumstempel houdt de repo actief.
           date -u +%Y-%m-%dT%H:%M:%SZ > docs/last-build.txt
-          if [ -z "$(git status --porcelain docs/pinterest-feed.csv docs/last-build.txt)" ]; then
+          if [ -z "$(git status --porcelain docs/pinterest-feed.csv docs/google-feed.tsv docs/last-build.txt)" ]; then
             echo "Niets te committen."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs/pinterest-feed.csv docs/last-build.txt
-          if git diff --cached --quiet -- docs/pinterest-feed.csv; then
+          [ -f docs/google-feed.tsv ] && git add docs/google-feed.tsv
+          if git diff --cached --quiet -- docs/pinterest-feed.csv docs/google-feed.tsv; then
             git commit -m "Heartbeat ($(date -u +%Y-%m-%d)) — feed ongewijzigd"
           else
             git commit -m "Feed bijgewerkt ($(date -u +%Y-%m-%d))"
