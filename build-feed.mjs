@@ -445,6 +445,9 @@ const GOOGLE = {
   shipping: "US:::0.00 USD", // gratis verzending in de VS (actie 'Free US shipping')
   productType: "Oversized Gym Tees",
   minRows: 50, // minder regels = waarschijnlijk een haperende API → niet wegschrijven
+  // Designs die NIET naar Google gaan (blijven wel op de site en in de Pinterest-feed).
+  // 21 okt 2026: afgekeurd door Google als "Restricted adult content" (woord "smut").
+  exclude: new Set(["lift-heavy-read-smut-oversized-gym-tee"]),
 };
 
 function tsvField(value) {
@@ -469,6 +472,7 @@ const GOOGLE_COLUMNS = [
 
 function googleRows(product) {
   const slug = product.slug;
+  if (GOOGLE.exclude.has(slug)) return [];
   const plain = toPlainText(product.description) || product.name;
   const images = (product.images || []).map((i) => i.url).filter(Boolean);
   if (!images.length) return [];
