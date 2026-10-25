@@ -1737,14 +1737,16 @@
      "studio": "lift-heavy/lift-heavy-pepper-studio-v1.jpg",
      "terras": "lift-heavy/lift-heavy-pepper-terras-v1.jpg",
      "vlonder": "lift-heavy/lift-heavy-pepper-vlonder-v1.jpg",
-     "zebrapad": "lift-heavy/lift-heavy-pepper-zebrapad-v1.jpg"
+     "zebrapad": "lift-heavy/lift-heavy-pepper-zebrapad-v1.jpg",
+     "straat-man": "lift-heavy/lift-heavy-pepper-straat-man-v1.jpg",
+     "gym-man": "lift-heavy/lift-heavy-pepper-gym-man-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
-     "quote",
-     "studio",
-     "gym2"
+     "straat-man",
+     "gym-man",
+     "quote"
     ]
    }
   },
@@ -1944,14 +1946,16 @@
      "studio": "practice-safe-sets/practice-safe-sets-pepper-studio-v1.jpg",
      "terras": "practice-safe-sets/practice-safe-sets-pepper-terras-v1.jpg",
      "vlonder": "practice-safe-sets/practice-safe-sets-pepper-vlonder-v1.jpg",
-     "zebrapad": "practice-safe-sets/practice-safe-sets-pepper-zebrapad-v1.jpg"
+     "zebrapad": "practice-safe-sets/practice-safe-sets-pepper-zebrapad-v1.jpg",
+     "straat-man": "practice-safe-sets/practice-safe-sets-pepper-straat-man-v1.jpg",
+     "gym-man": "practice-safe-sets/practice-safe-sets-pepper-gym-man-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
-     "quote",
-     "studio",
-     "gym2"
+     "straat-man",
+     "gym-man",
+     "quote"
     ]
    }
   },
@@ -2047,14 +2051,16 @@
      "studio": "beast-mode/beast-mode-pepper-studio-v1.jpg",
      "terras": "beast-mode/beast-mode-pepper-terras-v1.jpg",
      "vlonder": "beast-mode/beast-mode-pepper-vlonder-v1.jpg",
-     "zebrapad": "beast-mode/beast-mode-pepper-zebrapad-v1.jpg"
+     "zebrapad": "beast-mode/beast-mode-pepper-zebrapad-v1.jpg",
+     "straat-man": "beast-mode/beast-mode-pepper-straat-man-v1.jpg",
+     "gym-man": "beast-mode/beast-mode-pepper-gym-man-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
-     "quote",
-     "studio",
-     "gym2"
+     "straat-man",
+     "gym-man",
+     "quote"
     ]
    }
   },
@@ -2072,14 +2078,16 @@
      "studio": "go-hard-or-go-home/go-hard-or-go-home-pepper-studio-v1.jpg",
      "terras": "go-hard-or-go-home/go-hard-or-go-home-pepper-terras-v1.jpg",
      "vlonder": "go-hard-or-go-home/go-hard-or-go-home-pepper-vlonder-v1.jpg",
-     "zebrapad": "go-hard-or-go-home/go-hard-or-go-home-pepper-zebrapad-v1.jpg"
+     "zebrapad": "go-hard-or-go-home/go-hard-or-go-home-pepper-zebrapad-v1.jpg",
+     "straat-man": "go-hard-or-go-home/go-hard-or-go-home-pepper-straat-man-v1.jpg",
+     "gym-man": "go-hard-or-go-home/go-hard-or-go-home-pepper-gym-man-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
-     "quote",
-     "studio",
-     "gym2"
+     "straat-man",
+     "gym-man",
+     "quote"
     ]
    }
   },
@@ -2097,14 +2105,16 @@
      "studio": "powered-by-protein/powered-by-protein-pepper-studio-v1.jpg",
      "terras": "powered-by-protein/powered-by-protein-pepper-terras-v1.jpg",
      "vlonder": "powered-by-protein/powered-by-protein-pepper-vlonder-v1.jpg",
-     "zebrapad": "powered-by-protein/powered-by-protein-pepper-zebrapad-v1.jpg"
+     "zebrapad": "powered-by-protein/powered-by-protein-pepper-zebrapad-v1.jpg",
+     "straat-man": "powered-by-protein/powered-by-protein-pepper-straat-man-v1.jpg",
+     "gym-man": "powered-by-protein/powered-by-protein-pepper-gym-man-v1.jpg"
     }
    },
    "volgorde": {
     "Pepper": [
-     "quote",
-     "studio",
-     "gym2"
+     "straat-man",
+     "gym-man",
+     "quote"
     ]
    }
   },
