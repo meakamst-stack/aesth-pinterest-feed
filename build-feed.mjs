@@ -467,7 +467,7 @@ function googleLink(slug) {
 const GOOGLE_COLUMNS = [
   "id", "item_group_id", "title", "description", "link", "image_link", "additional_image_link",
   "price", "availability", "condition", "brand", "identifier_exists", "google_product_category",
-  "product_type", "color", "size", "size_system", "gender", "age_group", "shipping",
+  "product_type", "color", "size", "size_system", "gender", "age_group", "material", "pattern", "shipping",
 ];
 
 function googleRows(product) {
@@ -502,6 +502,9 @@ function googleRows(product) {
       size_system: "US",
       gender: CONFIG.gender,
       age_group: CONFIG.ageGroup,
+      // 25 okt 2026: Merchant Center vroeg om Color, Pattern, Material bij alle shirts.
+      material: "Cotton",
+      pattern: "Graphic Print",
       shipping: GOOGLE.shipping,
     }];
   });
