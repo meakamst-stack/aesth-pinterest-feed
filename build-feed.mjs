@@ -76,6 +76,19 @@ const CONFIG = {
   fetchAttempts: 3,
 };
 
+/**
+ * Designs waarvan Pinterest de nieuwe hoofdfoto niet opnieuw opnam (vielen stil uit de
+ * catalogus). Waarde = versie; verhogen als het opnieuw nodig is.
+ * 29 okt 2026: 5 herenshirts batch 8 na de fotowissel van 25 okt (catalogus 108/113).
+ */
+const PINTEREST_IMAGE_REFRESH = {
+  "beast-mode-oversized-gym-tee": 2,
+  "lift-heavy-oversized-gym-tee": 2,
+  "practice-safe-sets-oversized-gym-tee": 2,
+  "go-hard-or-go-home-oversized-gym-tee": 2,
+  "powered-by-protein-oversized-gym-tee": 2,
+};
+
 /** Leest de mockup-manifest in; ontbreekt die, dan worden alleen Fourthwall-foto's gebruikt. */
 function loadPins() {
   if (!existsSync(CONFIG.pinsManifest)) return null;
@@ -309,6 +322,11 @@ function colorRows(product) {
       images = (withImages ? withImages.images : productImages).map((i) => i.url);
       if (!images.length) return []; // zonder afbeelding keurt Pinterest de regel af
     }
+
+    // Pinterest verwerkt een gewijzigde afbeelding soms niet opnieuw (de regel valt dan
+    // stil uit de catalogus). Een versie-parameter achter de URL dwingt herverwerking af.
+    const refresh = PINTEREST_IMAGE_REFRESH[slug];
+    if (refresh) images = images.map((u) => `${u}${u.includes("?") ? "&" : "?"}v=${refresh}`);
 
     // Vanaf-prijs: de laagste prijs van alle maten in deze kleur (zelfde valuta).
     const priced = variants.filter((v) => v.unitPrice?.value > 0);
