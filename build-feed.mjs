@@ -466,7 +466,18 @@ const GOOGLE = {
   // Designs die NIET naar Google gaan (blijven wel op de site en in de Pinterest-feed).
   // 21 okt 2026: afgekeurd door Google als "Restricted adult content" (woord "smut").
   exclude: new Set(["lift-heavy-read-smut-oversized-gym-tee"]),
+  // 29 okt 2026: op de site staat de close-up van de print op plek 1 en de flatlay op plek 2.
+  // Google krijgt de flatlay (hele shirt) als hoofdbeeld; de close-up gaat mee als extra beeld.
+  // Producten met minder dan 3 foto's: gewoon de eerste foto.
+  flatlayIndex: 1,
 };
+
+// Hoofdbeeld voor Google vooraan zetten (zie GOOGLE.flatlayIndex).
+function googleImageOrder(list) {
+  const i = GOOGLE.flatlayIndex;
+  if (!i || list.length < 3 || i >= list.length) return list;
+  return [list[i], ...list.slice(0, i), ...list.slice(i + 1)];
+}
 
 function tsvField(value) {
   // Tabs en regeleinden zouden de kolommen verschuiven.
@@ -499,7 +510,7 @@ function googleRows(product) {
     const color = v.attributes?.color?.name || "";
     const price = v.unitPrice;
     if (!price?.value || !size || !v.id) return [];
-    const vImages = (v.images?.length ? v.images.map((i) => i.url) : images).filter(Boolean);
+    const vImages = googleImageOrder((v.images?.length ? v.images.map((i) => i.url) : images).filter(Boolean));
     return [{
       id: String(v.id).slice(0, 50),
       item_group_id: slug.slice(0, 50),
